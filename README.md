@@ -1,2 +1,2 @@
-# This is the report of the SIGSEG sylabus
+# This is the report of the SIGSEG syllabus
 
