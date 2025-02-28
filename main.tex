@@ -1,0 +1,105 @@
+\documentclass[a4paper,12pt]{report}
+
+% Input encoding and font encoding
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Mathematics and symbols
+\usepackage{amsmath,amsfonts,amssymb}
+
+% Graphics support and image formats
+\usepackage{graphicx}
+\DeclareGraphicsExtensions{.png,.pdf,.jpg,.eps}
+
+% Hyperlinks support (hidelinks removes link borders)
+\usepackage[hidelinks]{hyperref}
+
+% Enumeration lists customization
+\usepackage{enumitem}
+
+% Geometry settings for margins
+\usepackage{geometry}
+\geometry{margin=1in}
+
+% Table of contents and figures list formatting
+\usepackage{tocloft}
+
+% Support for long tables
+\usepackage{longtable}
+
+% Acronyms
+\usepackage{acronym}
+
+% Language and citation
+\usepackage[english]{babel}
+\usepackage[superscript]{cite}
+
+% URL formatting in the bibliography
+\usepackage{url}
+
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[utf8]{inputenc}
+\usepackage[table,xcdraw]{xcolor}
+
+\begin{document}
+
+% Title page
+\begin{titlepage}
+    \centering
+    \vspace*{1.5cm}
+    
+    \Huge
+    \textbf{Information Security Management System for GreenGrid Energy}
+    
+    \vspace{0.5cm}
+    \Large
+    Master's in Computer Engineering - Cybersecurity and Systems Administration \\
+    Security Management Systems (SIGSEG)
+    
+    \vspace{1.5cm}
+    
+    \vfill
+
+    % Add the logo in the middle of the page
+    \includegraphics[width=0.8\textwidth]{figures/isep_wordmark_expanded_vintage.eps}
+    
+    \vfill
+   
+    \textbf{Students:} \\
+    1200720@isep.ipp.pt \\
+    1201346@isep.ipp.pt \\
+    1200920@isep.ipp.pt
+
+    \vfill
+\end{titlepage}
+
+% Table of contents, figures, and acronyms
+\pagenumbering{roman}
+\tableofcontents
+\newpage
+\listoffigures
+% Acronyms section
+\chapter*{Acronyms}
+\begin{acronym}[XXXX] % Use [XXXX] for proper acronym alignment
+\acro{ISMS}{Information Security Management System}
+
+\end{acronym}
+
+\newpage
+\pagenumbering{arabic}
+
+\chapter{Introduction}
+\input{intro}
+
+
+\chapter{Conclusion}
+\input{conclusion}
+
+
+\bibliographystyle{plain} % Choose the style of your references
+\bibliography{refs} % Link your .bib file here
+
+\end{document}
+
+
