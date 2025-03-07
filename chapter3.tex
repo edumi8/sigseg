@@ -1,0 +1,100 @@
+%----------------------------------
+% Chapter 3
+%----------------------------------
+
+
+\section{Introduction}
+This activity defines the boundaries and scope of GreenGrid Energy’s Information Security Management System (ISMS), following the guidelines of ISO/IEC 27001 (Clause 4.3). It identifies all people, processes, and technologies affected by security requirements and details any relevant exclusions.
+
+\section{Identify Organization Stakeholders}
+\begin{itemize}
+    \item \textbf{Internal Stakeholders:}
+    \begin{itemize}
+        \item \textit{Executive Leadership}: CEO, CFO, CTO, CISO, Legal \& Administration
+        \item \textit{Engineering \& Grid Operations}: Manages power distribution, SCADA oversight
+        \item \textit{R\&D}: Researches and pilots grid optimization and analytics
+        \item \textit{Customer Services \& Billing}: Handles customer data, billing systems
+        \item \textit{Supply Chain Management}: Oversees vendor contracts, hardware procurement
+        \item \textit{Human Resources (HR)}: Manages employee data, access control, training
+    \end{itemize}
+    \item \textbf{External Stakeholders:}
+    \begin{itemize}
+        \item \textit{Customers}: Residential and enterprise energy clients
+        \item \textit{Regulatory Bodies}: Energy sector regulators, data protection authorities
+        \item \textit{Suppliers \& Partners}: Hardware/software vendors, cloud providers
+        \item \textit{Local Communities \& Investors}: Impacted by or invested in energy operations
+    \end{itemize}
+\end{itemize}
+
+\section{Describe IT (Shared) Infrastructure and Systems}
+\begin{itemize}
+    \item \textbf{SCADA Systems}: Monitors and controls grid operations (OT domain).
+    \item \textbf{Cloud \& Edge Computing}: Hybrid AWS/Azure setup for data analytics and IoT.
+    \item \textbf{Networking}:
+        \begin{itemize}
+            \item OT Network (real-time operational controls)
+            \item IT Network (corporate, administrative, and business services)
+        \end{itemize}
+    \item \textbf{OT/IT Convergence}: Secure integration of grid operations with corporate systems.
+    \item \textbf{Enterprise Tools}: Microsoft 365 for collaboration, SAP ERP for planning.
+    \item \textbf{Security Infrastructure}: Palo Alto firewalls, IDS/IPS, MFA solutions, etc.
+\end{itemize}
+
+\section{Identify Relevant Business Processes and Data}
+\begin{itemize}
+    \item \textbf{Engineering \& Grid Operations}: Real-time monitoring, telemetry data, SCADA.
+    \item \textbf{R\&D}: Proprietary research, predictive analytics, intellectual property.
+    \item \textbf{Customer Services \& Billing}: Customer records, billing info, PII, payment data.
+    \item \textbf{Supply Chain Management}: Vendor contracts, procurement data, delivery schedules.
+    \item \textbf{Human Resources}: Employee data, payroll, performance records.
+    \item \textbf{Legal \& Administration}: Regulatory compliance documentation, financial records.
+\end{itemize}
+
+\section{Define ISMS Boundaries}
+\begin{itemize}
+    \item \textbf{Physical Scope}:
+    \begin{itemize}
+        \item Headquarters, branch offices, and on-premises data centers.
+        \item Critical SCADA sites and edge computing nodes under direct control of GreenGrid.
+    \end{itemize}
+    \item \textbf{Logical Scope}:
+    \begin{itemize}
+        \item All IT and OT networks where GreenGrid processes or stores business-critical data.
+        \item Cloud-based systems (AWS/Azure) that handle sensitive or regulated information.
+    \end{itemize}
+    \item \textbf{Organizational Scope}:
+    \begin{itemize}
+        \item All departments contributing to or relying on secure information management.
+        \item Third-party and vendor relationships that influence compliance or security posture.
+    \end{itemize}
+    \item \textbf{Exclusions (If Applicable)}:
+    \begin{itemize}
+        \item Legacy systems scheduled for decommissioning (if not critical).
+        \item Certain external facilities or environments not under GreenGrid’s control.
+    \end{itemize}
+\end{itemize}
+
+\section{Individual Tasks}
+Each project member will investigate their assigned department in depth, clarifying:
+\begin{itemize}
+    \item \textbf{Department-Specific Infrastructure \& Systems:}
+    \begin{itemize}
+        \item Application servers, specialized tools, data flows unique to the department.
+        \item Current security measures, compliance requirements, and known gaps.
+    \end{itemize}
+    \item \textbf{Departmental Business Processes \& Data:}
+    \begin{itemize}
+        \item Confidentiality, integrity, and availability needs for departmental information.
+        \item Critical workflows (e.g., contract management, analytics model development, billing).
+    \end{itemize}
+\end{itemize}
+
+\section{Deliverables}
+\begin{itemize}
+    \item \textbf{ISMS Scope Documentation:} A formal statement capturing included networks, sites, stakeholders, and assets in line with ISO 27001 Clause 4.3.
+    \item \textbf{Updated Organizational Report:} Incorporate final ISMS scope, stakeholder analysis, and any refinements to the existing case study details.
+\end{itemize}
+
+\section{Conclusion}
+Defining the ISMS scope ensures that GreenGrid Energy’s security efforts focus on the most critical assets and processes. This structured approach serves as a foundation for subsequent activities—such as risk assessment and control implementation—aiming to safeguard the company’s operational technologies, proprietary research, and customer data.
+
