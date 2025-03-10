@@ -1,74 +1,198 @@
 \section{Introduction}
-GreenGrid Energy is a large-sized enterprise \cite{Portugal2020} operating in the renewable energy sector, with a particular focus on smart grid technology. The organization employs approximately 400 professionals and reported revenue of roughly 35 million euros in the most recent fiscal year. Its business model revolves around three key revenue streams:
+
+GreenGrid Energy is a large-scale enterprise \cite{Portugal2020} specializing in renewable energy, with particular expertise in smart grid technology. The company employs approximately 400 professionals and achieved revenues of around 35 million euros in the latest fiscal year. Its business activities are structured around three core revenue streams:
 \begin{enumerate}
     \item Smart grid infrastructure deployment (45\%),
     \item Renewable energy supply contracts (40\%),
     \item Energy monitoring and analytics software (15\%).
 \end{enumerate}
 
-With the growing adoption of renewable energy solutions and \ac{IoT} devices in power grids, GreenGrid Energy finds itself navigating a complex landscape that blends \ac{OT} and \ac{IT}. This convergence elevates the importance of robust cybersecurity measures and well-defined governance strategies.
+With the expanding adoption of renewable energy solutions and increasing integration of \ac{IoT} devices, GreenGrid Energy operates at the intersection of \ac{OT} and \ac{IT}. This convergence necessitates a comprehensive cybersecurity approach, robust governance frameworks, and specialized departmental oversight.
+
+To effectively respond to these challenges, GreenGrid Energy has assembled a dedicated project team to assess and strengthen information security practices within critical departments, while collaboratively addressing overall cybersecurity objectives.
+
+\subsection{Project Team Structure and Individual Responsibilities}
+
+The project team is composed of three specialists, each focusing on securing a critical area of operation:
+
+\subsubsection*{\ac{RND}}
+Inês Ribeiro (1201346@isep.ipp.pt) assesses and enhances security practices within the \ac{RND} department, safeguarding proprietary technologies, algorithms, and intellectual property. She ensures secure collaborative environments for technology pilot programs, mitigating risks from industrial espionage and cyber threats.
+
+\subsubsection*{Supply Chain Management}
+Manuela Leite (1200720@isep.ipp.pt) is responsible for analyzing procurement processes, supplier security standards, and component lifecycle management. Her primary focus includes establishing guidelines to mitigate risks associated with third-party vendors, particularly regarding hardware integrity and supply-chain vulnerabilities.
+
+\subsubsection*{Customer Services \& Billing}
+Eduardo Sousa (1200920@isep.ipp.pt) evaluates procedures related to customer onboarding, billing systems, and contract management, emphasizing the protection of \ac{PII} and financial data. He coordinates closely with the Legal \& Administration department to ensure regulatory compliance and prevent fraud.
+
+\subsection{Collective Responsibilities}
+
+Beyond their individual roles, the team collaborates on key areas that affect multiple departments, including:
+
+\begin{itemize}
+    \item \textbf{Engineering \& Grid Operations}: Ensuring secure integration of emerging technologies, particularly within \ac{OT} and \ac{IT} networks, to maintain operational integrity.
+    \item \textbf{Human Resources}: Implementing role-based access control and promoting a security-aware culture through employee training and awareness programs.
+    \item \textbf{Legal \& Administration}: Aligning departmental activities with legal and regulatory requirements, managing compliance frameworks, and streamlining incident reporting mechanisms.
+    \item \textbf{Cybersecurity Strategy Development}: Creating comprehensive security policies, incident response plans, and risk mitigation frameworks applicable organization-wide.
+\end{itemize}
+
+\subsection{Forward-Looking Objectives}
+
+The project team’s strategic objectives include:
+
+\begin{enumerate}
+    \item Conducting comprehensive risk assessments to identify critical assets, vulnerabilities, and potential impacts across departments.
+    \item Implementing an \ac{ISMS} aligned with recognized international frameworks (such as ISO 27001 or NIST CSF).
+    \item Ensuring secure convergence and seamless integration between \ac{OT} and \ac{IT} infrastructures.
+    \item Fostering a proactive security culture emphasizing continuous improvement and awareness throughout the organization.
+\end{enumerate}
 
 \section{Governance and Leadership}
-GreenGrid Energy operates under a governance model designed to balance strategic oversight with operational efficiency:
+GreenGrid Energy follows a governance model that balances strategic oversight with efficient operations:
 \begin{itemize}
-    \item \textbf{Board of Directors}: Shapes the strategic vision, approves major investments, and ensures compliance with energy regulations.
-    \item \textbf{\ac{CEO}}: Oversees day-to-day leadership and reports directly to the Board.
+    \item \textbf{Board of Directors}: Defines strategic vision, approves major investments, and ensures compliance with energy sector regulations.
+    \item \textbf{\ac{CEO}}: Oversees day-to-day operations and reports directly to the Board.
     \item \textbf{Executive Management Team}:
-        \begin{itemize}
-            \item \emph{Chief Financial Officer (CFO)}: Oversees budget planning, financial compliance, and resource allocation.
-            \item \emph{Chief Technology Officer (CTO)}: Guides the technological roadmap, including research and product development.
-            \item \emph{Chief Operating Officer (COO)}: Manages operational functions, including engineering, supply chain, and service delivery.
-            \item CIO
-            \item \emph{Chief Information Security Officer (CISO)}: Establishes cybersecurity strategies and ensures best practices across OT and IT domains.
-        \end{itemize}
+    \begin{itemize}
+        \item \emph{\ac{CFO}}: Handles budget planning, financial compliance, and resource allocation.
+        \item \emph{\ac{CTO}}: Determines technological direction, including research initiatives and product development.
+        \item \emph{\ac{COO}}: Manages core operations, covering engineering, supply chain, and service delivery.
+        \item \emph{\ac{CIO}}: Aligns IT strategy with business objectives and oversees IT infrastructure.
+        \item \emph{\ac{CISO}}: Develops cybersecurity strategies and enforces best practices across \ac{OT} and \ac{IT} domains.
+    \end{itemize}
     \item \textbf{Department Directors or Managers}: Lead their respective divisions and report to the relevant C-level executive.
 \end{itemize}
 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{figures/organizational_chart.eps}
+    \caption{Organizational chart of GreenGrid Energy}
+    \label{fig:org_chart}
+\end{figure}
 
+Figure~\ref{fig:org_chart} provides an overview of the organization's structure. 
+Each department has a dedicated director, while the executive team members focus on their respective areas of expertise. 
+Together with the \ac{CEO} and department directors, these executives form the Board of Directors. 
+All major decisions---including governance matters and the scope of new or revised policies---must be approved by this governing body before implementation throughout the company and its individual departments.
 
 \section{Key Departments}
-Although the company maintains several functional areas, the following six departments represent the backbone of GreenGrid Energy:
+GreenGrid Energy employs a total of 400 staff members. Of these, 12 serve in leadership roles across the Board of Directors and C-level positions, leaving 388 employees distributed among the following six core departments. Each department is led by a Director or Manager, who reports to the relevant executive.
 
 \subsection{Engineering \& Grid Operations}
-This department focuses on designing, maintaining, and optimizing the physical power distribution network. Responsibilities include real-time supervision of Supervisory Control and Data Acquisition (SCADA) systems, ensuring grid reliability, and implementing upgrades to maintain efficiency. Collaboration with R\&D is critical when new technologies are tested or introduced into the grid environment.
+This department is responsible for designing, maintaining, and optimizing the physical power distribution network. Key tasks include real-time monitoring of \ac{SCADA} systems, ensuring grid reliability, and implementing infrastructure upgrades for operational efficiency. Close collaboration with \ac{RND} is vital when testing or rolling out new technologies to the grid environment.
 
-\subsection{Research \& Development (R\&D)}
-The R\&D department concentrates on innovation in predictive analytics, grid optimization algorithms, and the development of cutting-edge solutions for renewable energy systems. Protecting intellectual property and ensuring secure, controlled testing environments are essential concerns given the competitive nature of the energy technology market.
+\subsection{\ac{RND}}
+Focused on innovation and next-generation solutions, this department drives the development of predictive analytics tools, grid optimization algorithms, and renewable energy system enhancements. Protecting intellectual property and maintaining secure testing environments are top priorities, given the competitive nature of the energy technology market and the need for robust cybersecurity safeguards.
 
 \subsection{Customer Services \& Billing}
-All client-facing activities fall under this area, including account management, billing, and technical support for both residential and enterprise customers. Confidentiality and compliance with data protection regulations are critical due to the handling of personal and financial information.
+All client-facing activities—such as account management, billing, and technical support—fall under this department’s purview, serving both residential and enterprise customers. Protecting personal and financial data is paramount, requiring rigorous compliance with data privacy regulations and prompt issue resolution to maintain customer satisfaction.
 
-\subsection{Supply Chain Management}
-This division is responsible for procuring hardware and services crucial to the operation of the power grid infrastructure. Maintaining resilient supplier relationships, vetting vendor security practices, and ensuring timely deliveries are among its primary tasks. The security of hardware components entering the network is an increasing concern, given the potential for compromised devices.
+\section{Supply Chain Management Department}
+
+The Supply Chain Management department at GreenGrid Energy plays a crucial role in supporting the company's operational efficiency and strategic goals. Its primary responsibilities include procuring, assessing, and managing the acquisition of hardware, software, and external services necessary for the company's operations. Given the company's strong emphasis on cybersecurity and compliance, this department ensures that all acquired resources and services adhere to rigorous security standards and regulatory requirements.
+
+To address the complexity of procurement and vendor management activities effectively, the Supply Chain Management department is organized with clearly defined roles under the supervision of a Supply Chain Manager, who directly reports to the \ac{COO}. The internal structure of this department is as follows:
+
+\begin{itemize}
+    \item \textbf{Supply Chain Manager}: Responsible for strategic oversight, departmental leadership, and alignment of procurement processes with organizational objectives. Coordinates overall procurement strategies and supervises team performance.
+
+    \item \textbf{Hardware Procurement Specialist}: Oversees the procurement, logistics, inventory management, and verification of all physical hardware components, such as smart-grid devices, sensors, and power management equipment. Ensures hardware security integrity and vendor reliability.
+
+    \item \textbf{Software Procurement Specialist}: Manages the procurement of software assets, licenses, analytics tools, and cybersecurity solutions. Collaborates closely with the \ac{CIO} and \ac{CTO} to confirm software solutions align with technology strategies and cybersecurity guidelines.
+
+    \item \textbf{Service Procurement Specialist}: Focuses on acquiring external services critical to operations, such as consulting engagements, technical training programs, support contracts, and maintenance services. Responsible for monitoring the quality and compliance of service providers.
+
+    \item \textbf{Vendor Relationship Specialist}: Dedicated to managing strategic vendor relationships across hardware, software, and services. Conducts vendor risk assessments, security audits, and compliance verifications to mitigate supply chain-related risks.
+\end{itemize}
+
+This structure ensures clear accountability, specialization of roles, and scalability to meet future operational demands. It also aligns closely with GreenGrid Energy's cybersecurity framework by ensuring thorough vetting and continuous monitoring of all vendors and acquired resources.
+
+The organizational hierarchy within the Supply Chain Management department is depicted below:
+
+\begin{figure}[ht]
+\centering
+\begin{tabular}{c}
+\textbf{Supply Chain Manager} \\
+$\downarrow$ \\[6pt]
+\begin{tabular}{ccc}
+\textbf{Hardware Specialist} & \textbf{Software Specialist} & \textbf{Service Specialist} \\
+\end{tabular}\\[10pt]
+$\downarrow$\\[6pt]
+\textbf{Vendor Relationship Specialist}\\
+\end{tabular}
+\caption{Internal Structure of the Supply Chain Management Department}
+\label{fig:supply_chain_structure}
+\end{figure}
+
+Through this structured organization, the Supply Chain Management department ensures efficient operations, robust security controls, and strategic alignment with GreenGrid Energy’s business objectives.
 
 \subsection{Human Resources (HR)}
-Recruitment, training, performance evaluation, and employee welfare fall under HR. As part of the broader organizational security posture, HR manages background checks, security awareness training, and role-based access control for employees.
+HR oversees recruitment, training, performance evaluation, and overall employee welfare. As part of the company’s broader security posture, HR also manages background checks, role-based access control, and ongoing security awareness initiatives to ensure that all staff understand and adhere to established security protocols.
 
 \subsection{Legal \& Administration}
-This area ensures that GreenGrid Energy remains compliant with ever-evolving industry standards and regulations. Key tasks include drafting and reviewing contracts, monitoring regulatory changes in the energy sector, and overseeing budget adherence within administrative activities.
+This department ensures that GreenGrid Energy remains compliant with evolving industry regulations and standards. Core tasks include contract drafting and review, regulatory monitoring, and oversight of administrative budgeting. By maintaining legal and procedural integrity, the Legal \& Administration team supports the organization’s ability to operate smoothly and avoid compliance risks.
+
 
 \section{Infrastructure and Security Context}
 
 \subsection{Core Technologies and Systems}
-GreenGrid Energy relies on both operational and corporate infrastructure:
-\begin{itemize}
-    \item \textbf{SCADA Systems}: Facilitate real-time monitoring and control of power grid assets.
-    \item \textbf{Hybrid Cloud (AWS/Azure) and Edge Computing}: Provides a scalable framework for advanced data analytics and IoT management.
-    \item \textbf{Enterprise Solutions}: Microsoft 365 for collaboration and SAP ERP for resource planning.
-\end{itemize}
+
+GreenGrid Energy's infrastructure comprises several critical technologies supporting operational excellence, security, and departmental integration.
+
+\paragraph{\ac{SCADA} Systems} 
+These systems allow real-time control and monitoring of grid equipment, essential for the reliability and stability of energy distribution operations.
+
+\paragraph{Hybrid Cloud Platforms (AWS/Azure)}
+Offer scalable computing, secure data storage, advanced analytics, and support for \ac{IoT} device management, facilitating innovation and departmental collaboration.
+
+\paragraph{Edge Computing}
+Provides local data processing capabilities near physical assets, ensuring low latency and rapid response for critical grid management tasks.
+
+\paragraph{Microsoft 365}
+The primary platform for internal communication, collaboration, and productivity across all company departments.
+
+\paragraph{SAP \ac{ERP}}
+Integrates business-critical functions such as procurement, inventory management, customer services, financial oversight, and regulatory compliance.
 
 \subsection{Network Topology}
-The organization maintains two distinct networks:
+
+GreenGrid Energy maintains two distinct networks to segregate operational and corporate functions securely:
+
 \begin{itemize}
-    \item \textbf{Operational Technology (OT) Network}: Houses SCADA systems, real-time control devices, and IoT sensors responsible for the grid's operation.
-    \item \textbf{Information Technology (IT) Network}: Hosts corporate functions, including email servers, ERP, and HR systems.
+    \item \textbf{\ac{OT} Network}: Hosts grid-specific operations, including \ac{SCADA} systems and field-deployed \ac{IoT} devices.
+    \item \textbf{\ac{IT} Network}: Manages corporate services such as ERP systems, collaboration tools, and human resources applications.
 \end{itemize}
-Secure segmentation and controlled data sharing between these two networks is vital to protect sensitive operations from potential external threats.
+
+Secure segmentation between the \ac{OT} and \ac{IT} networks is essential to safeguard critical infrastructure operations.
 
 \subsection{Threat Landscape}
-In the current geopolitical and technological context, GreenGrid Energy faces the following threats:
+
+The primary cybersecurity threats facing GreenGrid Energy include:
+
 \begin{itemize}
-    \item \textbf{Nation-State Actors}: Motivated by political or strategic objectives, these attackers may target critical infrastructure to disrupt services or exfiltrate data.
-    \item \textbf{Advanced Persistent Threats (APTs)}: Exploit IoT and smart meter vulnerabilities to infiltrate the network, often remaining undetected for prolonged periods.
-    \item \textbf{Supply Chain Risks}: Compromised components can introduce hidden backdoors or vulnerabilities, emphasizing the importance of secure procurement practices.
+    \item \textbf{Nation-State Actors}: Target critical infrastructure for strategic objectives and disruption.
+    \item \textbf{\ac{APTs}}: Sophisticated attackers leveraging vulnerabilities in IoT and grid-related technologies.
+    \item \textbf{Supply Chain Risks}: Compromise of hardware or software components through third-party suppliers.
 \end{itemize}
+
+\subsection{Technology and Department Association}
+
+The following table associates each core technology with its primary departmental users, highlighting responsibility and ensuring clear governance:
+
+\begin{table}[ht]
+\centering
+\caption{Core Technologies and Associated Departments}
+\label{tab:tech-departments}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{7cm}|>{\raggedright\arraybackslash}p{9cm}|}
+\hline
+\textbf{Technology/System}          & \textbf{Primary Department(s)} \\ \hline
+\ac{SCADA} Systems                  & Engineering \& Grid Operations \\ \hline
+Hybrid Cloud Platforms (AWS/Azure)  & IT, \ac{RND}                   \\ \hline
+Edge Computing                      & Engineering \& Grid Operations, \ac{RND} \\ \hline
+Microsoft 365                       & All Departments                \\ \hline
+SAP \ac{ERP}                        & Supply Chain, Customer Services, Legal \& Administration, \ac{HR} \\ \hline
+\ac{OT} Network                     & Engineering \& Grid Operations \\ \hline
+\ac{IT} Network                     & IT, Legal \& Administration, \ac{HR} \\ \hline
+\end{tabular}
+\end{table}
+
+This clear and organized mapping ensures effective oversight, accountability, and management of cybersecurity risks across the company's operational infrastructure.
