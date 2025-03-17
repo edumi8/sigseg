@@ -1,5 +1,82 @@
 \chapter{Other Policies and Procedures}
 
-\section{Other Security Policy}
+\section{Other Security Policies}
+
+Beyond the central Information Security Policy (Clause 4.2), additional organization-wide security policies are essential to address specific operational contexts within GreenGrid Energy, particularly relevant to the \ac{RD} department. The following policy is explicitly designed to support the secure execution of research activities and protection of critical intellectual property:
+
+\subsection{RD Intellectual Property and Data Security Policy}
+
+\textbf{Purpose:} To ensure comprehensive protection of GreenGrid Energy’s proprietary algorithms, innovations, and research data against unauthorized access, disclosure, modification, or destruction.
+
+\textbf{Policy Statements:}
+\begin{itemize}
+\item \textbf{Data Classification and Handling:} All \ac{RD}-generated data and proprietary code must be classified as Confidential or Highly Confidential. Access to such data shall follow a strict need-to-know basis, utilizing role-based access control (RBAC).
+\item \textbf{Encryption:} All \ac{RD} data stored at rest or transmitted over networks (both internal and external) must be encrypted using approved encryption standards and technologies.
+\item \textbf{Secure Development and Testing Environment:} Prototype development and testing environments must adhere to strict isolation protocols, ensuring restricted access, proper authentication, regular vulnerability scanning, and thorough security audits.
+\item \textbf{Vendor and Partner Compliance:} All third-party technology partners and academic institutions involved in \ac{RD} activities must comply with GreenGrid’s security requirements, undergo periodic security assessments, and sign confidentiality agreements.
+\item \textbf{Incident Reporting and Response:} All suspected security incidents within the \ac{RD} context, including potential data leaks or unauthorized access attempts, must be reported immediately according to the defined incident management procedure.
+\end{itemize}
+
+\textbf{Roles and Responsibilities:}
+\begin{itemize}
+\item \textbf{R\&D Director:} Oversees policy compliance within \ac{RD}.
+\item \textbf{CISO:} Provides oversight, conducts audits, and ensures enforcement of compliance measures.
+\item \textbf{All R\&D Employees:} Adhere strictly to this policy and report breaches or concerns promptly.
+\end{itemize}
 
 \section{Other Security Procedures}
+
+Specific procedures established to implement these policies effectively include:
+
+\subsection{Procedure 1: Secure Code Review}
+\begin{itemize}
+\item \textbf{Objective:} Identify and mitigate vulnerabilities in software and algorithm code prior to deployment or release.
+\item \textbf{Steps:}
+\begin{enumerate}
+\item Schedule code reviews for every major release and document findings.
+\item Utilize static and dynamic analysis tools to automate vulnerability identification.
+\item Perform manual code reviews for critical software components.
+\item Track and manage identified vulnerabilities until resolved.
+\end{enumerate}
+\item \textbf{Responsibility:} \ac{RD} Development Team, supervised by \ac{RD} Manager and \ac{IT} Security Team.
+\end{itemize}
+
+\subsection{Procedure 2: Access Management for R\&D Systems}
+\begin{itemize}
+\item \textbf{Objective:} Control and monitor access to sensitive \ac{RD} environments and data.
+\item \textbf{Steps:}
+\begin{enumerate}
+\item Implement Role-Based Access Control (RBAC) to manage employee permissions.
+\item Conduct quarterly audits of access permissions to \ac{RD} environments and adjust permissions as necessary.
+\item Enforce multi-factor authentication (MFA) for remote access to sensitive environments.
+\item Document all access changes and ensure traceability.
+\end{enumerate}
+\item \textbf{Responsibility:} \ac{RD} Manager, \ac{IT} Administration Team.
+\end{itemize}
+
+\subsection{Procedure 3: Incident Management within R\&D}
+\begin{itemize}
+\item \textbf{Objective:} Effectively respond to security incidents affecting the \ac{RD} environment.
+\item \textbf{Steps:}
+\begin{enumerate}
+\item Report any security incident immediately to the IT Security Operations Center (SOC).
+\item SOC evaluates incident severity and initiates appropriate response actions.
+\item Contain and remediate the incident promptly, documenting all response activities.
+\item Conduct post-incident reviews to identify improvements.
+\end{enumerate}
+\item \textbf{Responsibility:} \ac{RD} Employees, SOC Team, IT Security Team.
+\end{itemize}
+
+\subsection{Procedure 4: Vendor and Partner Security Assessment}
+\begin{itemize}
+\item \textbf{Objective:} Ensure that all \ac{RD} vendors and partners comply with GreenGrid’s security standards.
+\item \textbf{Steps:}
+\begin{enumerate}
+\item Perform initial and periodic security risk assessments of vendors and partners.
+\item Require evidence of compliance with relevant security certifications (ISO/IEC 27001, SOC 2, etc.).
+\item Maintain up-to-date security agreements with clear terms regarding confidentiality and data protection.
+\item Review and update vendor and partner risk profiles annually or following significant changes.
+\end{enumerate}
+\item \textbf{Responsibility:} Vendor Relationship Specialist, \ac{RD} Director, IT Security Team.
+\end{itemize}
+
