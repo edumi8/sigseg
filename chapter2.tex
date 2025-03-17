@@ -1,10 +1,14 @@
-\section{Scope of the \ac{ISMS}}
+Aligned with ISO/IEC 27001 Clause~4.3 guidelines \cite{iso27001}, 
+this chapter details GreenGrid Energy’s Information Security Management 
+System (\ac{ISMS}) scope by identifying stakeholders, \ac{IT} infrastructure, 
+key business processes, associated data, and explicit \ac{ISMS} boundaries.
 
-Aligned with ISO/IEC 27001 Clause 4.3 guidelines \cite{iso27001}, this chapter outlines the scope of GreenGrid Energy’s \ac{ISMS}, identifying stakeholders, \ac{IT} infrastructure, key business processes, associated data, and explicit \ac{ISMS} boundaries.
+\section{Organizational Stakeholders}
+\label{sec:stakeholders}
 
-\subsection{Organizational Stakeholders}
-
-GreenGrid Energy's stakeholders, as defined by ISO/IEC 27001, include both internal and external entities that influence or are impacted by the organization's security practices \cite{hightable}.
+GreenGrid Energy's stakeholders, as defined by ISO/IEC 27001, include both 
+internal and external entities that influence or are impacted by the 
+organization's security practices \cite{hightable}.
 
 \begin{table}[ht]
 \centering
@@ -13,47 +17,162 @@ GreenGrid Energy's stakeholders, as defined by ISO/IEC 27001, include both inter
 \begin{tabular}{|p{5cm}|p{9cm}|}
 \hline
 \textbf{Stakeholder Group} & \textbf{Interaction with the \ac{ISMS}} \\ \hline
-Executive Management and Board & Provide strategic oversight, allocate resources, approve \ac{ISMS} scope, and review security performance. \\ \hline
-\ac{IT} Department & Implement and maintain technical security controls; daily management of the \ac{ISMS} infrastructure. \\ \hline
-Department Heads and Employees & Comply with \ac{ISMS} policies, handle information securely, report incidents, and participate in risk assessments. \\ \hline
-Customers and Clients & Expect protection of data confidentiality, integrity, and availability as part of service agreements. \\ \hline
-Suppliers and Third-Party Providers & Comply with contractual security requirements to ensure the security of GreenGrid data processed externally. \\ \hline
-Regulators and Authorities & Expect adherence to industry regulations and may audit \ac{ISMS} practices and compliance. \\ \hline
-Certifying Bodies/Auditors & Evaluate and validate compliance with ISO/IEC 27001 through periodic certification audits. \\ \hline
+Executive Management 
+and Board & 
+Provide strategic oversight, allocate resources, approve \ac{ISMS} scope, 
+and review security performance. \\ \hline
+\ac{IT} Department & 
+Implement and maintain technical security controls; daily management of 
+the \ac{ISMS} infrastructure. \\ \hline
+Department Heads 
+and Employees & 
+Comply with \ac{ISMS} policies, handle information securely, report incidents, 
+and participate in risk assessments. \\ \hline
+Customers 
+and Clients & 
+Expect protection of data confidentiality, integrity, and availability 
+as part of service agreements. \\ \hline
+Suppliers and 
+Third-Party Providers & 
+Comply with contractual security requirements to ensure the security 
+of GreenGrid data processed externally. \\ \hline
+Regulators 
+and Authorities & 
+Expect adherence to industry regulations and may audit \ac{ISMS} practices 
+and compliance. \\ \hline
+Certifying 
+Bodies/Auditors & 
+Evaluate and validate compliance with ISO/IEC 27001 through periodic 
+certification audits. \\ \hline
 \end{tabular}
 \end{table}
 
-\subsection{Shared \ac{IT} Infrastructure and Systems}
+\section{Shared IT Infrastructure and Systems}
+\label{sec:shared_it}
 
-GreenGrid Energy employs a centrally managed \ac{IT} infrastructure shared by multiple departments. This infrastructure includes:
-
+GreenGrid Energy employs a centrally managed \ac{IT} infrastructure shared 
+by multiple departments. This infrastructure includes:
 \begin{itemize}
-    \item \textbf{Network Infrastructure}: Company-wide network including \ac{LAN}, secure Wi-Fi, and \ac{VPN} for remote employees.
-    \item \textbf{Server and Cloud Systems (AWS/Azure)}: Hosting internal applications, databases, and departmental services.
-    \item \textbf{Enterprise Applications}: Microsoft 365, SAP \ac{ERP}, and \ac{CRM} software supporting business operations and collaboration.
-    \item \textbf{User Devices}: Managed desktop computers, laptops, and mobile devices.
-    \item \textbf{Data Storage and Backup Systems}: Centralized data repositories and backup solutions.
-    \item \textbf{Communication and Collaboration Tools}: Email systems, instant messaging platforms, video conferencing, and intranet portals.
+    \item \textbf{Network Infrastructure}: Company-wide network including 
+    \ac{LAN}, secure Wi-Fi, and \ac{VPN} for remote employees.
+    \item \textbf{Server and Cloud Systems (AWS/Azure)}: Hosting internal 
+    applications, databases, and departmental services.
+    \item \textbf{Enterprise Applications}: Microsoft 365, SAP \ac{ERP}, 
+    and \ac{CRM} software supporting business operations and collaboration.
+    \item \textbf{User Devices}: Managed desktop computers, laptops, and 
+    mobile devices.
+    \item \textbf{Data Storage and Backup Systems}: Centralized data 
+    repositories and backup solutions.
+    \item \textbf{Communication and Collaboration Tools}: Email systems, 
+    instant messaging platforms, video conferencing, and intranet portals.
+\end{itemize}
+Specific security policies and controls for these technologies appear in later chapters.
+
+\section{Business Processes, Data, and Security Risks by Department}
+\label{sec:business_processes}
+
+\subsection{Engineering \& Operations}
+\textbf{Key Processes and Data:} Real-time grid operations (\ac{SCADA} data, logs, asset management)  
+\textbf{Security Risks:} Unauthorized access, service disruptions, data integrity threats
+
+\subsection{Research \& Development (R\&D)}
+\textbf{Key Processes and Data:} Proprietary research, predictive algorithms, software code  
+\textbf{Security Risks:} Intellectual property theft, data leakage, espionage
+
+\subsection{Customer Services}
+\textbf{Key Processes and Data:} Client contracts, billing data, \ac{CRM}, customer \ac{PII}  
+\textbf{Security Risks:} Privacy breaches, financial fraud, unauthorized data disclosure
+
+\subsection{Finance}
+\textbf{Key Processes and Data:} Financial management (budgeting, transactions, payroll, 
+\ac{ERP} financial module)  
+\textbf{Security Risks:} Financial fraud, phishing attacks, unauthorized access, data tampering
+
+\subsection{Supply Chain Management}
+
+\subsubsection{Procurement and Sourcing}
+Oversees the end-to-end procurement lifecycle for hardware, software, and services by:
+\begin{itemize}
+    \item Drafting \ac{RFPs} or \ac{RFQs}.
+    \item Conducting vendor evaluations and security due diligence.
+    \item Negotiating contracts and maintaining supplier agreements.
+\end{itemize}
+Associated data supporting this process:
+\begin{itemize}
+    \item Vendor profiles and security certifications.
+    \item Product specifications (e.g., smart grid components, software licenses).
+    \item Pricing details, purchase orders, and invoices.
 \end{itemize}
 
-Specific security policies and controls regarding these technologies are detailed in subsequent chapters.
+\subsubsection{Vendor Relationship Management}
+Manages ongoing relationships with approved suppliers to ensure adherence to GreenGrid Energy’s 
+security and performance standards by:
+\begin{itemize}
+    \item Monitoring \ac{SLA}.
+    \item Tracking vendor performance and compliance metrics.
+    \item Conducting periodic vendor risk assessments, especially for critical components.
+\end{itemize}
+Relevant data for this process:
+\begin{itemize}
+    \item Contract terms and \ac{SLA} metrics.
+    \item Vendor incident reports or audit findings.
+    \item Communication records (emails, project updates, meeting minutes).
+\end{itemize}
 
-\subsection{Business Processes, Data, and Security Risks by Department}
+\subsubsection{Inventory \& Logistics Coordination}
+Coordinates warehousing, transportation logistics, and inventory control once goods or 
+services are procured by:
+\begin{itemize}
+    \item Tracking shipment and delivery status of hardware components.
+    \item Verifying the integrity and authenticity of infrastructure parts.
+    \item Overseeing storage, handling, and distribution to operational sites.
+\end{itemize}
+Data types maintained in this process:
+\begin{itemize}
+    \item Shipping documentation (e.g., bills of lading, customs paperwork).
+    \item Inventory levels and restocking details.
+    \item Asset tracking logs (equipment serial numbers, batch numbers).
+\end{itemize}
 
-The following table summarizes each department’s core business processes, data handled, and security risks.
+\subsubsection{Compliance and Risk Management}
+Ensures that supplier relationships and procurement activities meet security policies and sector-specific regulations by:
+\begin{itemize}
+    \item Reviewing supplier security audits and certifications.
+    \item Ensuring compliance with data protection and trade regulations.
+    \item Coordinating corrective actions for supplier or logistics risks.
+\end{itemize}
+Data associated with this process:
+\begin{itemize}
+    \item Audit reports, compliance checklists, and regulatory filings.
+    \item Documentation of risk treatment actions (vendor replacements, contract updates).
+    \item Internal approval records and compliance sign-offs.
+\end{itemize}
 
-\begin{longtable}{|p{3cm}|p{4cm}|p{6cm}|}
-\hline
-\textbf{Department} & \textbf{Key Processes and Data} & \textbf{Security Risks} \\ \hline
-Engineering \& Operations & Real-time grid operations (\ac{SCADA} data, logs, asset management) & Unauthorized access, service disruptions, data integrity threats \\ \hline
-Research \& Development (R\&D) & Proprietary research, predictive algorithms, software code & Intellectual property theft, data leakage, espionage \\ \hline
-Customer Services & Client contracts, billing data, \ac{CRM}, customer \ac{PII} & Privacy breaches, financial fraud, unauthorized data disclosure \\ \hline
-Finance & Financial management (budgeting, transactions, payroll, ERP financial module) & Financial fraud, phishing attacks, unauthorized access, data tampering \\ \hline
-Supply Chain Management & Procurement processes (vendor contracts, inventory data, supplier credentials) & Supply chain compromise, counterfeit hardware/software, insecure vendor access \\ \hline
-Human Resources & Employee management (personal records, payroll data, performance data) & Unauthorized disclosure, insider threats, privacy breaches \\ \hline
-\ac{IT} Department & Infrastructure management (network devices, servers, endpoint devices, IAM systems, incident response data) & System compromise, configuration errors, misuse of admin privileges \\ \hline
-Sales and Marketing & Customer relationship management (\ac{CRM}), market data, public web resources & Unauthorized access to client data, reputation damage, phishing/malware attacks \\ \hline
-\end{longtable}
+\subsubsection{Contract and \ac{SLA} Oversight}
+Manages contractual obligations from initial sign-off to renewal or termination by:
+\begin{itemize}
+    \item Monitoring contract milestones (renewal dates, penalty clauses).
+    \item Ensuring suppliers meet service quality and security requirements.
+    \item Handling contract amendments for security or operational changes.
+\end{itemize}
+Key data involved:
+\begin{itemize}
+    \item \ac{MSAs}, \ac{SOWs}.
+    \item Change requests and contract amendment records.
+    \item Legal correspondence regarding contract disputes or terminations.
+\end{itemize}
+
+\subsection{Human Resources}
+\textbf{Key Processes and Data:} Employee management (personal records, payroll data, performance data)  
+\textbf{Security Risks:} Unauthorized disclosure, insider threats, privacy breaches
+
+\subsection{\ac{IT} Department}
+\textbf{Key Processes and Data:} Infrastructure management (network devices, servers, endpoint devices, IAM systems, incident response data)  
+\textbf{Security Risks:} System compromise, configuration errors, misuse of admin privileges
+
+\subsection{Sales and Marketing}
+\textbf{Key Processes and Data:} Customer relationship management (\ac{CRM}), market data, public-facing web resources  
+\textbf{Security Risks:} Unauthorized access, reputation damage, phishing/malware attacks
 
 \subsection{R\&D Department}
 
@@ -206,19 +325,22 @@ This process focuses on transitioning validated technologies from the R\&D depar
     \item Secure configuration management systems
 \end{itemize}
 
-\subsection{\ac{ISMS} Boundaries and Exclusions}
+\section{ISMS Boundaries and Exclusions}
+\label{sec:boundaries}
 
 The \ac{ISMS} boundaries include:
-
 \begin{itemize}
-    \item Internal \ac{IT} and \ac{OT} networks, including \ac{SCADA} and enterprise systems used by the Supply Chain Management, Customer Services \& Billing, and Research \& Development departments.
-    \item Data processing within cloud environments (e.g., AWS or Azure) that is generated or consumed by the Supply Chain Management, Customer Services \& Billing, and Research \& Development departments.
+    \item Internal \ac{IT} and \ac{OT} networks, including \ac{SCADA} and enterprise systems 
+    used by the Supply Chain Management, Customer Services \& Billing, and 
+    Research \& Development departments.
+    \item Data processing within cloud environments (e.g., AWS or Azure) generated or consumed 
+    by the Supply Chain Management, Customer Services \& Billing, and 
+    Research \& Development departments.
     \item Procurement processes and vendor management.
     \item Employee data, access management, and training processes.
 \end{itemize}
 
 Explicit exclusions from the \ac{ISMS} scope include:
-
 \begin{itemize}
     \item Third-party systems fully managed externally, where GreenGrid has no direct control.
     \item Personal employee devices not centrally managed by the organization.
@@ -226,6 +348,6 @@ Explicit exclusions from the \ac{ISMS} scope include:
     \item Separate subsidiaries or partner organizations.
 \end{itemize}
 
-These exclusions are justified by the lack of direct administrative oversight or practical manageability; any associated risks are mitigated through contractual obligations and vendor assessments \cite{advisera}.
-
-
+These exclusions are justified by the lack of direct administrative oversight or 
+practical manageability; any associated risks are mitigated through contractual 
+obligations and vendor assessments \cite{advisera}.
