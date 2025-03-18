@@ -1,77 +1,77 @@
 \chapter{ISMS Scope}
 \label{chap:isms_scope}
 Aligned with ISO/IEC 27001 Clause~4.3 guidelines \cite{iso27001}, this chapter
-details GreenGrid Energy’s \emph{\ac{ISMS}} scope by identifying the key stakeholders, 
-describing shared \ac{IT} infrastructure, highlighting core business processes, 
+details GreenGrid Energy’s \emph{\ac{ISMS}} scope by identifying the key stakeholders,
+describing shared \ac{IT} infrastructure, highlighting core business processes,
 and specifying the boundaries within which the \ac{ISMS} will operate.
 
 \section{Organizational Stakeholders}
 \label{sec:stakeholders}
 
-GreenGrid Energy’s stakeholders, as defined by ISO/IEC~27001, include both internal 
-and external entities that can influence—or be influenced by—the organization’s security 
-practices \cite{hightable}. Table~\ref{tab:stakeholders} summarizes the principal stakeholder 
+GreenGrid Energy’s stakeholders, as defined by ISO/IEC~27001, include both internal
+and external entities that can influence—or be influenced by—the organization’s security
+practices \cite{hightable}. Table~\ref{tab:stakeholders} summarizes the principal stakeholder
 groups and their roles in relation to the \ac{ISMS}.
 
 \begin{table}[ht]
-\centering
-\caption{Stakeholders and \ac{ISMS} Interaction}
-\label{tab:stakeholders}
-\begin{tabular}{|p{5cm}|p{9cm}|}
-\hline
-\textbf{Stakeholder Group} & \textbf{Interaction with the \ac{ISMS}} \\ \hline
-Executive Management 
-and Board & 
-Provide strategic oversight, allocate resources, approve \ac{ISMS} scope, 
-and review security performance. \\ \hline
-\ac{IT} Department & 
-Implement and maintain technical security controls; daily management of 
-the \ac{ISMS} infrastructure. \\ \hline
-Department Heads 
-and Employees & 
-Comply with \ac{ISMS} policies, handle information securely, report incidents, 
-and participate in risk assessments. \\ \hline
-Customers 
-and Clients & 
-Expect protection of data confidentiality, integrity, and availability 
-as part of service agreements. \\ \hline
-Suppliers and 
-Third-Party Providers & 
-Comply with contractual security requirements to ensure the security 
-of GreenGrid data processed externally. \\ \hline
-Regulators 
-and Authorities & 
-Expect adherence to industry regulations and may audit \ac{ISMS} practices 
-and compliance. \\ \hline
-Certifying 
-Bodies/Auditors & 
-Evaluate and validate compliance with ISO/IEC~27001 through periodic 
-certification audits. \\ \hline
-\end{tabular}
+    \centering
+    \caption{Stakeholders and \ac{ISMS} Interaction}
+    \label{tab:stakeholders}
+    \begin{tabular}{|p{5cm}|p{9cm}|}
+        \hline
+        \textbf{Stakeholder Group} & \textbf{Interaction with the \ac{ISMS}} \\ \hline
+        Executive Management
+        and Board                  &
+        Provide strategic oversight, allocate resources, approve \ac{ISMS} scope,
+        and review security performance.                                     \\ \hline
+        \ac{IT} Department         &
+        Implement and maintain technical security controls; daily management of
+        the \ac{ISMS} infrastructure.                                        \\ \hline
+        Department Heads
+        and Employees              &
+        Comply with \ac{ISMS} policies, handle information securely, report incidents,
+        and participate in risk assessments.                                 \\ \hline
+        Customers
+        and Clients                &
+        Expect protection of data confidentiality, integrity, and availability
+        as part of service agreements.                                       \\ \hline
+        Suppliers and
+        Third-Party Providers      &
+        Comply with contractual security requirements to ensure the security
+        of GreenGrid data processed externally.                              \\ \hline
+        Regulators
+        and Authorities            &
+        Expect adherence to industry regulations and may audit \ac{ISMS} practices
+        and compliance.                                                      \\ \hline
+        Certifying
+        Bodies/Auditors            &
+        Evaluate and validate compliance with ISO/IEC~27001 through periodic
+        certification audits.                                                \\ \hline
+    \end{tabular}
 \end{table}
 
 \section{Shared IT Infrastructure and Systems}
 \label{sec:shared_it}
 
-GreenGrid Energy employs a centrally managed \ac{IT} infrastructure used across multiple 
+GreenGrid Energy employs a centrally managed \ac{IT} infrastructure used across multiple
 departments. Key elements of this shared environment include:
 \begin{itemize}
-    \item \textbf{Network Infrastructure:} Company-wide network including 
-    \ac{LAN}, secure Wi-Fi, and \ac{VPN} for remote employees.
-    \item \textbf{Server and Cloud Systems:} Hosting internal 
-    applications, databases, and departmental services.
-    \item \textbf{Enterprise Applications:} Microsoft 365, SAP \ac{ERP}, 
-    and \ac{CRM} software supporting business operations and collaboration.
-    \item \textbf{User Devices:} Managed desktop computers, laptops, and 
-    mobile devices.
-    \item \textbf{Data Storage and Backup Systems:} Centralized data 
-    repositories and backup solutions.
-    \item \textbf{Communication and Collaboration Tools:} Email systems, 
-    instant messaging platforms, video conferencing, and intranet portals.
+    \item \textbf{Network Infrastructure:} Company-wide network including
+          \ac{LAN}, secure Wi-Fi, and \ac{VPN} for remote employees.
+    \item \textbf{Server and Cloud Systems:} Hosting internal
+          applications, databases, and departmental services.
+    \item \textbf{Enterprise Applications:} Microsoft 365, SAP \ac{ERP},
+          and \ac{CRM} software supporting business operations and collaboration.
+    \item \textbf{User Devices:} Managed desktop computers, laptops, and
+          mobile devices.
+    \item \textbf{Data Storage and Backup Systems:} Centralized data
+          repositories and backup solutions.
+    \item \textbf{Communication and Collaboration Tools:} Email systems,
+          instant messaging platforms, video conferencing, and intranet portals.
 \end{itemize}
 
-Each department relies on these resources for day-to-day operations. Chapter~3 will focus 
-on specific requirements, objectives, and policies around these systems, while this chapter 
+Each department relies on these resources for day-to-day operations. Chapter~3 will focus
+on specific requirements, objectives, and policies around these systems, while this chapter
 captures their basic description for scope purposes.
 
 \section{Business Processes, Data, and Security Risks by Department}
@@ -81,8 +81,39 @@ captures their basic description for scope purposes.
 % or just describe it in text.
 
 \subsection{Engineering \& Operations}
-\textbf{Key Processes and Data:} Real-time grid operations (\ac{SCADA} data, logs, asset management)  
-\textbf{Security Risks:} Unauthorized access, service disruptions, data integrity threats
+
+The Engineering \& Operations Department serves as the backbone of GreenGrid Energy's infrastructure, ensuring the seamless integration and reliable performance of smart-grid technologies and renewable energy systems. This department is responsible for designing, deploying, and maintaining critical operational assets, balancing efficiency, scalability, and cybersecurity. The \ac{ISMS} scope encompasses key operational processes, addressing risks associated with grid stability, system automation, and industrial control systems while aligning with the organization's broader security objectives.
+
+
+\subsubsection{Grid Infrastructure Management:}
+\begin{itemize}
+    \item \textbf{Activities:} Overseeing deployment, maintenance, and modernization of grid components.
+    \item \textbf{Data Processed:} Grid topology data, maintenance logs, infrastructure monitoring reports.
+    \item \textbf{Cybersecurity Risks:} Unauthorized system modifications, physical and cyber tampering, outdated firmware vulnerabilities.
+    \item \textbf{Technologies:} SCADA systems, asset management platforms, industrial-grade firewalls.
+\end{itemize}
+\subsubsection{SCADA System Operations:}
+\begin{itemize}
+    \item \textbf{Activities:} Monitoring and controlling grid assets for stability and reliability.
+    \item \textbf{Data Processed:} Real-time grid performance data, event logs, control commands.
+    \item \textbf{Cybersecurity Risks:} Remote access exploitation, SCADA malware, data interception.
+    \item \textbf{Technologies:} Secure remote access solutions, intrusion detection systems, encrypted communication channels.
+\end{itemize}
+\subsubsection{Incident Response and Disaster Recovery:}
+\begin{itemize}
+    \item \textbf{Activities:} Developing and executing contingency plans for cyber and operational incidents.
+    \item \textbf{Data Processed:} Incident reports, forensic data, response logs.
+    \item \textbf{Cybersecurity Risks:} Prolonged downtime, inadequate threat response, lack of forensic integrity.
+    \item \textbf{Technologies:} Automated threat detection, backup and recovery solutions, SIEM platforms.
+\end{itemize}
+\subsubsection{Renewable Energy Integration:}
+\begin{itemize}
+    \item \textbf{Activities:} Managing the integration of solar, wind, and other renewable energy sources.
+    \item \textbf{Data Processed:} Renewable generation data, demand-response metrics, battery storage status.
+    \item \textbf{Cybersecurity Risks:} Grid imbalances, data manipulation, unauthorized control access.
+    \item \textbf{Technologies:} Smart inverters, edge computing for energy optimization, blockchain for energy transactions.
+\end{itemize}
+
 
 \subsection{Research \& Development (R\&D)}
 
@@ -105,6 +136,7 @@ This process involves identifying, researching, and evaluating emerging technolo
     \item Experimental research results
 \end{itemize}
 
+
 \textbf{Cybersecurity Risks:}
 \begin{itemize}
     \item Data leakage of research findings
@@ -113,7 +145,7 @@ This process involves identifying, researching, and evaluating emerging technolo
 
 \textbf{Technologies:}
 \begin{itemize}
-    \item Cloud platforms 
+    \item Cloud platforms
     \item Research databases and analytics tools
 \end{itemize}
 
@@ -236,12 +268,12 @@ This process focuses on transitioning validated technologies from the R\&D depar
 \end{itemize}
 
 \subsection{Customer Services}
-\textbf{Key Processes and Data:} Client contracts, billing data, \ac{CRM}, customer \ac{PII}  
+\textbf{Key Processes and Data:} Client contracts, billing data, \ac{CRM}, customer \ac{PII}
 \textbf{Security Risks:} Privacy breaches, financial fraud, unauthorized data disclosure
 
 \subsection{Finance}
-\textbf{Key Processes and Data:} Financial management (budgeting, transactions, payroll, 
-\ac{ERP} financial module)  
+\textbf{Key Processes and Data:} Financial management (budgeting, transactions, payroll,
+\ac{ERP} financial module)
 \textbf{Security Risks:} Financial fraud, phishing attacks, unauthorized access, data tampering
 
 \subsection{Supply Chain Management}
@@ -262,7 +294,7 @@ Associated data supporting this process:
 \end{itemize}
 
 \subsubsection{Vendor Relationship Management}
-Manages ongoing relationships with approved suppliers to ensure adherence to GreenGrid Energy’s 
+Manages ongoing relationships with approved suppliers to ensure adherence to GreenGrid Energy’s
 security and performance standards by:
 \begin{itemize}
     \item Monitoring \ac{SLA} requirements.
@@ -278,7 +310,7 @@ Relevant data for this process:
 \end{itemize}
 
 \subsubsection{Inventory \& Logistics Coordination}
-Coordinates warehousing, transportation logistics, and inventory control once goods or 
+Coordinates warehousing, transportation logistics, and inventory control once goods or
 services are procured by:
 \begin{itemize}
     \item Tracking shipment and delivery status of hardware components.
@@ -294,7 +326,7 @@ Data types maintained in this process:
 \end{itemize}
 
 \subsubsection{Compliance and Risk Management}
-Ensures that supplier relationships and procurement activities meet security policies and 
+Ensures that supplier relationships and procurement activities meet security policies and
 relevant regulations by:
 \begin{itemize}
     \item Reviewing supplier security audits and certifications.
@@ -325,17 +357,17 @@ Key data involved:
 \end{itemize}
 
 \subsection{Human Resources}
-\textbf{Key Processes and Data:} Employee management (personal records, payroll data, 
-performance data)  
+\textbf{Key Processes and Data:} Employee management (personal records, payroll data,
+performance data)
 \textbf{Security Risks:} Unauthorized disclosure, insider threats, privacy breaches
 
 \subsection{IT Department}
-\textbf{Key Processes and Data:} Infrastructure management (network devices, servers, endpoint devices, IAM systems, incident response data)  
+\textbf{Key Processes and Data:} Infrastructure management (network devices, servers, endpoint devices, IAM systems, incident response data)
 \textbf{Security Risks:} System compromise, configuration errors, misuse of admin privileges
 
 \subsection{Sales and Marketing}
-\textbf{Key Processes and Data:} Customer relationship management (\ac{CRM}), market data, 
-public-facing web resources  
+\textbf{Key Processes and Data:} Customer relationship management (\ac{CRM}), market data,
+public-facing web resources
 \textbf{Security Risks:} Unauthorized access, reputation damage, phishing/malware attacks
 
 \section{ISMS Boundaries and Exclusions}
@@ -343,25 +375,55 @@ public-facing web resources
 
 The \ac{ISMS} boundaries include:
 \begin{itemize}
-    \item Internal \ac{IT} and \ac{OT} networks, including \ac{SCADA} and 
-    enterprise systems used by the Supply Chain Management, Customer Services 
-    \& Billing, and Research \& Development departments.
-    \item Data processing within cloud environments 
-    generated or consumed by Supply Chain Management, Customer Services 
-    \& Billing, and Research \& Development.
+    \item Internal \ac{IT} and \ac{OT} networks, including \ac{SCADA} and
+          enterprise systems used by the Supply Chain Management, Customer Services
+          \& Billing, and Research \& Development departments.
+    \item Data processing within cloud environments
+          generated or consumed by Supply Chain Management, Customer Services
+          \& Billing, and Research \& Development.
     \item Procurement processes and vendor management.
     \item Employee data, access management, and training processes.
 \end{itemize}
 
 Explicit exclusions from the \ac{ISMS} scope include:
 \begin{itemize}
-    \item Third-party systems fully managed externally, where GreenGrid has 
-    no direct control.
+    \item Third-party systems fully managed externally, where GreenGrid has
+          no direct control.
     \item Personal employee devices not centrally managed by the organization.
     \item Physical security at externally managed premises (e.g., leased data centers).
     \item Separate subsidiaries or partner organizations outside direct oversight.
 \end{itemize}
 
-These exclusions are justified by the lack of direct administrative oversight or 
-practical manageability; any associated risks are mitigated through contractual 
+These exclusions are justified by the lack of direct administrative oversight or
+practical manageability; any associated risks are mitigated through contractual
 obligations and vendor assessments \cite{advisera}.
+
+
+
+
+% \subsubsection{Risk Management and Cybersecurity Challenges}
+
+% The Engineering \& Grid Operations department faces multiple cybersecurity challenges, including:
+
+% \begin{itemize}
+%     \item \textbf{Cyber Threats to Grid Infrastructure}: Nation-state actors and \ac{APTs} targeting critical infrastructure.
+%     \item \textbf{Vulnerabilities in \ac{IoT} Devices}: Ensuring the security of smart meters and edge devices against unauthorized access and data breaches.
+%     \item \textbf{Supply Chain Risks}: Preventing hardware and software tampering during procurement and deployment.
+%     \item \textbf{Data Integrity Risks}: Protecting \ac{SCADA} and real-time operational data from manipulation or corruption.
+% \end{itemize}
+
+% To address these challenges, the department follows a structured risk management framework, incorporating ISO 27001 and \ac{NIST} Cybersecurity Framework guidelines.
+
+
+% \subsubsection{Future Strategic Initiatives}
+
+% The department is focused on the following strategic initiatives to enhance grid security and efficiency:
+
+% \begin{enumerate}
+%     \item Strengthening the security of \ac{OT} systems through continuous monitoring and anomaly detection.
+%     \item Expanding the use of AI-driven predictive maintenance to reduce downtime and optimize asset lifespan.
+%     \item Enhancing collaboration with regulatory bodies to ensure compliance with evolving cybersecurity standards.
+%     \item Developing an advanced threat intelligence platform to detect and mitigate cyber threats proactively.
+% \end{enumerate}
+
+% These initiatives align with GreenGrid Energy's broader goals of achieving operational resilience, improving service reliability, and securing the smart grid ecosystem.
