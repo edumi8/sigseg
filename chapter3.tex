@@ -1,14 +1,14 @@
 \chapter{Information Security Policy and Objectives}
 \label{chap:infosec_policy_objectives}
 This chapter addresses the next phase of establishing GreenGrid Energy’s
-Information Security Management System (\ac{ISMS}) by incorporating
+\ac{ISMS} by incorporating
 stakeholder requirements, business goals, security objectives, leadership
 commitment, and overall compliance needs.
 
 \section{Stakeholder Requirements and Business Goals}
 \label{sec:stakeholder_req}
 
-As established in Chapter~2, GreenGrid Energy’s stakeholders include
+As established in Chapter \ref{chap:isms_scope}, GreenGrid Energy’s stakeholders include
 Executive Management, the \ac{IT} Department, Department Heads \& Employees,
 Suppliers, Clients, Regulators, and Certifying Bodies. Because the
 \ac{ISMS} scope specifically includes:
@@ -16,7 +16,7 @@ Suppliers, Clients, Regulators, and Certifying Bodies. Because the
     \item Internal \ac{IT} and \ac{OT} networks, including \ac{SCADA} and 
           enterprise systems used by \textbf{Supply Chain Management},
           \textbf{Customer Services \& Billing}, and \textbf{\ac{RD}} departments.
-    \item Data processing within cloud environments (AWS/Azure) generated 
+    \item Data processing within cloud environments generated 
           or consumed by \textbf{Supply Chain Management}, \textbf{Customer Services \& 
           Billing}, and \textbf{\ac{RD}}.
     \item Procurement processes and vendor management.
@@ -24,12 +24,12 @@ Suppliers, Clients, Regulators, and Certifying Bodies. Because the
 \end{itemize}
 Most stakeholder requirements focus on ensuring robust controls to protect:
 \begin{itemize}
-    \item Critical infrastructure (e.g., \ac{SCADA} and \ac{OT} systems).
+    \item Critical infrastructure.
     \item Sensitive customer and financial data.
     \item Intellectual property from \ac{RD} activities.
     \item Secure procurement of hardware/software through the Supply 
           Chain Management department.
-    \item Proper handling of employee data and permissions (HR \& \ac{IT}).
+    \item Proper handling of employee data and permissions.
 \end{itemize}
 
 In contrast, stakeholders agree that \textbf{third-party systems fully managed externally},
@@ -40,21 +40,19 @@ explicitly out of scope, thus reducing direct stakeholder interest in those area
 \section{Leadership Commitment}
 \label{sec:leadership_commitment}
 
-GreenGrid Energy’s senior executives (CEO, COO, CFO, \textit{etc.}) reinforce
+GreenGrid Energy’s board of directors reinforce
 the \ac{ISMS} by:
 \begin{itemize}
     \item \textbf{Allocating Sufficient Budgets:} Funding security tools 
-          and training for departments within the \ac{ISMS} boundaries 
-          (Supply Chain, \ac{RD}, Customer Services, etc.).
+          and training for departments within the \ac{ISMS} boundaries.
     \item \textbf{Championing Policy Adoption:} Ensuring all employees 
           and department heads integrate the new Information Security Policy 
           into their daily operations.
     \item \textbf{Encouraging a Security Culture:} Mandating ongoing 
           training on secure processes, especially for staff involved in 
-          vendor management (Supply Chain) and grid operations (Engineering 
-          \& Operations).
-    \item \textbf{Reviewing ISMS Performance:} Conducting periodic 
-          management reviews (e.g., quarterly) to track key risk metrics, 
+          vendor management and grid operations.
+    \item \textbf{Reviewing \ac{ISMS} Performance:} Conducting periodic 
+          management reviews to track key risk metrics, 
           incident reports, and audit findings.
 \end{itemize}
 
@@ -65,14 +63,13 @@ Given the potential threats to the included systems and data, the organization
 sets forth the following overarching risk management goals:
 
 \begin{itemize}
-    \item \textbf{Protect OT/IT Convergence:} Keep \ac{SCADA}, IoT, and 
-          enterprise networks (especially those used by \ac{RD} and Supply Chain) 
-          resilient against cyber threats (e.g., malware, APTs).
+    \item \textbf{Protect \ac{OT} and \ac{IT} Convergence:} Keep \ac{SCADA}, \ac{IoT}, and 
+          enterprise networks resilient against cyber threats.
     \item \textbf{Safeguard Data Privacy and Integrity:} Ensure 
           confidentiality of customer billing data, vendor records, and 
           intellectual property from \ac{RD}.
     \item \textbf{Maintain Regulatory Compliance:} Satisfy relevant 
-          EU directives such as NIS~2, and meet ISO/IEC~27001 standards 
+          \ac{EU} directives such as NIS~2, and meet ISO/IEC~27001 standards 
           to secure continuous certification and avoid penalties.
     \item \textbf{Mitigate Vendor and Procurement Risks:} Enforce 
           security checks during procurement of critical hardware/software, 
@@ -91,9 +88,9 @@ integrity, and availability of information assets within the boundaries
 of its \ac{ISMS}, specifically covering:
 \begin{itemize}
     \item Internal \ac{IT} and \ac{OT} networks that power core operations.
-    \item Data processed through corporate cloud environments (AWS/Azure).
+    \item Data processed through corporate cloud environments.
     \item Procurement and vendor relationships supporting operational continuity.
-    \item Employee access management, training, and HR-related records.
+    \item Employee access management, training, and \ac{HR}-related records.
 \end{itemize}
 
 \subsection*{Key Principles}
@@ -111,7 +108,7 @@ of its \ac{ISMS}, specifically covering:
 
 \subsection*{Responsibilities}
 \begin{itemize}
-    \item \textbf{CISO:} Oversees policy implementation and audits 
+    \item \textbf{\ac{CISO}:} Oversees policy implementation and audits 
           across \ac{IT}, \ac{OT}, and supply chain operations.
     \item \textbf{Department Directors:} Ensure departmental processes 
           adhere to this policy; sponsor secure practices among staff.
@@ -226,99 +223,4 @@ the primary stakeholders driving or benefiting from these goals.
     \item \textbf{Measure}: Audit completion rate and resolution of identified vulnerabilities.
     \item \textbf{Owner}: Director of \ac{RD} \ac{IT} Security Team.
       \end{itemize}
-\end{itemize}
-
-\subsection{Engineering \& Operations}
-\paragraph{Stakeholders:}
-\begin{itemize}
-    \item \textbf{Engineers, OT Specialists}: Maintain the \ac{SCADA} 
-          network, field devices, and real-time grid distribution.
-    \item \textbf{Grid Regulators \& Authorities}: May require proof of 
-          reliability and security for critical infrastructure.
-    \item \textbf{Customers (Indirectly)}: Expect stable and uninterrupted 
-          power supply.
-\end{itemize}
-
-\paragraph{Objectives:}
-\begin{itemize}
-    \item \textbf{Objective EO-1: Strengthen OT Network Protection}
-    \begin{itemize}
-        \item \textbf{Target:} Reduce OT-related critical vulnerabilities 
-              by 40\% within one year.
-        \item \textbf{Measure:} Vulnerability scans showing unpatched 
-              high-severity OT exploits.
-        \item \textbf{Owner:} Engineering \& Ops Manager, CISO.
-    \end{itemize}
-    \item \textbf{Objective EO-2: Improve \ac{SCADA} Incident Response}
-    \begin{itemize}
-        \item \textbf{Target:} Decrease \ac{SCADA} downtime from security 
-              incidents by 30\%.
-        \item \textbf{Measure:} \ac{SCADA}-related Mean Time to Recover 
-              (MTTR) after an incident.
-        \item \textbf{Owner:} Engineering \& Ops Manager, \ac{IT} Dept.
-    \end{itemize}
-\end{itemize}
-
-\subsection{Human Resources (HR)}
-\paragraph{Stakeholders:}
-\begin{itemize}
-    \item \textbf{HR Staff}: Manage personnel data, background checks, 
-          and training records.
-    \item \textbf{All Employees}: Provide or update personal data; expect 
-          privacy and secure handling.
-    \item \textbf{Regulators (Data Protection)}: Enforce compliance with 
-          data privacy laws.
-\end{itemize}
-
-\paragraph{Objectives:}
-\begin{itemize}
-    \item \textbf{Objective HR-1: Bolster Employee Data Protection}
-    \begin{itemize}
-        \item \textbf{Target:} Zero major privacy incidents involving 
-              HR-owned data per quarter.
-        \item \textbf{Measure:} Count of reported HR data breaches 
-              categorized as high-severity.
-        \item \textbf{Owner:} HR Director, CISO.
-    \end{itemize}
-    \item \textbf{Objective HR-2: Enhance Security Training Engagement}
-    \begin{itemize}
-        \item \textbf{Target:} 90\% of employees complete mandatory 
-              security training within each 6-month cycle.
-        \item \textbf{Measure:} Completion rates in the Learning 
-              Management System (LMS), phishing test success.
-        \item \textbf{Owner:} HR Director, Department Heads.
-    \end{itemize}
-\end{itemize}
-
-\subsection{IT Department}
-\paragraph{Stakeholders:}
-\begin{itemize}
-    \item \textbf{IT Staff (SysAdmins, Network Engineers)}: Manage core 
-          infrastructure, respond to security incidents.
-    \item \textbf{All Other Departments}: Depend on stable, secure 
-          networks and systems for daily operations.
-    \item \textbf{Auditors}: Evaluate effectiveness of technical 
-          controls and IT governance.
-\end{itemize}
-
-\paragraph{Objectives:}
-\begin{itemize}
-    \item \textbf{Objective IT-1: Improve Patch and Vulnerability 
-          Management}
-    \begin{itemize}
-        \item \textbf{Target:} Patch 95\% of critical IT vulnerabilities 
-              within 30 days of release.
-        \item \textbf{Measure:} Patch compliance reports, vulnerability 
-              scan results.
-        \item \textbf{Owner:} \ac{IT} Manager, CISO.
-    \end{itemize}
-    \item \textbf{Objective IT-2: Enhance Incident Coordination}
-    \begin{itemize}
-        \item \textbf{Target:} Achieve an average Mean Time to Detect 
-              (MTTD) of under 48 hours for new threats across the 
-              enterprise network.
-        \item \textbf{Measure:} Logs from SIEM systems indicating 
-              detection-to-alert timelines.
-        \item \textbf{Owner:} \ac{IT} Manager, Security Operations Center.
-    \end{itemize}
 \end{itemize}
