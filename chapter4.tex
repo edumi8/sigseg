@@ -1,144 +1,106 @@
-\chapter{Other Policies and Procedures}
+\chapter{Other Security Policies and Procedures}
+\label{chap:other_sec_policies}
+
+In addition to our main Information Security Policy, GreenGrid Energy implements several 
+additional organization-wide security policies and corresponding procedures. These measures 
+support our compliance with ISO/IEC 27001 Annex A and ensure that all aspects of our security 
+posture are addressed consistently across the organization.
 
 \section{Other Security Policies}
 
-Beyond the central Information Security Policy (Clause 4.2), additional organization-wide security policies are essential to address specific operational contexts within GreenGrid Energy. The following policy is explicitly designed to support the secure execution of research activities and protection of critical intellectual property:
-
-\subsection{RD Intellectual Property and Data Security Policy}
-
-\textbf{Purpose:} To ensure comprehensive protection of GreenGrid Energy’s proprietary algorithms, innovations, and research data against unauthorized access, disclosure, modification, or destruction.
-
-\textbf{Policy Statements:}
+\subsection{Access Control Policy}
+\textbf{Purpose:} To ensure that access to information assets is granted only to authorized 
+individuals in accordance with the principle of least privilege.\\[1mm]
+\textbf{Scope:} Applies to all employees, contractors, and third parties who access GreenGrid 
+Energy’s information systems.\\[1mm]
+\textbf{Policy:}
 \begin{itemize}
-    \item \textbf{Data Classification and Handling:} All \ac{RD}-generated data and proprietary code must be classified as Confidential or Highly Confidential. Access to such data shall follow a strict need-to-know basis, utilizing role-based access control (RBAC).
-    \item \textbf{Encryption:} All \ac{RD} data stored at rest or transmitted over networks (both internal and external) must be encrypted using approved encryption standards and technologies.
-    \item \textbf{Secure Development and Testing Environment:} Prototype development and testing environments must adhere to strict isolation protocols, ensuring restricted access, proper authentication, regular vulnerability scanning, and thorough security audits.
-    \item \textbf{Vendor and Partner Compliance:} All third-party technology partners and academic institutions involved in \ac{RD} activities must comply with GreenGrid’s security requirements, undergo periodic security assessments, and sign confidentiality agreements.
-    \item \textbf{Incident Reporting and Response:} All suspected security incidents within the \ac{RD} context, including potential data leaks or unauthorized access attempts, must be reported immediately according to the defined incident management procedure.
+    \item Access rights are assigned based on roles and responsibilities.
+    \item All access requests must be formally documented, approved, and periodically reviewed.
+    \item Multi-factor authentication (MFA) is required for accessing sensitive systems.
 \end{itemize}
+\textbf{Enforcement:} Failure to comply with access control procedures may result in restricted 
+access, mandatory retraining, or disciplinary action, including termination if misuse is severe.\\[1mm]
+\textbf{Responsibilities:} The IT Department, in collaboration with HR and departmental managers, 
+is responsible for the implementation and monitoring of access controls.
 
-\textbf{Roles and Responsibilities:}
+\subsection{Data Classification Policy}
+\textbf{Purpose:} To classify information according to its sensitivity and ensure that it is handled 
+appropriately to prevent unauthorized disclosure, modification, or destruction.\\[1mm]
+\textbf{Scope:} Applies to all data owned or processed by GreenGrid Energy.\\[1mm]
+\textbf{Policy:}
 \begin{itemize}
-    \item \textbf{\ac{RD} Director:} Oversees policy compliance within \ac{RD}.
-    \item \textbf{CISO:} Provides oversight, conducts audits, and ensures enforcement of compliance measures.
-    \item \textbf{All \ac{RD} Employees:} Adhere strictly to this policy and report breaches or concerns promptly.
+    \item Information shall be classified as Public, Internal, Confidential, or Restricted.
+    \item Handling, storage, and transmission procedures will be defined based on the data classification.
+    \item Regular reviews will ensure that classification levels remain accurate and effective.
 \end{itemize}
+\textbf{Enforcement:} Any violation of the data classification guidelines may lead to corrective 
+measures such as access restrictions, formal warnings, and potential legal action in case of data breaches.\\[1mm]
+\textbf{Responsibilities:} Department heads are responsible for classifying information within their 
+areas, while the IT Department ensures secure storage and transmission.
 
-\subsection{Operational Technology (OT) \& Infrastructure Security Policy}
-
-\textbf{Purpose:}
-
-To ensure the security, availability, and integrity of GreenGrid Energy’s \ac{OT}, critical infrastructure, and cloud-based engineering systems by defining security controls for network segmentation, access control, monitoring, and incident response.
-
-
-\textbf{Policy Statements:}
+\subsection{Incident Response Policy}
+\textbf{Purpose:} To establish a clear process for reporting, managing, and resolving security incidents 
+efficiently.\\[1mm]
+\textbf{Scope:} All employees and third-party providers who use or manage GreenGrid Energy’s information systems.\\[1mm]
+\textbf{Policy:}
 \begin{itemize}
-    \item Network Segmentation and Access Control:
-          \begin{itemize}
-              \item Separation of \ac{IT} and \ac{OT} networks must be enforced using firewalls, VLANs, and zero-trust architectures.
-              \item Remote access to \ac{SCADA}/\ac{ICS} environments must be restricted to dedicated \ac{VPN} and jump servers with \ac{MFA}.
-          \end{itemize}
-    \item System Hardening and Secure Configuration:
-          \begin{itemize}
-              \item All \ac{OT} and cloud systems must adhere to \ac{CIS} benchmarks and secure baseline configurations.
-              \item Security patches and firmware updates must be applied within 30 days of release, except in cases requiring operational testing.
-          \end{itemize}
-    \item Monitoring and Security Auditing:
-          \begin{itemize}
-              \item \ac{IDS}/\ac{IPS} must monitor \ac{OT} and cloud networks for unauthorized activity.
-              \item Security logs from all critical infrastructure systems must be stored for at least 12 months and analyzed periodically.
-          \end{itemize}
-    \item Incident Handling and Recovery:
-          \begin{itemize}
-              \item All security incidents affecting \ac{OT}, cloud, and engineering infrastructure must be reported within 15 minutes to the \ac{SOC}.
-              \item Emergency isolation procedures must be in place to contain cyber threats targeting \ac{ICS}, \ac{SCADA}, or cloud resources.
-          \end{itemize}
+    \item All security incidents must be reported immediately to the IT Security Team.
+    \item An incident response plan is in place to contain, eradicate, and recover from incidents.
+    \item A post-incident review is conducted to capture lessons learned and implement corrective measures.
 \end{itemize}
+\textbf{Enforcement:} Non-compliance with incident reporting procedures or failure to follow the response plan 
+may result in disciplinary action, including termination, and can lead to further legal consequences if negligence 
+results in significant harm.\\[1mm]
+\textbf{Responsibilities:} The IT Security Team, led by the CISO, is responsible for managing incident response 
+and ensuring that all incidents are documented and reviewed.
 
-\textbf{Roles and Responsibilities:}
+\subsection{Responsible IT Resource Usage Policy}
+\textbf{Purpose:} To promote the secure and efficient use of GreenGrid Energy’s IT resources in support 
+of business operations while maintaining data integrity.\\[1mm]
+\textbf{Scope:} This policy applies to all employees, contractors, and temporary staff who access or use 
+GreenGrid Energy’s IT systems and devices.\\[1mm]
+\textbf{Policy:}
 \begin{itemize}
-    \item Director of Engineering \& Operations: Ensures compliance with \ac{OT} security policies across all facilities.
-    \item \ac{CISO} \& \ac{IT} Security Team: Conducts audits, monitors threats, and enforces network security measures.
-    \item \ac{OT} Administrators \& Cloud Engineers: Implement secure configurations, manage access control, and respond to incidents.
+    \item IT resources should primarily support work-related activities and organizational goals.
+    \item Users must protect their access credentials and handle sensitive information responsibly.
+    \item Personal use of IT resources is allowed only if it does not interfere with work duties or compromise system security.
+    \item All IT resource usage must comply with applicable laws, regulations, and company policies.
 \end{itemize}
+\textbf{Enforcement:} Violations of this policy may lead to corrective measures such as access suspension, 
+formal warnings, mandatory retraining, or disciplinary actions up to and including termination.\\[1mm]
+\textbf{Responsibilities:} Department Heads are responsible for ensuring that their teams understand and adhere to 
+this policy, while the IT Department monitors usage and implements necessary safeguards.
 
 \section{Other Security Procedures}
 
-Specific procedures established to implement these policies effectively include:
+For each of the above policies, corresponding procedures provide detailed, step-by-step instructions 
+for implementation and operational management. The following is an overview of these procedures:
 
-\subsection{Procedure 1: Access Management}
+\subsection{Access Control Procedure}
 \begin{itemize}
-    \item \textbf{Objective:} Control and monitor access to sensitive environments and data.
-    \item \textbf{Steps:}
-          \begin{enumerate}
-              \item Implement \ac{RBAC} to manage employee permissions.
-              \item Conduct quarterly audits of access permissions to company environments and adjust permissions as necessary.
-              \item Enforce \ac{MFA} for remote access to sensitive environments.
-              \item Document all access changes and ensure traceability.
-          \end{enumerate}
-    \item \textbf{Responsibility:} \ac{RD} Manager, \ac{IT} Administration Team.
+    \item Document and approve all access requests.
+    \item Regularly review and update user access rights.
+    \item Implement and maintain multi-factor authentication for sensitive systems.
 \end{itemize}
 
-\subsection{Procedure 2: Incident Management}
+\subsection{Data Classification Procedure}
 \begin{itemize}
-    \item \textbf{Objective:} Effectively respond to security incidents affecting the \ac{IT} environments.
-    \item \textbf{Steps:}
-          \begin{enumerate}
-              \item Report any security incident immediately to the \ac{IT} \ac{SOC}.
-              \item \ac{SOC} evaluates incident severity and initiates appropriate response actions.
-              \item Contain and remediate the incident promptly, documenting all response activities.
-              \item Conduct post-incident reviews to identify improvements.
-          \end{enumerate}
-    \item \textbf{Responsibility:} \ac{RD} Employees, \ac{SOC} Team, \ac{IT} Security Team.
+    \item Classify information assets according to defined categories.
+    \item Label and store data based on its classification.
+    \item Periodically review and update data classification levels.
 \end{itemize}
 
-\subsection{Procedure 3: Vendor and Partner Security Assessment}
+\subsection{Incident Response Procedure}
 \begin{itemize}
-    \item \textbf{Objective:} Ensure that all vendors and partners comply with GreenGrid’s security standards.
-    \item \textbf{Steps:}
-          \begin{enumerate}
-              \item Perform initial and periodic security risk assessments of vendors and partners.
-              \item Require evidence of compliance with relevant security certifications (ISO/IEC 27001, SOC 2, etc.).
-              \item Maintain up-to-date security agreements with clear terms regarding confidentiality and data protection.
-              \item Review and update vendor and partner risk profiles annually or following significant changes.
-          \end{enumerate}
-    \item \textbf{Responsibility:} Vendor Relationship Specialist.
+    \item Report security incidents immediately to the IT Security Team.
+    \item Follow the established incident response plan to contain, eradicate, and recover from incidents.
+    \item Conduct post-incident reviews and document lessons learned.
 \end{itemize}
 
-\subsection{Procedure 4: Incident Management within OT \& Cloud Systems}
-
-\textbf{Objective:} Ensure a structured response to security incidents affecting SCADA, ICS, cloud, and engineering infrastructure.
-
-\textbf{Steps:}
+\subsection{Responsible IT Resource Usage Procedure}
 \begin{itemize}
-    \item \textbf{Detection \& Reporting:}
-          \begin{enumerate}
-              \item All security alerts from IDS/IPS or SIEM must be immediately investigated.
-              \item OT personnel must report any unusual system behavior to the SOC within 15 minutes.
-          \end{enumerate}
-
-    \item \textbf{Containment}:
-          \begin{enumerate}
-              \item Immediately disconnect affected OT systems from external networks.
-              \item Limit access to critical cloud environments until the incident is fully assessed.
-          \end{enumerate}
-
-    \item \textbf{Investigation \& Root Cause Analysis:}
-          \begin{enumerate}
-              \item Review SCADA \& OT system logs for anomalous activity.
-              \item Conduct forensic analysis to identify the attack vector.
-          \end{enumerate}
-
-    \item \textbf{Recovery \& Post-Incident Review:}
-          \begin{enumerate}
-              \item Restore systems from verified secure backups.
-              \item Implement lessons learned into security policies to prevent future incidents.
-          \end{enumerate}
-\end{itemize}
-
-\textbf{Responsibility:}
-\begin{itemize}
-    \item \textbf{SOC Team:} Manages incident response and forensic investigation.
-    \item \textbf{OT \& Cloud Security Engineers:} Apply security patches and restore affected infrastructure.
-    \item \textbf{CISO \& Engineering Leadership:} Review security incidents and enforce corrective actions.
+    \item Distribute the Responsible IT Resource Usage Policy to all users.
+    \item Monitor IT resource usage to ensure compliance.
+    \item Investigate and address any violations promptly.
 \end{itemize}
