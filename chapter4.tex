@@ -46,7 +46,7 @@ efficiently.\\[1mm]
 \textbf{Policy:}
 \begin{itemize}
     \item All security incidents must be reported immediately to the \ac{IT} Security Team.
-    \item An incident response plan is in place to contain, eradicate, and recover from incidents.
+    \item An \ac{IRP} is in place to contain, eradicate, and recover from incidents.
     \item A post-incident review is conducted to capture lessons learned and implement corrective measures.
 \end{itemize}
 \textbf{Enforcement:} Non-compliance with incident reporting procedures or failure to follow the response plan 
@@ -59,7 +59,7 @@ and ensuring that all incidents are documented and reviewed.
 \textbf{Purpose:} To promote the secure and efficient use of GreenGrid Energy’s IT resources in support 
 of business operations while maintaining data integrity.\\[1mm]
 \textbf{Scope:} This policy applies to all employees, contractors, and temporary staff who access or use 
-GreenGrid Energy’s \ac{IT} systems and devices.\\[1mm]
+GreenGrid Energy's \ac{IT} systems and devices.\\[1mm]
 \textbf{Policy:}
 \begin{itemize}
     \item \ac{IT} resources should primarily support work-related activities and organizational goals.
@@ -73,34 +73,88 @@ formal warnings, mandatory retraining, or disciplinary actions up to and includi
 this policy, while the \ac{IT} Department monitors usage and implements necessary safeguards.
 
 \section{Other Security Procedures}
+\label{sec:extra_procedures}
 
-For each of the above policies, corresponding procedures provide detailed, step-by-step instructions 
-for implementation and operational management. The following is an overview of these procedures:
+For each of the above policies, the following procedures provide 
+detailed, step-by-step instructions for implementation and operational 
+management. Beyond simply stating how tasks are carried out, these 
+procedures also outline how data produced by or for the \ac{ISMS}—such 
+as audit logs, classification labels, or incident records—are securely 
+stored, accessed, and disposed of.
 
 \subsection{Access Control Procedure}
 \begin{itemize}
-    \item Document and approve all access requests.
-    \item Regularly review and update user access rights.
-    \item Implement and maintain multi-factor authentication for sensitive systems.
+    \item \textbf{Document and Approve Access Requests}: 
+    All new access requests must be submitted via the official request 
+    form and approved by the department manager and \ac{IT} Security. 
+    \item \textbf{Periodic Access Reviews}: 
+    Perform quarterly audits to ensure that user privileges align with 
+    current roles and responsibilities; remove or adjust access as needed.
+    \item \textbf{\ac{MFA}}:
+    Enable and maintain \ac{MFA} for sensitive systems, ensuring credentials 
+    are stored securely and never shared.
+    \item \textbf{Protecting \ac{ISMS} Data}:
+    Access logs, approval workflows, and any reports on privileges 
+    are labeled \textit{Restricted}, stored in an encrypted repository, 
+    and shared only with authorized personnel.
 \end{itemize}
 
 \subsection{Data Classification Procedure}
 \begin{itemize}
-    \item Classify information assets according to defined categories.
-    \item Label and store data based on its classification.
-    \item Periodically review and update data classification levels.
+    \item \textbf{Identify and Label Assets}: 
+    Classify data as Public, Internal, Confidential, or Restricted 
+    according to the Data Classification Policy.
+    \item \textbf{Storage and Handling Guidelines}:
+    For each classification level, follow approved controls 
+    (e.g., encryption for Restricted data, restricted folder 
+    permissions for Confidential).
+    \item \textbf{Periodic Review and Update}:
+    Conduct semiannual checks to validate that classification 
+    labels remain accurate as business processes evolve.
+    \item \textbf{Protecting \ac{ISMS} Data}:
+    All classification records and any logs describing data 
+    reclassification are stored on a secure server with 
+    role-based access. Any reclassification decisions are 
+    documented and version-controlled.
 \end{itemize}
 
 \subsection{Incident Response Procedure}
 \begin{itemize}
-    \item Report security incidents immediately to the \ac{IT} Security Team.
-    \item Follow the established incident response plan to contain, eradicate, and recover from incidents.
-    \item Conduct post-incident reviews and document lessons learned.
+    \item \textbf{Immediate Reporting}: 
+    All security incidents must be reported to the \ac{IT} Security Team 
+    or the Incident Response Coordinator within 15 minutes of discovery.
+    \item \textbf{Containment, Eradication, and Recovery}: 
+    Follow the \ac{IRP} to isolate affected systems, 
+    remove malicious artifacts, and restore operations with minimal 
+    downtime.
+    \item \textbf{Post-Incident Review}: 
+    Conduct a root cause analysis to identify vulnerabilities 
+    or process gaps and document lessons learned for continuous 
+    improvement.
+    \item \textbf{Protecting \ac{ISMS} Data}:
+    All incident reports, investigation notes, and evidence are 
+    tagged \textit{Confidential}, stored in a secure incident 
+    database accessible only to the Incident Response Team, 
+    and retained for the legally required duration.
 \end{itemize}
 
-\subsection{Responsible IT Resource Usage Procedure}
+\subsection{Responsible \ac{IT} Resource Usage Procedure}
 \begin{itemize}
-    \item Distribute the Responsible \ac{IT} Resource Usage Policy to all users.
-    \item Monitor \ac{IT} resource usage to ensure compliance.
-    \item Investigate and address any violations promptly.
+    \item \textbf{Policy Distribution and Acknowledgment}:
+    The Responsible \ac{IT} Resource Usage Policy is circulated 
+    to all new hires and existing employees; each individual 
+    must acknowledge it in writing or via an online form.
+    \item \textbf{Usage Monitoring}:
+    The \ac{IT} Department periodically reviews network and 
+    system logs for suspicious or excessive personal use. 
+    Violations are escalated as per HR guidelines.
+    \item \textbf{Incident Handling}:
+    If a misuse incident is detected, a formal investigation 
+    is initiated, and appropriate disciplinary measures 
+    (including revoking certain privileges) may be applied.
+    \item \textbf{Protecting \ac{ISMS} Data}:
+    All logs and records regarding user behavior are labeled 
+    at least \textit{Internal} and stored on secure servers. 
+    Only HR, the \ac{IT} Security Team, and relevant department 
+    managers have access for investigative purposes.
 \end{itemize}
