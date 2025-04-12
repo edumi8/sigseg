@@ -1,160 +1,69 @@
-\chapter{Other Security Policies and Procedures}
-\label{chap:other_sec_policies}
+\chapter{Risk Management Framework}
+\label{chap:risk_management}
 
-In addition to our main Information Security Policy, GreenGrid Energy implements several
-additional organization-wide security policies and corresponding procedures. These measures
-support our compliance with \ac{ISO}/\ac{IEC} 27001 Annex A and ensure that all aspects of our security
-posture are addressed consistently across the organization.
+This chapter presents the basic components of GreenGrid Energy's information security risk management programme. It outlines the Risk Assessment Policy, the Risk Assessment and Treatment Processes, and includes a sample Asset Inventory developed in accordance with ISO/IEC 27001 Clause 6.1.2 and Annex A 5.9.
 
-\section{Other Security Policies}
+\section{Risk Assessment Policy}
+\label{sec:risk_policy}
 
-\subsection{Access Control Policy}
-\textbf{Purpose:} To ensure that access to information assets is granted only to authorized
-individuals in accordance with the principle of least privilege.\\[1mm]
-\textbf{Scope:} Applies to all employees, contractors, and third parties who access GreenGrid
-Energy's information systems.\\[1mm]
-\textbf{Policy:}
+\subsection*{Purpose and Scope}
+This policy defines GreenGrid Energy's approach to identifying, assessing and managing information security risks. It applies to all information systems, assets, business processes and personnel within the scope of the \ac{ISMS}.
+
+\subsection*{Objectives}
 \begin{itemize}
-    \item Access rights are assigned based on roles and responsibilities.
-    \item All access requests must be formally documented, approved, and periodically reviewed.
-    \item \ac{MFA} is required for accessing sensitive systems.
-\end{itemize}
-\textbf{Enforcement:} Failure to comply with access control procedures may result in restricted
-access, mandatory retraining, or disciplinary action, including termination if misuse is severe.\\[1mm]
-\textbf{Responsibilities:} The \ac{IT} Department, in collaboration with \ac{HR} and departmental managers,
-is responsible for the implementation and monitoring of access controls.
-
-\subsection{Data Classification Policy}
-\textbf{Purpose:} To classify information according to its sensitivity and ensure that it is handled
-appropriately to prevent unauthorized disclosure, modification, or destruction.\\[1mm]
-\textbf{Scope:} Applies to all data owned or processed by GreenGrid Energy.\\[1mm]
-\textbf{Policy:}
-\begin{itemize}
-    \item Information shall be classified as Public, Internal, Confidential, or Restricted.
-    \item Handling, storage, and transmission procedures will be defined based on the data classification.
-    \item Regular reviews will ensure that classification levels remain accurate and effective.
-\end{itemize}
-\textbf{Enforcement:} Any violation of the data classification guidelines may lead to corrective
-measures such as access restrictions, formal warnings, and potential legal action in case of data breaches.\\[1mm]
-\textbf{Responsibilities:} Department heads are responsible for classifying information within their
-areas, while the \ac{IT} Department ensures secure storage and transmission.
-
-\subsection{Incident Response Policy}
-\textbf{Purpose:} To establish a clear process for reporting, managing, and resolving security incidents
-efficiently.\\[1mm]
-\textbf{Scope:} All employees and third-party providers who use or manage GreenGrid Energy’s information systems.\\[1mm]
-\textbf{Policy:}
-\begin{itemize}
-    \item All security incidents must be reported immediately to the \ac{IT} Security Team.
-    \item An \ac{IRP} is in place to contain, eradicate, and recover from incidents.
-    \item A post-incident review is conducted to capture lessons learned and implement corrective measures.
-\end{itemize}
-\textbf{Enforcement:} Non-compliance with incident reporting procedures or failure to follow the response plan
-may result in disciplinary action, including termination, and can lead to further legal consequences if negligence
-results in significant harm.\\[1mm]
-\textbf{Responsibilities:} The \ac{IT} Security Team, led by the \ac{CISO}, is responsible for managing incident response
-and ensuring that all incidents are documented and reviewed.
-
-\subsection{Responsible \ac{IT} Resource Usage Policy}
-\textbf{Purpose:} To promote the secure and efficient use of GreenGrid Energy’s \ac{IT} resources in support
-of business operations while maintaining data integrity.\\[1mm]
-\textbf{Scope:} This policy applies to all employees, contractors, and temporary staff who access or use
-GreenGrid Energy's \ac{IT} systems and devices.\\[1mm]
-\textbf{Policy:}
-\begin{itemize}
-    \item \ac{IT} resources should primarily support work-related activities and organizational goals.
-    \item Users must protect their access credentials and handle sensitive information responsibly.
-    \item Personal use of \ac{IT} resources is allowed only if it does not interfere with work duties or compromise system security.
-    \item All \ac{IT} resource usage must comply with applicable laws, regulations, and company policies.
-\end{itemize}
-\textbf{Enforcement:} Violations of this policy may lead to corrective measures such as access suspension,
-formal warnings, mandatory retraining, or disciplinary actions up to and including termination.\\[1mm]
-\textbf{Responsibilities:} Department Heads are responsible for ensuring that their teams understand and adhere to
-this policy, while the \ac{IT} Department monitors usage and implements necessary safeguards.
-
-\section{Other Security Procedures}
-\label{sec:extra_procedures}
-
-For each of the above policies, the following procedures provide
-detailed, step-by-step instructions for implementation and operational
-management. Beyond simply stating how tasks are carried out, these
-procedures also outline how data produced by or for the \ac{ISMS}—such
-as audit logs, classification labels, or incident records—are securely
-stored, accessed, and disposed of.
-
-\subsection{Access Control Procedure}
-\begin{itemize}
-    \item \textbf{Document and Approve Access Requests}:
-          All new access requests must be submitted via the official request
-          form and approved by the department manager and \ac{IT} Security.
-    \item \textbf{Periodic Access Reviews}:
-          Perform quarterly audits to ensure that user privileges align with
-          current roles and responsibilities; remove or adjust access as needed.
-    \item \textbf{\ac{MFA}}:
-          Enable and maintain \ac{MFA} for sensitive systems, ensuring credentials
-          are stored securely and never shared.
-    \item \textbf{Protecting \ac{ISMS} Data}:
-          Access logs, approval workflows, and any reports on privileges
-          are labeled \textit{Restricted}, stored in an encrypted repository,
-          and shared only with authorized personnel.
+    \item Establish a structured and repeatable approach to risk identification and analysis.
+    \item Support informed decision making regarding the implementation of security controls.
+    \item Ensure compliance with applicable legal, regulatory and contractual requirements.
 \end{itemize}
 
-\subsection{Data Classification Procedure}
+\subsection*{Governance and Risk Appetite}
+GreenGrid Energy maintains a conservative risk appetite, particularly for critical infrastructure such as \ac{SCADA} systems and sensitive customer information. Risks rated \textit{High} or \textit{Medium-High} require mandatory treatment and cannot be accepted without mitigation.
+
+\section{Risk Assessment Process}
+\label{sec:Risk_assessment}
+
+\subsection*{Overview}
+The risk assessment process consists of three main stages:
+\begin{enumerate}
+    \item \textbf{Risk Identification}: Mapping assets, associated threats, vulnerabilities and their potential impact.
+    \item \textbf{Risk Analysis}: Assessing the likelihood and impact of threat scenarios.
+    \item \textbf{Risk Assessment}: Comparing the analysed risk levels with predefined risk acceptance criteria.
+\end{enumerate}
+
+\subsection*{Methodology}
+Risks are analysed using a \textbf{Risk Level Matrix}, which combines the likelihood of an incident occurring with the severity of its impact. The matrix follows a 5x5 scale with risk levels classified as low, medium, high or critical. This structured approach enables a consistent and visual prioritisation of risks.
+
+\begin{figure}[H] \center \includegraphics[width=0.85\textwidth]{figures/image.png}
+    \caption{Risk level matrix used by GreenGrid Energy\cite{defelice2024riskmatrix}}
+    \label{figure:risk_matrix}
+\end{figure}
+
+The matrix serves as a decision-making tool to identify which risks require immediate treatment and which can be accepted under defined conditions.
+
+\section{Risk Treatment Process}
+\label{sec:risk_treatment}
+
+\subsection*{Treatment Options}
+Risks that exceed acceptable thresholds shall be managed using one or more of the following strategies:
 \begin{itemize}
-    \item \textbf{Identify and Label Assets}:
-          Classify data as Public, Internal, Confidential, or Restricted
-          according to the Data Classification Policy.
-    \item \textbf{Storage and Handling Guidelines}:
-          For each classification level, follow approved controls
-          (e.g., encryption for Restricted data, restricted folder
-          permissions for Confidential).
-    \item \textbf{Periodic Review and Update}:
-          Conduct semiannual checks to validate that classification
-          labels remain accurate as business processes evolve.
-    \item \textbf{Protecting \ac{ISMS} Data}:
-          All classification records and any logs describing data
-          reclassification are stored on a secure server with
-          role-based access. Any reclassification decisions are
-          documented and version-controlled.
+    \item \textbf{Mitigation}: Implementing controls to reduce the likelihood or impact of the risk.
+    \item \textbf{Acceptance}: Accepting the risk when its impact is negligible or mitigation is not cost effective.
+    \item \textbf{Transference}: To transfer the risk to a third party (e.g. by insurance or outsourcing).
+    \item \textbf{Avoidance}: Elimination of the risk by cessation of the associated activity.
 \end{itemize}
 
-\subsection{Incident Response Procedure}
+GreenGrid Energy follows the treatment approach outlined below:
 \begin{itemize}
-    \item \textbf{Immediate Reporting}:
-          All security incidents must be reported to the \ac{IT} Security Team
-          or the Incident Response Coordinator within 15 minutes of discovery.
-    \item \textbf{Containment, Eradication, and Recovery}:
-          Follow the \ac{IRP} to isolate affected systems,
-          remove malicious artifacts, and restore operations with minimal
-          downtime.
-    \item \textbf{Post-Incident Review}:
-          Conduct a root cause analysis to identify vulnerabilities
-          or process gaps and document lessons learned for continuous
-          improvement.
-    \item \textbf{Protecting \ac{ISMS} Data}:
-          All incident reports, investigation notes, and evidence are
-          tagged \textit{Confidential}, stored in a secure incident
-          database accessible only to the Incident Response Team,
-          and retained for the legally required duration.
+    \item \textbf{High and Medium-High risks} must be mitigated. If mitigation is not possible internally, the risk will be transferred to a competent third party for resolution.
+    \item \textbf{Medium risks} will be transferred to qualified external entities for management.
+    \item \textbf{Low and low-medium risks} are generally accepted. However, treatment may be considered if there are no higher priority risks pending.
 \end{itemize}
 
-\subsection{Responsible \ac{IT} Resource Usage Procedure}
+\subsection*{Implementation}
+A formal plan shall be developed for each risk requiring treatment, including
 \begin{itemize}
-    \item \textbf{Policy Distribution and Acknowledgment}:
-          The Responsible \ac{IT} Resource Usage Policy is circulated
-          to all new hires and existing employees; each individual
-          must acknowledge it in writing or via an online form.
-    \item \textbf{Usage Monitoring}:
-          The \ac{IT} Department periodically reviews network and
-          system logs for suspicious or excessive personal use.
-          Violations are escalated as per \ac{HR} guidelines.
-    \item \textbf{Incident Handling}:
-          If a misuse incident is detected, a formal investigation
-          is initiated, and appropriate disciplinary measures
-          (including revoking certain privileges) may be applied.
-    \item \textbf{Protecting \ac{ISMS} Data}:
-          All logs and records regarding user behavior are labeled
-          at least \textit{Internal} and stored on secure servers.
-          Only \ac{HR}, the \ac{IT} Security Team, and relevant department
-          managers have access for investigative purposes.
+    \item The chosen management strategy.
+    \item Designated stakeholders responsible for implementation.
+    \item Implementation schedules and defined monitoring mechanisms.
 \end{itemize}
+
