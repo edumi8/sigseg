@@ -1,7 +1,7 @@
 \chapter{Risk Management Framework}
 \label{chap:risk_management}
 
-This chapter presents the basic components of GreenGrid Energy's information security risk management programme. It outlines the Risk Assessment Policy, the Risk Assessment and Treatment Processes, and includes a sample Asset Inventory developed in accordance with ISO/IEC 27001 Clause 6.1.2 and Annex A 5.9.
+This chapter presents the basic components of GreenGrid Energy's information security risk management programme. It outlines the Risk Assessment Policy, the Risk Assessment and Treatment Processes, and includes an Asset Inventory developed in accordance with ISO/IEC 27001 Clause 6.1.2 and Annex A 5.9.
 
 \section{Risk Assessment Policy}
 \label{sec:risk_policy}
@@ -40,6 +40,38 @@ Risks are analysed using a \textbf{Risk Level Matrix}, which combines the likeli
 
 The matrix serves as a decision-making tool to identify which risks require immediate treatment and which can be accepted under defined conditions.
 
+\subsection{Risk Identification}
+
+\subsubsection{Asset Inventory}
+
+As part of the risk identification process required by ISO/IEC 27001, a complete asset inventory was developed and classified according to security relevance and operational context. This inventory includes both \ac{IT} and \ac{OT} assets and was used as a reference to assess risk levels based on the \ac{CIA} triad.
+
+The full inventory is presented in Appendix~\ref{appendix:asset_inventory}, where assets are organised by department and include detailed technical and risk-related attributes.
+
+\subsection{Risk Analysis}
+
+Following the identification of relevant assets and their classification according to Confidentiality, Integrity, and Availability (CIA), a structured risk analysis was performed. This process involved evaluating the likelihood and potential impact of various threat scenarios targeting the organisation’s information assets.
+
+The methodology applied is based on a qualitative risk matrix approach, combining the likelihood of occurrence with the impact level to determine the severity of each risk. Likelihood levels were derived from historical incident trends, industry threat intelligence, and system exposure (e.g., public-facing interfaces or outdated software). Impact levels were assessed considering the potential consequences on operations, legal compliance, financial stability, and reputation.
+
+The risk matrix used by GreenGrid Energy, shown in Figure~\ref{figure:risk_matrix}, categorises risks into four levels: Low, Medium, High, and Critical. These categories support the prioritisation of treatment measures in the subsequent phase.
+
+\subsection{Risk Assessment}
+
+The risk assessment stage consists of comparing the analysed risk levels with GreenGrid Energy’s defined risk acceptance criteria. Risks classified as High or Critical are considered unacceptable and require mandatory treatment through mitigation, transference, or avoidance. Medium-level risks may be tolerated if justified and documented with compensatory controls or a monitoring strategy. Low-level risks are generally accepted, but still logged for periodic review.
+
+Each identified risk was documented with:
+\begin{itemize}
+    \item Affected asset and department;
+    \item Identified threat or vulnerability;
+    \item Likelihood and impact rating;
+    \item Calculated risk level (from the matrix);
+    \item Proposed treatment or justification for acceptance.
+\end{itemize}
+
+The outcome of the risk assessment provides the foundation for the selection and implementation of appropriate security controls, ensuring alignment with both ISO/IEC 27001 and GreenGrid Energy’s operational needs and risk appetite.
+
+
 \section{Risk Treatment Process}
 \label{sec:risk_treatment}
 
@@ -66,4 +98,5 @@ A formal plan shall be developed for each risk requiring treatment, including
     \item Designated stakeholders responsible for implementation.
     \item Implementation schedules and defined monitoring mechanisms.
 \end{itemize}
+
 
