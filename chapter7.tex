@@ -1,0 +1,32 @@
+\chapter{Risk Treatment - Statement of Applicability}
+\label{chap:risk_treatment_applicability}
+
+This section presents the \ac{SoA} for the GreenGrid company, in accordance with Clause 6.1.3 of ISO/IEC 27001. It builds on the previously identified risks and their treatment by mapping applicable Annex A controls and providing justifications for inclusion or exclusion. This activity ensures that relevant controls are effectively supporting the security of the company's assets.
+
+\section{\ac{RD} Department}
+
+\subsection{Control Mapping and Justification}
+
+The following table maps selected Annex A controls to the \ac{RD} department's risks, as identified in the risk assessment.
+
+\begin{tabular}{|p{5cm}|p{8cm}|p{2.5cm}|}
+\hline
+\textbf{Control (Annex A)} & \textbf{Justification} & \textbf{Status} \\
+\hline
+A.5.1.1 Policies for Information Security & \ac{RD} requires tailored information security policies to address specific asset and research data needs. & Included \\
+\hline
+A.5.18 Access Control Policy & Ensures RBAC is enforced across systems handling proprietary algorithms and IP. & Included \\
+\hline
+A.5.20 Authentication Information & \ac{MFA} is implemented for all critical systems. & Included \\
+\hline
+A.5.28 Protection of Information in Transit & Required to protect sensitive research data transmitted between systems and collaborators. & Included \\
+\hline
+A.5.32 Logging & Supports forensic investigation in the event of insider threats. & Included \\
+\hline
+A.5.36 Backup & Regular backups of research and simulation environments are necessary to protect against corruption or loss. & Included \\
+\hline
+A.5.25 Cryptographic Controls & Ensures encryption of research databases and development repositories. & Included \\
+\hline
+A.5.10 Acceptable Use of Information & Not directly applicable to \ac{RD} systems under strict access policies. & Excluded \\
+\hline
+\end{tabular}

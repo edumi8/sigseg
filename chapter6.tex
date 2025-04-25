@@ -1,0 +1,82 @@
+\chapter{Risk Assessment}
+\label{chap:risk_assessment}
+
+\section{\ac{RD} Department}
+
+The \ac{RD} Department at GreenGrid Energy is dedicated to innovation and the advancement of smart grid technologies. Given its critical role in safeguarding intellectual property and proprietary technologies, it is essential to systematically identify, assess, and mitigate risks related to cybersecurity threats, data integrity, and operational disruptions.
+
+This risk assessment aligns with the ISO/IEC 27001 standard and forms part of the organization's \ac{ISMS}.
+
+\subsection{Asset Inventory}
+
+Key assets within the scope of this assessment include:
+\begin{itemize}
+  \item \textbf{Prototype Simulation Clusters:} Essential for testing and validating new technologies.
+  \item \textbf{Algorithm and Software Development Platforms:} Contain proprietary algorithms and code.
+  \item \textbf{Research Databases and Cloud Repositories:} Storage and processing of experimental data and intellectual property.
+\end{itemize}
+
+These assets have been classified based on their \ac{CIA} requirements:
+
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Asset} & \textbf{Confidentiality} & \textbf{Integrity} & \textbf{Availability} \\
+\hline
+Prototype Simulation Clusters & High & High & Medium \\
+Algorithms and Software Platforms & High & High & High \\
+Research Databases and Repositories & High & High & High \\
+\hline
+\end{tabular}
+
+\subsection{Risk Identification}
+
+Risks specific to the \ac{RD} environment were identified as follows:
+\begin{itemize}
+  \item \textbf{Data Breach or Intellectual Property Theft:} Unauthorized external or internal access.
+  \item \textbf{Cyberattacks on Testing Environments:} Potential compromise through ransomware or malware.
+  \item \textbf{Access Control Vulnerabilities:} Inadequate management of user privileges.
+  \item \textbf{Data Loss or Corruption:} Insufficient backup and disaster recovery procedures.
+\end{itemize}
+
+\subsection{Risk Analysis}
+
+Using GreenGrid’s Risk Level Matrix, the risks were analyzed based on their likelihood and potential impact:
+
+\begin{tabular}{|p{9cm}|c|c|c|}
+\hline
+\textbf{Identified Risk} & \textbf{Likelihood} & \textbf{Impact} & \textbf{Risk Level} \\
+\hline
+Unauthorized access to proprietary IP & Likely & Major & High \\
+Ransomware targeting \ac{RD} systems & Possible & Critical & High \\
+Insider threat leading to data compromise & Possible & Major & High \\
+Data corruption in testing environments & Unlikely & Moderate & Medium \\
+Lack of \ac{MFA} & Likely & Moderate & Medium \\
+\hline
+\end{tabular}
+
+\subsection{Risk Assessment and Treatment}
+
+Risks categorized as High or Medium require defined treatment strategies:
+
+\paragraph{High Risks:}
+\begin{itemize}
+  \item \textbf{Unauthorized access to proprietary IP:} Implement strict \ac{RBAC}, data encryption, and audit logging.
+  \item \textbf{Ransomware targeting \ac{RD} systems:} Enhance endpoint security, implement antivirus and antimalware solutions, and perform continuous vulnerability assessments.
+  \item \textbf{Insider threats:} Establish comprehensive access reviews, enhanced logging, and regular employee security training.
+\end{itemize}
+
+\paragraph{Medium Risks:}
+\begin{itemize}
+  \item \textbf{Data corruption in testing environments:} Strengthen backup procedures and validate backup integrity regularly.
+  \item \textbf{Lack of \ac{MFA}:} Enforce \ac{MFA} across all \ac{RD} platforms to prevent unauthorized access.
+\end{itemize}
+
+\subsection{Implementation and Monitoring}
+
+The \ac{RD} department will implement the following:
+\begin{itemize}
+  \item \textbf{Encryption} for sensitive data, both at rest and in transit.
+  \item \textbf{Quarterly audits} of user access rights and system vulnerabilities.
+  \item \textbf{\ac{IRP}} tailored to the \ac{RD} environment.
+  \item \textbf{Regular employee training and awareness programs} focusing on cybersecurity best practices.
+\end{itemize}
