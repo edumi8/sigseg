@@ -10,43 +10,43 @@ This chapter maps each risk identified in the assessment to the relevant ISO/IEC
 
 \section{Shared Assets}
 
-The common assets listed in this section underpin the organisation's overall business operations - finance, people, 
-customer engagement and core \ac{IT} infrastructure.  Because a single vulnerability can affect multiple functions, 
-the controls are selected not only to mitigate the specific risk, but also to strengthen the resilience of the 
-broader environment.  The table below shows how each identified threat is addressed, together with the rationale for 
+The common assets listed in this section underpin the organisation's overall business operations - finance, people,
+customer engagement and core \ac{IT} infrastructure.  Because a single vulnerability can affect multiple functions,
+the controls are selected not only to mitigate the specific risk, but also to strengthen the resilience of the
+broader environment.  The table below shows how each identified threat is addressed, together with the rationale for
 including or legitimately excluding each Appendix A control.
 
 \begin{longtable}{|p{2cm}|p{4cm}|p{4.5cm}|p{4cm}|}
-    \caption{Statement of application for shared assets}\\
+    \caption{Statement of application for shared assets}                                                                                                            \\
     \hline
-    \textbf{Asset ID} & \textbf{Threat} & \textbf{Control(s)\,(Annex A)} & \textbf{Justification for Inclusion/Exclusion} \\
+    \textbf{Asset ID} & \textbf{Threat}                                  & \textbf{Control(s)\,(Annex A)} & \textbf{Justification for Inclusion/Exclusion}          \\
     \hline
     \endhead
-    ERP-301  & Data‑breach (access‑control failure)              & A.9.1.1, A.9.4.1 & Critical system; access‑policy enforcement mandatory. \\
+    ERP-301           & Data‑breach (access‑control failure)             & A.9.1.1, A.9.4.1               & Critical system; access‑policy enforcement mandatory.   \\
     \hline
-    IT-201   & Phishing / social‑engineering attack              & A.6.3.1, A.7.2.2 & User awareness is primary defence; inclusion essential. \\
+    IT-201            & Phishing / social‑engineering attack             & A.6.3.1, A.7.2.2               & User awareness is primary defence; inclusion essential. \\
     \hline
-    IT-202   & Network misconfiguration                          & A.13.1.1, A.12.4.1 & Network segmentation and logging indispensable. \\
+    IT-202            & Network misconfiguration                         & A.13.1.1, A.12.4.1             & Network segmentation and logging indispensable.         \\
     \hline
-    CS-401   & Data leakage (excessive permissions)              & A.9.2.3, A.9.2.5 & Periodic permission reviews prevent leakage. \\
+    CS-401            & Data leakage (excessive permissions)             & A.9.2.3, A.9.2.5               & Periodic permission reviews prevent leakage.            \\
     \hline
-    HR-501   & Insider threat (malicious privileged user)        & A.9.2.5, A.12.4.3 & Privileged‑activity oversight is critical. \\
+    HR-501            & Insider threat (malicious privileged user)       & A.9.2.5, A.12.4.3              & Privileged‑activity oversight is critical.              \\
     \hline
-    HR-502   & Staff unavailability / single point of knowledge  & A.17.1.1, A.5.30  & Succession planning and redundancy required. \\
+    HR-502            & Staff unavailability / single point of knowledge & A.17.1.1, A.5.30               & Succession planning and redundancy required.            \\
     \hline
 \end{longtable}
 
 Taken together, the controls selected strengthen the confidentiality, integrity and availability of the organisation's
- most widely used assets.  \emph{ERP-301} sits at the heart of finance, HR and supply chain workflows, so strengthening 
- access governance via A.9 is non-negotiable - a compromised account could otherwise expose the entire corporate dataset.
+most widely used assets.  \emph{ERP-301} sits at the heart of finance, HR and supply chain workflows, so strengthening
+access governance via A.9 is non-negotiable - a compromised account could otherwise expose the entire corporate dataset.
 \emph{IT-201} illustrates that social engineering remains a quick way to bypass technical safeguards; ongoing awareness programmes
-(A.6.3.1) and scheduled refresher training (A.7.2.2) directly reduce the success rate of such attacks.  For \emph{IT-202}, 
-granular network zoning (A.13.1.1) combined with correlated event logging (A.12.4.1) enables rapid detection and isolation of 
-any misconfigured firewall rule.  The customer records server, \emph{CS-401}, relies on strict least privilege (A.9.2.x); 
-quarterly access reviews eliminate dormant high-privilege accounts that could leak personally identifiable information.  
-Privileged HR roles in \emph{HR-501} handle payroll and medical records; extensive logging of admin sessions (A.12.4.3) 
-provides both deterrence and evidence.  Finally, \emph{HR-502} addresses business continuity: cross-training and an up-to-date 
-succession matrix (A.17.1.1, A.5.30) safeguard critical knowledge and ensure uninterrupted operations during pandemics or sudden 
+(A.6.3.1) and scheduled refresher training (A.7.2.2) directly reduce the success rate of such attacks.  For \emph{IT-202},
+granular network zoning (A.13.1.1) combined with correlated event logging (A.12.4.1) enables rapid detection and isolation of
+any misconfigured firewall rule.  The customer records server, \emph{CS-401}, relies on strict least privilege (A.9.2.x);
+quarterly access reviews eliminate dormant high-privilege accounts that could leak personally identifiable information.
+Privileged HR roles in \emph{HR-501} handle payroll and medical records; extensive logging of admin sessions (A.12.4.3)
+provides both deterrence and evidence.  Finally, \emph{HR-502} addresses business continuity: cross-training and an up-to-date
+succession matrix (A.17.1.1, A.5.30) safeguard critical knowledge and ensure uninterrupted operations during pandemics or sudden
 staff departures.
 
 
@@ -78,26 +78,50 @@ By implementing encryption, \ac{MFA}, structured change processes, and proactive
 
 \section{Supply-Chain Assets}
 
-The supply chain assets focus on the organisation's \texttt{ERP-301} platform, which acts as a central procurement hub and integration point for dozens of external suppliers.  
-Because a single weakness here can quickly propagate to production systems and disrupt service delivery, the associated controls are chosen both to mitigate the immediate threat and to harden the broader ecosystem.  
+The supply chain assets focus on the organisation's \texttt{ERP-301} platform, which acts as a central procurement hub and integration point for dozens of external suppliers.
+Because a single weakness here can quickly propagate to production systems and disrupt service delivery, the associated controls are chosen both to mitigate the immediate threat and to harden the broader ecosystem.
 The table \ref{tab:supply-chain-soa} maps each risk to its corresponding Appendix A control and explains why the control is either included or excluded.
 
 \begin{longtable}{|p{2cm}|p{4cm}|p{4.5cm}|p{4cm}|}
     \caption{Statement of application for supply-chain assets}
-    \label{tab:supply-chain-soa}\\
+    \label{tab:supply-chain-soa}                                                                                                                              \\
     \hline
-    \textbf{Asset ID} & \textbf{Threat} & \textbf{Control(s)\,(Annex A)} & \textbf{Justification for Inclusion/Exclusion} \\
+    \textbf{Asset ID} & \textbf{Threat}                          & \textbf{Control(s)\,(Annex A)} & \textbf{Justification for Inclusion/Exclusion}            \\
     \hline
     \endhead
-    ERP-301 & Supply-chain compromise (third-party)   & A.15.1.1, A.15.2.1 & Supplier vetting and continuous monitoring are mandatory. \\
+    ERP-301           & Supply-chain compromise (third-party)    & A.15.1.1, A.15.2.1             & Supplier vetting and continuous monitoring are mandatory. \\
     \hline
-    ERP-301 & Data-integrity loss (bad patch / config) & A.12.1.2, A.14.2.2 & Formal change and update control essential. \\
+    ERP-301           & Data-integrity loss (bad patch / config) & A.12.1.2, A.14.2.2             & Formal change and update control essential.               \\
     \hline
-    ERP-301 & System downtime (availability loss)      & A.17.1.2, A.17.2.1 & Backup and fail-over required for operational continuity. \\
+    ERP-301           & System downtime (availability loss)      & A.17.1.2, A.17.2.1             & Backup and fail-over required for operational continuity. \\
     \hline
 \end{longtable}
 
-The shared \texttt{ERP-301} instance also drives procurement, making it the single integration point with numerous vendors.  
-A lapse in supplier diligence could embed malware in firmware deliveries, so controls A.15.1.1 and A.15.2.1 enforce binding security clauses, periodic assessments and service level triggers to detect anomalies early.  
-Patch failures remain a major cause of \ac{ERP} data corruption; segregated test environments and dual approval workflows (A.12.1.2, A.14.2.2) minimise the chance of bad updates reaching production.  
+The shared \texttt{ERP-301} instance also drives procurement, making it the single integration point with numerous vendors.
+A lapse in supplier diligence could embed malware in firmware deliveries, so controls A.15.1.1 and A.15.2.1 enforce binding security clauses, periodic assessments and service level triggers to detect anomalies early.
+Patch failures remain a major cause of \ac{ERP} data corruption; segregated test environments and dual approval workflows (A.12.1.2, A.14.2.2) minimise the chance of bad updates reaching production.
 Finally, every minute of \ac{ERP} downtime delays purchase orders and network maintenance spares, so hot standby infrastructure (A.17.1.2) and geographic replication (A.17.2.1) are essential to maintain supply chain resilience.
+
+\section{Customer Services \& Billing Department}
+
+The Customer Services \& Billing (CSB) department manages customer relationship data, billing processes, and financial transactions, using a CRM platform and a Billing Engine.
+Risks identified include customer data breaches, CRM service disruptions, billing fraud, and system unavailability.
+The following table maps these risks to Annex A controls and documents the applicability of each control.
+
+\begin{longtable}{|p{2cm}|p{3cm}|p{4cm}|p{2cm}|p{4cm}|}
+    \caption{Statement of application for Customer Services \& Billing Department assets}                                                                                                                                                                                               \\
+    \hline
+    \textbf{Asset ID} & \textbf{Threat}                                   & \textbf{Control(s) (Annex A)}                                       & \textbf{Status} & \textbf{Justification for Inclusion/Exclusion}                                                                      \\
+    \hline
+    \endhead
+    CS-CRM-01         & Customer data breach (credential theft, phishing) & A.5.18 (Access Control Policy), A.5.20 (Authentication Information) & Included        & Strong authentication and strict role-based access control are mandatory to protect customer PII stored in the CRM. \\
+    \hline
+    CS-CRM-01         & CRM service disruption (SaaS outage)              & A.17.1.2 (Availability of Information Processing Facilities)        & Included        & CRM business continuity plans are required to ensure availability and avoid customer service disruptions.           \\
+    \hline
+    CS-BILL-02        & Billing data tampering (fraud)                    & A.5.32 (Logging), A.5.25 (Cryptographic Controls)                   & Included        & Financial transaction integrity must be protected through audit logging and encryption of billing records.          \\
+    \hline
+    CS-BILL-02        & Billing service DoS attack (availability loss)    & A.17.2.1 (Redundancy of Information Processing Facilities)          & Included        & Billing infrastructure must have redundancy to ensure continuous operation during disruption scenarios.             \\
+    \hline
+\end{longtable}
+
+The CSB Department's key security priorities focus on ensuring the confidentiality of customer data, the integrity of billing transactions, and the resilience of CRM and billing services against availability risks.
