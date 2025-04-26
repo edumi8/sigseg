@@ -1,31 +1,31 @@
 \chapter{Risk Assessment Report}
 \label{chap:risk_assessment_report}
 
-This chapter summarises the output of the formal risk assessment carried out for GreenGrid Energy.  
-The process complies with ISO/IEC 27001 Clause 8.2 and uses the methodology specified in Chapter~\ref{chap:risk_management}, applied to the critical assets listed in Appendix~\ref{appendix:asset_inventory}.  
+This chapter summarises the output of the formal risk assessment carried out for GreenGrid Energy.
+The process complies with ISO/IEC 27001 Clause 8.2 and uses the methodology specified in Chapter~\ref{chap:risk_management}, applied to the critical assets listed in Appendix~\ref{appendix:asset_inventory}.
 Likelihood and impact were estimated with the GreenGrid Energy risk-matrix shown in Figure~\ref{figure:risk_matrix}; the resulting risk levels drive the \ac{SoA} in Chapter~\ref{chap:soa}.
 
 \section{Shared assets}
 
-Shared assets include the company-wide \ac{ERP} instance, the central \ac{IT} network stack, and services managed by \ac{HR} and customer services.  
+Shared assets include the company-wide \ac{ERP} instance, the central \ac{IT} network stack, and services managed by \ac{HR} and customer services.
 Because these systems cross functional boundaries, a successful attack could propagate quickly, increasing both the impact and cost of remediation.
 
 \begin{longtable}{|p{2cm}|p{2.5cm}|p{3cm}|p{2cm}|p{2cm}|p{2cm}|}
   \hline
-  \textbf{Asset ID} & \textbf{Threat} & \textbf{Vulnerability} & \textbf{Likelihood} & \textbf{Impact} & \textbf{Risk Level} \\
+  \textbf{Asset ID} & \textbf{Threat}      & \textbf{Vulnerability}         & \textbf{Likelihood} & \textbf{Impact} & \textbf{Risk Level}  \\
   \hline
   \endhead
-  ERP-301 & Data Breach & Poor access controls & Possible & Severe & \textbf{Medium-High} \\
+  ERP-301           & Data Breach          & Poor access controls           & Possible            & Severe          & \textbf{Medium-High} \\
   \hline
-  IT-201 & Phishing Attacks & Insufficient staff training & Very Likely & Significant & \textbf{High} \\
+  IT-201            & Phishing Attacks     & Insufficient staff training    & Very Likely         & Significant     & \textbf{High}        \\
   \hline
-  IT-202 & Unauthorised Access & Firewall misconfiguration & Possible & Significant & \textbf{Medium-High} \\
+  IT-202            & Unauthorised Access  & Firewall misconfiguration      & Possible            & Significant     & \textbf{Medium-High} \\
   \hline
-  CS-401 & Data Leakage & Improper permission management & Possible & Significant & \textbf{Medium-High} \\
+  CS-401            & Data Leakage         & Improper permission management & Possible            & Significant     & \textbf{Medium-High} \\
   \hline
-  HR-501 & Insider Threat & Excessive user privileges & Possible & Significant & \textbf{Medium-High} \\
+  HR-501            & Insider Threat       & Excessive user privileges      & Possible            & Significant     & \textbf{Medium-High} \\
   \hline
-  HR-502 & Staff Unavailability & High dependency on key staff & Possible & Significant & \textbf{Med-High} \\
+  HR-502            & Staff Unavailability & High dependency on key staff   & Possible            & Significant     & \textbf{Med-High}    \\
   \hline
 \end{longtable}
 
@@ -56,13 +56,13 @@ Key assets within the scope of this assessment include:
 These assets have been classified based on their \ac{CIA} requirements:
 
 \begin{tabular}{|l|c|c|c|}
-\hline
-\textbf{Asset} & \textbf{Confidentiality} & \textbf{Integrity} & \textbf{Availability} \\
-\hline
-Prototype Simulation Clusters & High & High & Medium \\
-Algorithms and Software Platforms & High & High & High \\
-Research Databases and Repositories & High & High & High \\
-\hline
+  \hline
+  \textbf{Asset}                      & \textbf{Confidentiality} & \textbf{Integrity} & \textbf{Availability} \\
+  \hline
+  Prototype Simulation Clusters       & High                     & High               & Medium                \\
+  Algorithms and Software Platforms   & High                     & High               & High                  \\
+  Research Databases and Repositories & High                     & High               & High                  \\
+  \hline
 \end{tabular}
 
 \subsection{Risk Identification}
@@ -80,15 +80,15 @@ Risks specific to the \ac{RD} environment were identified as follows:
 Using GreenGrid’s Risk Level Matrix, the risks were analyzed based on their likelihood and potential impact:
 
 \begin{tabular}{|p{9cm}|c|c|c|}
-\hline
-\textbf{Identified Risk} & \textbf{Likelihood} & \textbf{Impact} & \textbf{Risk Level} \\
-\hline
-Unauthorized access to proprietary IP & Likely & Major & High \\
-Ransomware targeting \ac{RD} systems & Possible & Critical & High \\
-Insider threat leading to data compromise & Possible & Major & High \\
-Data corruption in testing environments & Unlikely & Moderate & Medium \\
-Lack of \ac{MFA} & Likely & Moderate & Medium \\
-\hline
+  \hline
+  \textbf{Identified Risk}                  & \textbf{Likelihood} & \textbf{Impact} & \textbf{Risk Level} \\
+  \hline
+  Unauthorized access to proprietary IP     & Likely              & Major           & High                \\
+  Ransomware targeting \ac{RD} systems      & Possible            & Critical        & High                \\
+  Insider threat leading to data compromise & Possible            & Major           & High                \\
+  Data corruption in testing environments   & Unlikely            & Moderate        & Medium              \\
+  Lack of \ac{MFA}                          & Likely              & Moderate        & Medium              \\
+  \hline
 \end{tabular}
 
 \subsection{Risk Assessment and Treatment}
@@ -121,22 +121,47 @@ The \ac{RD} department will implement the following:
 
 \section{Supply-chain assets}
 
-The supply chain department relies almost entirely on the corporate \ac{ERP} platform to manage purchase orders, supplier master data and inbound logistics scheduling.  
+The supply chain department relies almost entirely on the corporate \ac{ERP} platform to manage purchase orders, supplier master data and inbound logistics scheduling.
 Although the asset is physically shared, its \ac{SCM} data flows, integrations and uptime requirements are different from those of finance or \ac{HR}.
 
 \begin{longtable}{|p{2cm}|p{2.5cm}|p{3cm}|p{2cm}|p{2cm}|p{2cm}|}
   \hline
-    \textbf{Asset ID} & \textbf{Threat} & \textbf{Vulnerability} & \textbf{Likelihood} & \textbf{Impact} & \textbf{Risk Level} \\
-    \hline
-    \endhead
-    ERP-301 & Supply Chain Compromise & Insecure third-party integrations & Possible & Severe & \textbf{Medium-High} \\
-    \hline
-    ERP-301 & Data Integrity Loss & Configuration errors, incorrect updates & Possible & Significant & \textbf{Medium-High} \\
-    \hline
-    ERP-301 & System Downtime & Single point of failure & Unlikely & Severe & \textbf{Medium-High} \\
+  \textbf{Asset ID} & \textbf{Threat}         & \textbf{Vulnerability}                  & \textbf{Likelihood} & \textbf{Impact} & \textbf{Risk Level}  \\
   \hline
-  \end{longtable}
+  \endhead
+  ERP-301           & Supply Chain Compromise & Insecure third-party integrations       & Possible            & Severe          & \textbf{Medium-High} \\
+  \hline
+  ERP-301           & Data Integrity Loss     & Configuration errors, incorrect updates & Possible            & Significant     & \textbf{Medium-High} \\
+  \hline
+  ERP-301           & System Downtime         & Single point of failure                 & Unlikely            & Severe          & \textbf{Medium-High} \\
+  \hline
+\end{longtable}
 
-  The key issue here is external trust. Unverified vendor \ac{API}s or tampered firmware could inject malicious code directly into production, bypassing perimeter defences.  
-  Similarly, a prolonged \ac{ERP} outage would freeze purchase orders and delay network maintenance spares, exposing the organisation to regulatory penalties.  
-  Supplier security clauses, robust end-to-end change management and geographically redundant hosting are therefore priority controls.
+The key issue here is external trust. Unverified vendor \ac{API}s or tampered firmware could inject malicious code directly into production, bypassing perimeter defences.
+Similarly, a prolonged \ac{ERP} outage would freeze purchase orders and delay network maintenance spares, exposing the organisation to regulatory penalties.
+Supplier security clauses, robust end-to-end change management and geographically redundant hosting are therefore priority controls.
+
+\section{Customer Services \& Billing Department}
+
+The Customer Services \& Billing (CSB) Department at GreenGrid Energy manages client accounts, customer service operations, and billing processes.
+It handles personally identifiable information (\ac{PII}) and financial data, primarily through a cloud-based CRM platform and an internally hosted billing system.
+Due to the sensitivity of the data and reliance on SaaS infrastructure, the department faces significant risks related to data breaches, system availability, and fraud.
+
+\begin{longtable}{|p{2cm}|p{2.5cm}|p{3cm}|p{2cm}|p{2cm}|p{2cm}|}
+  \hline
+  \textbf{Asset ID} & \textbf{Threat}            & \textbf{Vulnerability}       & \textbf{Likelihood} & \textbf{Impact} & \textbf{Risk Level}  \\
+  \hline
+  \endhead
+  CS-CRM-01         & Customer Data Breach       & Credential theft / weak MFA  & Likely              & Major           & \textbf{High}        \\
+  \hline
+  CS-CRM-01         & CRM Service Disruption     & SaaS platform outage         & Possible            & Major           & \textbf{High}        \\
+  \hline
+  CS-BILL-02        & Billing Data Tampering     & Lack of transaction auditing & Possible            & Critical        & \textbf{High}        \\
+  \hline
+  CS-BILL-02        & Billing Service DoS Attack & Insufficient redundancy      & Unlikely            & Major           & \textbf{Medium-High} \\
+  \hline
+\end{longtable}
+
+The main concerns for the CSB department are maintaining customer data confidentiality and ensuring uninterrupted billing operations.
+Mitigation efforts will focus on enforcing strong authentication mechanisms (MFA), implementing transaction integrity monitoring, and establishing resilient backup procedures for CRM and billing systems.
+Specific incident response plans must be maintained for handling customer data breaches and billing-related service disruptions.
