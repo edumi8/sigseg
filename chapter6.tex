@@ -5,12 +5,13 @@ This chapter summarises the output of the formal risk assessment carried out for
 The process complies with ISO/IEC 27001 Clause 8.2 and uses the methodology specified in Chapter~\ref{chap:risk_management}, applied to the critical assets listed in Appendix~\ref{appendix:asset_inventory}.  
 Likelihood and impact were estimated with the GreenGrid Energy risk-matrix shown in Figure~\ref{figure:risk_matrix}; the resulting risk levels drive the \ac{SoA} in Chapter~\ref{chap:soa}.
 
-\section{Shared assets}
+\section{Shared Assets}
 
 Shared assets include the company-wide \ac{ERP} instance, the central \ac{IT} network stack, and services managed by \ac{HR} and customer services.  
 Because these systems cross functional boundaries, a successful attack could propagate quickly, increasing both the impact and cost of remediation.
 
 \begin{longtable}{|p{2cm}|p{2.5cm}|p{3cm}|p{2cm}|p{2cm}|p{2cm}|}
+  \caption{Risk Assessment for Shared Assets Table}
   \hline
   \textbf{Asset ID} & \textbf{Threat} & \textbf{Vulnerability} & \textbf{Likelihood} & \textbf{Impact} & \textbf{Risk Level} \\
   \hline
@@ -33,98 +34,46 @@ The assessment highlights two systemic drivers:
 
 \begin{itemize}
   \item \textbf{Privilege abuse}  Four of the six entries are due to weak or excessive privileges, so there is a high return on investment in strengthening \ac{IAM}.
-  \item \textbf{Human factors}  The \texttt{IT-201} phishing scenario scores \emph{High} even though no technical vulnerability is exploited - demonstrating that staff security culture is as critical as tools.
+  \item \textbf{Human factors}  The \texttt{IT-201} phishing scenario scores \emph{High} even though no technical vulnerability is exploited, demonstrating that staff security culture is as critical as tools.
 \end{itemize}
 
 Mitigation must therefore balance technical hardening with ongoing awareness training and succession planning for key roles.
 
-\section{\ac{RD} Department}
+\section{\ac{RD} Department Assets}
 
 The \ac{RD} Department at GreenGrid Energy is dedicated to innovation and the advancement of smart grid technologies. Given its critical role in safeguarding intellectual property and proprietary technologies, it is essential to systematically identify, assess, and mitigate risks related to cybersecurity threats, data integrity, and operational disruptions.
 
 This risk assessment aligns with the ISO/IEC 27001 standard and forms part of the organization's \ac{ISMS}.
 
-\subsection{Asset Inventory}
+\begin{longtable}{|p{2.5cm}|p{3.5cm}|p{3.5cm}|p{2cm}|p{2cm}|p{2cm}|}
+  \caption{Research and Development Risk Table}
+  \label{tab:rd_assets_risks}\\
+  \hline
+  \textbf{Asset ID} & \textbf{Threat} & \textbf{Vulnerability} & \textbf{Likelihood} & \textbf{Impact} & \textbf{Risk Level} \\
+  \hline
+  \endhead
+  RD-101 & Prototype Simulation Cluster 1 & Data loss during simulations & Unlikely & Moderate & \textbf{Low Med} \\
+  \hline
+  RD-101 & Prototype Simulation Cluster 1 & Malware compromise of test environment & Possible & Significant & \textbf{Med Hi} \\
+  \hline
+  RD-102 & Hybrid Cloud Platforms (AWS/Azure) & Insider data breach on cloud services & Possible & Significant & \textbf{Med Hi} \\
+  \hline
+  RD-102 & Cloud service misconfiguration or compromise & Possible & Severe & \textbf{Med Hi} \\
+  \hline
+  
+\end{longtable}
+  
+The risk profile for \ac{RD} assets highlights the importance of protecting both on-premises and cloud-based research environments.  
+Priority measures focus on securing user access, ensuring resilient backups, maintaining vendor oversight, and protecting sensitive research data in transit and at rest.
 
-Key assets within the scope of this assessment include:
-\begin{itemize}
-  \item \textbf{Prototype Simulation Clusters:} Essential for testing and validating new technologies.
-  \item \textbf{Algorithm and Software Development Platforms:} Contain proprietary algorithms and code.
-  \item \textbf{Research Databases and Cloud Repositories:} Storage and processing of experimental data and intellectual property.
-\end{itemize}
+\section{Supply-Chain Assets}
 
-These assets have been classified based on their \ac{CIA} requirements:
-
-\begin{tabular}{|l|c|c|c|}
-\hline
-\textbf{Asset} & \textbf{Confidentiality} & \textbf{Integrity} & \textbf{Availability} \\
-\hline
-Prototype Simulation Clusters & High & High & Medium \\
-Algorithms and Software Platforms & High & High & High \\
-Research Databases and Repositories & High & High & High \\
-\hline
-\end{tabular}
-
-\subsection{Risk Identification}
-
-Risks specific to the \ac{RD} environment were identified as follows:
-\begin{itemize}
-  \item \textbf{Data Breach or Intellectual Property Theft:} Unauthorized external or internal access.
-  \item \textbf{Cyberattacks on Testing Environments:} Potential compromise through ransomware or malware.
-  \item \textbf{Access Control Vulnerabilities:} Inadequate management of user privileges.
-  \item \textbf{Data Loss or Corruption:} Insufficient backup and disaster recovery procedures.
-\end{itemize}
-
-\subsection{Risk Analysis}
-
-Using GreenGrid’s Risk Level Matrix, the risks were analyzed based on their likelihood and potential impact:
-
-\begin{tabular}{|p{9cm}|c|c|c|}
-\hline
-\textbf{Identified Risk} & \textbf{Likelihood} & \textbf{Impact} & \textbf{Risk Level} \\
-\hline
-Unauthorized access to proprietary IP & Likely & Major & High \\
-Ransomware targeting \ac{RD} systems & Possible & Critical & High \\
-Insider threat leading to data compromise & Possible & Major & High \\
-Data corruption in testing environments & Unlikely & Moderate & Medium \\
-Lack of \ac{MFA} & Likely & Moderate & Medium \\
-\hline
-\end{tabular}
-
-\subsection{Risk Assessment and Treatment}
-
-Risks categorized as High or Medium require defined treatment strategies:
-
-\paragraph{High Risks:}
-\begin{itemize}
-  \item \textbf{Unauthorized access to proprietary IP:} Implement strict \ac{RBAC}, data encryption, and audit logging.
-  \item \textbf{Ransomware targeting \ac{RD} systems:} Enhance endpoint security, implement antivirus and antimalware solutions, and perform continuous vulnerability assessments.
-  \item \textbf{Insider threats:} Establish comprehensive access reviews, enhanced logging, and regular employee security training.
-\end{itemize}
-
-\paragraph{Medium Risks:}
-\begin{itemize}
-  \item \textbf{Data corruption in testing environments:} Strengthen backup procedures and validate backup integrity regularly.
-  \item \textbf{Lack of \ac{MFA}:} Enforce \ac{MFA} across all \ac{RD} platforms to prevent unauthorized access.
-\end{itemize}
-
-\subsection{Implementation and Monitoring}
-
-The \ac{RD} department will implement the following:
-\begin{itemize}
-  \item \textbf{Encryption} for sensitive data, both at rest and in transit.
-  \item \textbf{Quarterly audits} of user access rights and system vulnerabilities.
-  \item \textbf{\ac{IRP}} tailored to the \ac{RD} environment.
-  \item \textbf{Regular employee training and awareness programs} focusing on cybersecurity best practices.
-\end{itemize}
-
-
-\section{Supply-chain assets}
-
-The supply chain department relies almost entirely on the corporate \ac{ERP} platform to manage purchase orders, supplier master data and inbound logistics scheduling.  
+The supply Chain Department relies almost entirely on the corporate \ac{ERP} platform to manage purchase orders, supplier master data and inbound logistics scheduling.  
 Although the asset is physically shared, its \ac{SCM} data flows, integrations and uptime requirements are different from those of finance or \ac{HR}.
 
 \begin{longtable}{|p{2cm}|p{2.5cm}|p{3cm}|p{2cm}|p{2cm}|p{2cm}|}
+  \caption{Supply Chain Risk Table}
+  \label{tab:supply_chain_risks}\\
   \hline
     \textbf{Asset ID} & \textbf{Threat} & \textbf{Vulnerability} & \textbf{Likelihood} & \textbf{Impact} & \textbf{Risk Level} \\
     \hline

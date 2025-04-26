@@ -52,33 +52,29 @@ staff departures.
 
 \section{\ac{RD} Department}
 
-\subsection{Control Mapping and Justification}
+The \ac{RD} department at GreenGrid Energy safeguards critical intellectual property and research initiatives.  
+Given the high value and sensitivity of these assets, specific Annex A controls are selected to address risks around unauthorised access, data integrity, and system resilience.  
+The table below maps each control to the identified threats and explains its inclusion or justified exclusion.
 
-The following table maps selected Annex A controls to the \ac{RD} department's risks, as identified in the risk assessment.
+\begin{longtable}{|p{2cm}|p{4cm}|p{4.5cm}|p{4cm}|}
+    \caption{Statement of Application for RD department assets}
+    \label{tab:rd-soa}\\
+    \hline
+    \textbf{Asset ID} & \textbf{Threat} & \textbf{Control(s)\,(Annex A)} & \textbf{Justification for Inclusion/Exclusion} \\
+    \hline
+    \endhead
+    RD-101 & Data loss or corruption in simulation environments & A.5.36, A.5.32 & Backup procedures (A.5.36) and detailed event logging (A.5.32) are necessary to ensure recovery and forensic analysis. \\
+    \hline
+    RD-101 & Malware infection compromising test systems & A.5.20, A.5.28 & MFA on administrator access (A.5.20) and encrypted communication channels (A.5.28) minimise infection risks. \\
+    \hline
+    RD-102 & Insider data breach in cloud platforms & A.5.18, A.5.25, A.5.32 & Enforcing RBAC (A.5.18), database encryption (A.5.25), and monitoring user actions (A.5.32) protect cloud-stored assets. \\
+    \hline
+    RD-102 & Cloud service compromise or configuration error & A.15.1.1, A.14.2.2 & Supplier assessment (A.15.1.1) and structured change control (A.14.2.2) ensure external platforms remain secure. \\
+    \hline
+\end{longtable}
 
-\begin{tabular}{|p{5cm}|p{8cm}|p{2.5cm}|}
-\hline
-\textbf{Control (Annex A)} & \textbf{Justification} & \textbf{Status} \\
-\hline
-A.5.1.1 Policies for Information Security & \ac{RD} requires tailored information security policies to address specific asset and research data needs. & Included \\
-\hline
-A.5.18 Access Control Policy & Ensures RBAC is enforced across systems handling proprietary algorithms and IP. & Included \\
-\hline
-A.5.20 Authentication Information & \ac{MFA} is implemented for all critical systems. & Included \\
-\hline
-A.5.28 Protection of Information in Transit & Required to protect sensitive research data transmitted between systems and collaborators. & Included \\
-\hline
-A.5.32 Logging & Supports forensic investigation in the event of insider threats. & Included \\
-\hline
-A.5.36 Backup & Regular backups of research and simulation environments are necessary to protect against corruption or loss. & Included \\
-\hline
-A.5.25 Cryptographic Controls & Ensures encryption of research databases and development repositories. & Included \\
-\hline
-A.5.10 Acceptable Use of Information & Not directly applicable to \ac{RD} systems under strict access policies. & Excluded \\
-\hline
-\end{tabular}
-
-
+The \ac{RD} department’s critical assets demand robust access governance, strict backup discipline, and close vendor management.  
+By implementing encryption, \ac{MFA}, structured change processes, and proactive monitoring, GreenGrid Energy strengthens the security and availability of its research infrastructure.
 
 \section{Supply-Chain Assets}
 
