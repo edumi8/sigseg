@@ -11,11 +11,21 @@ Shared assets include the company-wide \ac{ERP} instance, the central \ac{IT} ne
 Because these systems cross functional boundaries, a successful attack could propagate quickly, increasing both the impact and cost of remediation.
 
 \begin{longtable}{|p{2cm}|p{2.5cm}|p{3cm}|p{2cm}|p{2cm}|p{2cm}|}
-  \caption{Risk Assessment for Shared Assets Table}
+  \caption{Risk Assessment for Shared Assets}
+  \label{tab:shared_assets_risks}                                                                                                          \\
+  \hline
+  \textbf{Asset ID} & \textbf{Threat}      & \textbf{Vulnerability}         & \textbf{Likelihood} & \textbf{Impact} & \textbf{Risk Level}  \\
+  \hline
+  \endfirsthead
+
   \hline
   \textbf{Asset ID} & \textbf{Threat}      & \textbf{Vulnerability}         & \textbf{Likelihood} & \textbf{Impact} & \textbf{Risk Level}  \\
   \hline
   \endhead
+
+  \hline
+  \endfoot
+
   ERP-301           & Data Breach          & Poor access controls           & Possible            & Severe          & \textbf{Medium-High} \\
   \hline
   IT-201            & Phishing Attacks     & Insufficient staff training    & Very Likely         & Significant     & \textbf{High}        \\
@@ -26,15 +36,15 @@ Because these systems cross functional boundaries, a successful attack could pro
   \hline
   HR-501            & Insider Threat       & Excessive user privileges      & Possible            & Significant     & \textbf{Medium-High} \\
   \hline
-  HR-502            & Staff Unavailability & High dependency on key staff   & Possible            & Significant     & \textbf{Med-High}    \\
+  HR-502            & Staff Unavailability & High dependency on key staff   & Possible            & Significant     & \textbf{Medium-High} \\
   \hline
 \end{longtable}
 
 The assessment highlights two systemic drivers:
 
 \begin{itemize}
-  \item \textbf{Privilege abuse}  Four of the six entries are due to weak or excessive privileges, so there is a high return on investment in strengthening \ac{IAM}.
-  \item \textbf{Human factors}  The \texttt{IT-201} phishing scenario scores \emph{High} even though no technical vulnerability is exploited, demonstrating that staff security culture is as critical as tools.
+  \item \textbf{Privilege abuse} Four of the six entries are due to weak or excessive privileges, so there is a high return on investment in strengthening \ac{IAM}.
+  \item \textbf{Human factors} The \texttt{IT-201} phishing scenario scores \emph{High} even though no technical vulnerability is exploited, demonstrating that staff security culture is as critical as tools.
 \end{itemize}
 
 Mitigation must therefore balance technical hardening with ongoing awareness training and succession planning for key roles.
@@ -43,41 +53,56 @@ Mitigation must therefore balance technical hardening with ongoing awareness tra
 
 The \ac{RD} Department at GreenGrid Energy is dedicated to innovation and the advancement of smart grid technologies. Given its critical role in safeguarding intellectual property and proprietary technologies, it is essential to systematically identify, assess, and mitigate risks related to cybersecurity threats, data integrity, and operational disruptions.
 
-This risk assessment aligns with the ISO/IEC 27001 standard and forms part of the organization's \ac{ISMS}.
-
 \begin{longtable}{|p{2.5cm}|p{3.5cm}|p{3.5cm}|p{2cm}|p{2cm}|p{2cm}|}
   \caption{Research and Development Risk Table}
-  \label{tab:rd_assets_risks}\\
+  \label{tab:rd_assets_risks}                                                                                                                                             \\
   \hline
-  \textbf{Asset ID} & \textbf{Threat} & \textbf{Vulnerability} & \textbf{Likelihood} & \textbf{Impact} & \textbf{Risk Level} \\
+  \textbf{Asset ID} & \textbf{Threat}                              & \textbf{Vulnerability}                 & \textbf{Likelihood} & \textbf{Impact} & \textbf{Risk Level} \\
+  \hline
+  \endfirsthead
+
+  \hline
+  \textbf{Asset ID} & \textbf{Threat}                              & \textbf{Vulnerability}                 & \textbf{Likelihood} & \textbf{Impact} & \textbf{Risk Level} \\
   \hline
   \endhead
-  RD-101 & Prototype Simulation Cluster 1 & Data loss during simulations & Unlikely & Moderate & \textbf{Low Med} \\
+
   \hline
-  RD-101 & Prototype Simulation Cluster 1 & Malware compromise of test environment & Possible & Significant & \textbf{Med Hi} \\
+  \endfoot
+
+  RD-101            & Prototype Simulation Cluster 1               & Data loss during simulations           & Unlikely            & Moderate        & \textbf{Low Med}    \\
   \hline
-  RD-102 & Hybrid Cloud Platforms (AWS/Azure) & Insider data breach on cloud services & Possible & Significant & \textbf{Med Hi} \\
+  RD-101            & Prototype Simulation Cluster 1               & Malware compromise of test environment & Possible            & Significant     & \textbf{Med Hi}     \\
   \hline
-  RD-102 & Cloud service misconfiguration or compromise & Possible & Severe & \textbf{Med Hi} \\
+  RD-102            & Hybrid Cloud Platforms (AWS/Azure)           & Insider data breach on cloud services  & Possible            & Significant     & \textbf{Med Hi}     \\
   \hline
-  
+  RD-102            & Cloud service misconfiguration or compromise & Possible                               & Severe              & \textbf{Med Hi}                       \\
+  \hline
 \end{longtable}
-  
-The risk profile for \ac{RD} assets highlights the importance of protecting both on-premises and cloud-based research environments.  
+
+The risk profile for \ac{RD} assets highlights the importance of protecting both on-premises and cloud-based research environments.
 Priority measures focus on securing user access, ensuring resilient backups, maintaining vendor oversight, and protecting sensitive research data in transit and at rest.
 
 \section{Supply-Chain Assets}
 
-The supply Chain Department relies almost entirely on the corporate \ac{ERP} platform to manage purchase orders, supplier master data and inbound logistics scheduling.  
+The Supply Chain Department relies almost entirely on the corporate \ac{ERP} platform to manage purchase orders, supplier master data and inbound logistics scheduling.
 Although the asset is physically shared, its \ac{SCM} data flows, integrations and uptime requirements are different from those of finance or \ac{HR}.
 
 \begin{longtable}{|p{2cm}|p{2.5cm}|p{3cm}|p{2cm}|p{2cm}|p{2cm}|}
   \caption{Supply Chain Risk Table}
-  \label{tab:supply_chain_risks}\\
+  \label{tab:supply_chain_risks}                                                                                                                       \\
+  \hline
+  \textbf{Asset ID} & \textbf{Threat}         & \textbf{Vulnerability}                  & \textbf{Likelihood} & \textbf{Impact} & \textbf{Risk Level}  \\
+  \hline
+  \endfirsthead
+
   \hline
   \textbf{Asset ID} & \textbf{Threat}         & \textbf{Vulnerability}                  & \textbf{Likelihood} & \textbf{Impact} & \textbf{Risk Level}  \\
   \hline
   \endhead
+
+  \hline
+  \endfoot
+
   ERP-301           & Supply Chain Compromise & Insecure third-party integrations       & Possible            & Severe          & \textbf{Medium-High} \\
   \hline
   ERP-301           & Data Integrity Loss     & Configuration errors, incorrect updates & Possible            & Significant     & \textbf{Medium-High} \\
@@ -96,11 +121,22 @@ The Customer Services \& Billing (CSB) Department at GreenGrid Energy manages cl
 It handles personally identifiable information (\ac{PII}) and financial data, primarily through a cloud-based CRM platform and an internally hosted billing system.
 Due to the sensitivity of the data and reliance on SaaS infrastructure, the department faces significant risks related to data breaches, system availability, and fraud.
 
-\begin{longtable}{|p{2cm}|p{2.5cm}|p{3cm}|p{2cm}|p{2cm}|p{2cm}|}
+\begin{longtable}{|p{2cm}|p{3cm}|p{3.5cm}|p{2cm}|p{2cm}|p{2cm}|}
+  \caption{Customer Services \& Billing Risk Table}
+  \label{tab:csb_risks}                                                                                                                        \\
+  \hline
+  \textbf{Asset ID} & \textbf{Threat}            & \textbf{Vulnerability}       & \textbf{Likelihood} & \textbf{Impact} & \textbf{Risk Level}  \\
+  \hline
+  \endfirsthead
+
   \hline
   \textbf{Asset ID} & \textbf{Threat}            & \textbf{Vulnerability}       & \textbf{Likelihood} & \textbf{Impact} & \textbf{Risk Level}  \\
   \hline
   \endhead
+
+  \hline
+  \endfoot
+
   CS-CRM-01         & Customer Data Breach       & Credential theft / weak MFA  & Likely              & Major           & \textbf{High}        \\
   \hline
   CS-CRM-01         & CRM Service Disruption     & SaaS platform outage         & Possible            & Major           & \textbf{High}        \\
