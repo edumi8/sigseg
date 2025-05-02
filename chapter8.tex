@@ -1,0 +1,128 @@
+\chapter{\ac{BIA}}
+
+In this chapter we present the \ac{BIA} conducted for GreenGrid Energy in accordance with ISO/IEC 27001 Annex A 5.30. The \ac{BIA} is essential for identifying and prioritising the critical business processes, specifying the resources required for effective recovery, and establishing clear priorities for the restoration of essential system resources, with a particular focus on assets shared across multiple departments. Understanding these elements is critical to formulating robust contingency and recovery plans that ensure business continuity even under adverse conditions.
+
+\section{Business Process Recovery Criticality Assessment}
+
+The Recovery Criticality Assessment assists GreenGrid Energy in strategically prioritising incident response and disaster recovery activities. This assessment includes an analysis of processes whose disruption could result in severe operational, financial, regulatory or reputational consequences for the organisation.
+
+A detailed criticality classification for each key process is summarised in the table~\ref{tab:process_criticality}. This classification clearly defines the urgency of restoring each business process following a disruption.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Business Process} & \textbf{Criticality Level} \\ \hline
+\ac{SCADA} System Operations & Very High \\ \hline
+Grid Infrastructure Management & Very High \\ \hline
+Customer account management and billing & High \\ \hline
+Procurement and supply chain operations & High \\ \hline
+Research data and prototype testing & High \\ \hline
+Financial operations and payroll & Medium \\ \hline
+Internal communications and collaboration (Microsoft 365) & Medium \\ \hline
+Employee records management & Medium \\ \hline
+\end{tabular}
+\caption{Classification of Business Process Criticality}
+\label{tab:process_criticality}
+\end{table}
+
+\textbf{\ac{SCADA} System Operations} has been classified as \emph{Very High} in criticality. \ac{SCADA} systems are the backbone of real-time network monitoring and control, and have a direct impact on operational stability and security. Any disruption can quickly lead to serious operational failures, regulatory violations, significant financial penalties and serious damage to the organisation's reputation. Given the immediate and far-reaching consequences of \ac{SCADA} downtime, this system demands the highest priority for restoration.
+
+The \textbf{Grid Infrastructure Management} processes are also rated \emph{Very High} in criticality. They directly support the organisation's core business of energy distribution. Any degradation can result in prolonged service disruption, regulatory non-compliance, loss of customer confidence and significant financial and reputational consequences. Prompt recovery is critical to ensure minimal operational disruption and compliance with mandatory industry regulations.
+
+\textbf{Customer Account Management and Billing} operations are classified as \emph{high} due to their direct impact on customer satisfaction, revenue generation and compliance with contractual obligations. Disruptions to billing or customer relationship management can result in immediate loss of revenue, dissatisfied customers, potential legal issues from breach of contract and negative public perception. Timely recovery minimises these risks and maintains business continuity.
+
+\textbf{Procurement and supply chain operations} are classified as \emph{high} criticality. Efficient procurement and logistics processes ensure the timely availability of critical components required for network operation and maintenance. Disruptions here can delay essential maintenance and operational activities, risking regulatory penalties, incurring additional costs and potentially causing widespread service disruption.
+
+\textbf{Research data and prototype testing} has also been rated \emph{high} criticality. Protecting proprietary research and testing environments is essential to maintaining GreenGrid Energy's competitive edge. Compromise or loss of research data would negatively impact innovation timelines, strategic market position and overall financial health. Rapid recovery and robust protection of these assets is therefore critical.
+
+\textbf{Financial operations and payroll} have a criticality rating of \emph{medium-high}. These processes are essential for internal stability and employee satisfaction, and have a direct impact on employee morale and the company's compliance with financial regulations. While not as immediately catastrophic as disruptions to core operational systems, timely recovery is still necessary to avoid internal financial disruption and regulatory penalties.
+
+\textbf{Internal communication and collaboration} processes are rated as \emph{Medium} critical. These tools have a significant impact on internal operational efficiency and communication. While short-term disruptions may be tolerable, prolonged outages can affect productivity and internal coordination. Therefore, their timely recovery remains important, although secondary to systems that directly impact network operations or customer interactions.
+
+Finally, \textbf{Employee Record Management} also carries a \emph{Medium} criticality rating. These systems primarily affect internal operations and compliance with employment regulations. Disruptions, while having an internal impact, are less likely to have an immediate external operational impact. Their recovery is important for internal administrative continuity, but may come after more critical systems have been stabilised.
+
+This structured criticality assessment helps GreenGrid Energy prioritise resource allocation effectively, ensuring rapid recovery of essential operations and minimal disruption to the business.
+
+
+\section{Identification of Key Recovery Resources}
+
+To effectively recover and maintain critical business processes following a disruption, GreenGrid Energy must clearly identify and secure key recovery resources. These resources include a strategic mix of human expertise, technology systems and specialised physical infrastructure, each of which is essential to support uninterrupted operations and rapid recovery.
+
+\subsection{Human Resources}
+
+The role of skilled personnel is essential in disaster recovery and incident response. Operational engineers are critical, as they have the specialised knowledge needed to quickly restore network operations, ensuring stability and compliance with regulatory standards. Cyber security analysts are another key group; their expertise enables the rapid identification, containment and mitigation of cyber threats, protecting the organisation critical information and infrastructure.
+
+In addition, procurement specialists ensure the seamless restoration of supply chains by managing supplier relationships to secure essential components quickly and reliably. Customer service representatives maintain critical lines of communication with customers, ensuring customer satisfaction and confidence even in the midst of disruption. Finally, \ac{RD} cybersecurity specialists are critical to protecting sensitive proprietary research data, minimising strategic risks and ensuring continued innovation capabilities.
+
+\subsection{Technological Resources}
+
+Essential technological resources form the backbone of recovery in various operational areas. First and foremost is the \ac{SCADA} system, which is essential for real-time monitoring, control and stability of the energy distribution network. Rapid recovery of this system minimises operational disruption, maintains regulatory compliance and mitigates public safety risks.
+
+Hybrid cloud platforms such as AWS and Azure are also critical to recovery. They host critical analytical applications, data storage, and collaborative environments that are essential for both day-to-day operations and strategic business activities, particularly within the \ac{RD} and engineering departments.
+
+The \ac{SAP} \ac{ERP} system is another critical resource, integrating procurement, finance, logistics and operational management processes. Rapid recovery of the \ac{ERP} systems ensures continuous availability of key operational components and supports smooth financial transactions, directly impacting GreenGrid Energy's operational efficiency and regulatory compliance.
+
+The \ac{CRM} system is critical to maintaining effective customer relationship management and ensuring the accuracy and continuity of customer service and billing processes. Timely recovery of \ac{CRM} minimises financial risk, preserves customer confidence and maintains the organisation's reputation.
+
+In addition, the Microsoft 365 environment provides critical support for internal communication and operational collaboration, which is particularly important in the chaotic aftermath of an incident. Finally, robust backup and recovery solutions underpin all critical technologies, enabling operations to be restored quickly and reliably, minimising downtime and data loss.
+
+
+\subsection{Physical Resources}
+
+Physical resources serve as foundational elements necessary to facilitate recovery efforts. Control centres, from which network operations are managed and monitored, must be resilient and secure to ensure continued operational control during and after incidents. Data centres are another critical physical asset; their protection is essential to ensure data integrity and operational capability, and they serve as the core of both \ac{IT} and \ac{OT} infrastructures.
+
+In addition, secure storage facilities for hardware components and critical equipment help to maintain the integrity and availability of necessary physical assets during recovery operations. These specialised facilities ensure that components remain accessible, secure and ready for immediate use during business disruptions.
+
+By systematically identifying and prioritising these critical human, technological and physical resources, GreenGrid Energy significantly enhances its ability to rapidly recover essential operations, maintain regulatory compliance and minimise potential operational and financial losses following a disruptive incident.
+
+
+\section{Recovery Priorities for System Resources}
+
+Recovery priorities have been established based on operational criticality, Maximum Allowable Downtime (MAD), regulatory mandates and the wider impact of prolonged disruption.
+
+The table below summarises the prioritised recovery order for shared resources:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{7cm}|p{4cm}|p{4cm}|}
+\hline
+\textbf{Asset/System} & \textbf{Recovery Priority} & \textbf{Maximum Allowable Downtime} \\ \hline
+\ac{SCADA} System & High & $<$ 1 hour \\ \hline
+OT Network Infrastructure & High & $<$ 1 hour \\ \hline
+SAP ERP System & High & 1-2 hours \\ \hline
+CRM System & Moderate & 2 - 4 hours \\ \hline
+Hybrid cloud platforms (AWS/Azure) & Medium & 4 - 6 hours \\ \hline
+Microsoft 365 environment & Medium & 4 - 8 hours \\ \hline
+Edge computing infrastructure & Medium & 4 - 8 hours \\ \hline
+Employee Management System & Medium & 8 - 12 hours \\ \hline
+\end{tabular}
+\caption{Recovery Priorities for Shared Assets}
+\label{tab:recovery_priorities_shared_assets}
+\end{table}
+
+The \ac{SCADA} system and OT network infrastructure were given the highest priority due to their critical role in maintaining grid stability and operational continuity. Their recovery in less than one hour is mandated by regulatory requirements and operational safety concerns, as prolonged outages can lead to severe disruption affecting thousands of customers, significant fines and lasting reputational damage.
+
+The SAP ERP system is a high priority with a recommended recovery time of 1-2 hours. Its criticality stems from its central role in managing procurement, logistics, finance and operations. Delays in ERP recovery can significantly disrupt operational planning, procurement processes and financial transactions, leading to delays in the recovery of other dependent business activities.
+
+The CRM system has been prioritised as medium-high, reflecting its importance in maintaining customer relationships and billing processes. Rapid recovery of CRM (within 2-4 hours) minimises the financial and reputational risks associated with disrupted customer interactions and billing inaccuracies.
+
+Hybrid cloud platforms (AWS/Azure) and the Microsoft 365 environment, with medium recovery priorities (4-8 hours), are essential for ongoing analysis, communication and internal collaboration. While important, their brief absence has less immediate impact on direct customer-facing or regulatory-critical operations than \ac{SCADA} or ERP systems.
+
+Edge computing infrastructure is also a medium priority because of its supporting but critical role in localised grid management decision processes. Its recovery within a 4-8 hour window is sufficient to minimise wider operational disruption.
+
+Finally, the Employee Management System has a medium priority (8-12 hours) due to its role in managing internal processes such as payroll and employee records. Although essential, it does not have a direct impact on the organisation's operational security or direct customer interactions and therefore has a relatively longer allowable downtime.
+
+\section{Departmental Insights}
+
+The insights provided by the various departments enhanced our understanding of critical business processes and recovery priorities:
+
+The \textbf{Engineering \& Grid Operations} team emphasised the need for rapid recovery of the \ac{SCADA} and OT networks because of their immediate and direct impact on grid functionality and compliance.
+
+The \textbf{Research \& Development} team focused on protecting intellectual property and critical analytical processes in hybrid cloud environments, highlighting the strategic importance of rapid yet secure recovery.
+
+\textbf{Customer Services \& Billing} emphasised the need for the integrity and availability of CRM and billing systems, where disruptions can lead directly to customer dissatisfaction and financial consequences.
+
+The \textbf{Supply Chain Management} department emphasised the criticality of the SAP ERP system, highlighting the severe operational and financial impact of disruptions in procurement and logistics.
+
+The \ac{BIA} provides GreenGrid Energy with a clear blueprint for prioritising recovery efforts, essential resources and associated timelines. It is recommended that the \ac{BIA} be regularly reviewed and updated to adapt to evolving technological, operational and regulatory requirements. In addition, investing in enhanced backup and redundancy mechanisms and conducting regular drills will significantly improve organisational preparedness and resilience, and effectively mitigate the impact of potential disruptions.
