@@ -77,52 +77,40 @@ In addition, secure storage facilities for hardware components and critical equi
 By systematically identifying and prioritising these critical human, technological and physical resources, GreenGrid Energy significantly enhances its ability to rapidly recover essential operations, maintain regulatory compliance and minimise potential operational and financial losses following a disruptive incident.
 
 
-\section{Recovery Priorities for System Resources}
+\section{Recovery Priorities and Departmental Insights}
 
-Recovery priorities have been established based on operational criticality, Maximum Allowable Downtime (MAD), regulatory mandates and the wider impact of prolonged disruption.
+The recovery priorities for GreenGrid Energy were carefully determined based on operational criticality, \ac{MAD}, regulatory obligations and the wider impact of potential disruptions. These priorities were further refined through detailed consultation with key departments, whose insights were essential in understanding the nuances of each resource's importance.
 
-The table below summarises the prioritised recovery order for shared resources:
+The recovery priorities for shared assets are summarised in the table \ref{tab:recovery_priorities_shared_assets}.
 
 \begin{table}[H]
-\centering
-\begin{tabular}{|p{7cm}|p{4cm}|p{4cm}|}
-\hline
-\textbf{Asset/System} & \textbf{Recovery Priority} & \textbf{Maximum Allowable Downtime} \\ \hline
-\ac{SCADA} System & High & $<$ 1 hour \\ \hline
-OT Network Infrastructure & High & $<$ 1 hour \\ \hline
-SAP ERP System & High & 1-2 hours \\ \hline
-CRM System & Moderate & 2 - 4 hours \\ \hline
-Hybrid cloud platforms (AWS/Azure) & Medium & 4 - 6 hours \\ \hline
-Microsoft 365 environment & Medium & 4 - 8 hours \\ \hline
-Edge computing infrastructure & Medium & 4 - 8 hours \\ \hline
-Employee Management System & Medium & 8 - 12 hours \\ \hline
-\end{tabular}
-\caption{Recovery Priorities for Shared Assets}
-\label{tab:recovery_priorities_shared_assets}
-\end{table}
+    \centering
+    \begin{tabular}{|p{7cm}|p{4cm}|p{4cm}|}
+    \hline
+    \textbf{Asset/System} & \textbf{Recovery Priority} & \textbf{Maximum Allowable Downtime} \\ \hline
+    \ac{SCADA} System & High & < 1 hour \\ \hline
+    \ac{OT} Network Infrastructure & High & < 1 hour \\ \hline
+    \ac{SAP} \ac{ERP} System & High & 1-2 hours \\ \hline
+    \ac{CRM} System & Medium & 2-4 hours \\ \hline
+    Hybrid cloud platforms (AWS/Azure) & Medium & 4 - 6 hours \\ \hline
+    Microsoft 365 environment & Medium & 4 - 8 hours \\ \hline
+    Edge computing infrastructure & Medium & 4 - 8 hours \\ \hline
+    Workforce management system & Medium & 8 - 12 hours \\ \hline
+    \end{tabular}
+    \caption{Recovery Priorities for Shared Assets}
+    \label{tab:recovery_priorities_shared_assets}
+    \end{table}
 
-The \ac{SCADA} system and OT network infrastructure were given the highest priority due to their critical role in maintaining grid stability and operational continuity. Their recovery in less than one hour is mandated by regulatory requirements and operational safety concerns, as prolonged outages can lead to severe disruption affecting thousands of customers, significant fines and lasting reputational damage.
+Engineering \& Grid Operations highlighted the critical importance of rapid recovery for both the \ac{SCADA} system and the \ac{OT} network infrastructure. These systems are fundamental to maintaining grid stability and operational continuity. Any disruption lasting more than an hour can compromise security and regulatory compliance, impact thousands of customers and potentially result in significant fines and lasting reputational damage.
 
-The SAP ERP system is a high priority with a recommended recovery time of 1-2 hours. Its criticality stems from its central role in managing procurement, logistics, finance and operations. Delays in ERP recovery can significantly disrupt operational planning, procurement processes and financial transactions, leading to delays in the recovery of other dependent business activities.
+Similarly, the supply chain management team highlighted the critical role of the \ac{SAP} \ac{ERP} system, given its central position in procurement, logistics, finance and operational management. A delay of more than 1-2 hours could severely impact operational planning and financial transactions, leading to wider business disruption.
 
-The CRM system has been prioritised as medium-high, reflecting its importance in maintaining customer relationships and billing processes. Rapid recovery of CRM (within 2-4 hours) minimises the financial and reputational risks associated with disrupted customer interactions and billing inaccuracies.
+Customer Services \& Billing highlighted the need to prioritise the \ac{CRM} system due to its direct impact on customer relationships and accurate billing processes. Ensuring \ac{CRM} recovery within 2-4 hours reduces the risk of financial inaccuracies and customer dissatisfaction.
 
-Hybrid cloud platforms (AWS/Azure) and the Microsoft 365 environment, with medium recovery priorities (4-8 hours), are essential for ongoing analysis, communication and internal collaboration. While important, their brief absence has less immediate impact on direct customer-facing or regulatory-critical operations than \ac{SCADA} or ERP systems.
+Research \& Development highlighted the strategic importance of hybrid cloud platforms, advocating secure yet relatively fast recovery within 4-6 hours. These platforms underpin critical analytical processes and intellectual property protection.
 
-Edge computing infrastructure is also a medium priority because of its supporting but critical role in localised grid management decision processes. Its recovery within a 4-8 hour window is sufficient to minimise wider operational disruption.
+The Microsoft 365 environment and edge computing infrastructure, identified as medium priority, were recognised as essential for communications and localised network management, but were considered less immediately critical compared to operational systems.
 
-Finally, the Employee Management System has a medium priority (8-12 hours) due to its role in managing internal processes such as payroll and employee records. Although essential, it does not have a direct impact on the organisation's operational security or direct customer interactions and therefore has a relatively longer allowable downtime.
+Finally, the Human Resources and Legal \& Administration teams highlighted the importance of the employee management system. Despite its relatively long allowable downtime of 8-12 hours, it remains critical to internal processes such as payroll and records management. While not directly impacting operational security or customer interactions, the system is essential for long-term operational integrity and employee confidence.
 
-\section{Departmental Insights}
-
-The insights provided by the various departments enhanced our understanding of critical business processes and recovery priorities:
-
-The \textbf{Engineering \& Grid Operations} team emphasised the need for rapid recovery of the \ac{SCADA} and OT networks because of their immediate and direct impact on grid functionality and compliance.
-
-The \textbf{Research \& Development} team focused on protecting intellectual property and critical analytical processes in hybrid cloud environments, highlighting the strategic importance of rapid yet secure recovery.
-
-\textbf{Customer Services \& Billing} emphasised the need for the integrity and availability of CRM and billing systems, where disruptions can lead directly to customer dissatisfaction and financial consequences.
-
-The \textbf{Supply Chain Management} department emphasised the criticality of the SAP ERP system, highlighting the severe operational and financial impact of disruptions in procurement and logistics.
-
-The \ac{BIA} provides GreenGrid Energy with a clear blueprint for prioritising recovery efforts, essential resources and associated timelines. It is recommended that the \ac{BIA} be regularly reviewed and updated to adapt to evolving technological, operational and regulatory requirements. In addition, investing in enhanced backup and redundancy mechanisms and conducting regular drills will significantly improve organisational preparedness and resilience, and effectively mitigate the impact of potential disruptions.
+This integrated approach, combining quantitative assessments with qualitative departmental insights, provides GreenGrid Energy with a robust blueprint for prioritising resource recovery and improving overall organisational resilience. Regular reviews, enhanced back-up solutions and consistent exercises are recommended to maintain preparedness and adapt to the evolving operational, technological and regulatory landscape.
