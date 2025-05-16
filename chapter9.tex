@@ -1,0 +1,219 @@
+% ----------  Chapter 9 : Contingency-Planning Policies ----------
+\chapter{Contingency-Planning Policies}
+\label{chap:contingency}
+
+This chapter defines a coherent set of policies that strengthen
+GreenGrid Energy’s capability to prepare for, respond to, and
+recover from disruptive events.  These policies operationalise the risk-management
+commitments adopted by the Board in Chapters 3–7.
+%------------------------------------------------------------------
+\section{Policy Framework}
+\label{sec:framework}
+
+\begin{longtable}{@{}p{0.28\linewidth}p{0.45\linewidth}p{0.22\linewidth}@{}}
+\toprule
+\textbf{Policy} & \textbf{Purpose} & \textbf{ISO/IEC 27001:2022 Annex A}\\
+\midrule
+\endhead
+General Contingency‐Planning Policy (GCPP) &
+Enterprise-level principles governing \emph{all} contingency capabilities. &
+Foundational (applies to the whole standard)\\[2pt]
+
+Incident-Response Planning Policy (IRPP) &
+Preparation and coordination for information-security incidents. &
+5.24 \textit{Information-security incident management planning \& preparation}\\[2pt]
+
+Disaster-Recovery Planning Policy (DRPP) &
+Restoration of ICT/OT services to meet defined RTO/RPO. &
+5.29 \textit{Information-security continuity}\\[2pt]
+
+Business-Continuity Planning Policy (BCPP) &
+Continuity of critical business processes beyond ICT recovery. &
+5.30 \textit{ICT readiness for business continuity}\\
+\bottomrule
+\end{longtable}
+
+The policies are \emph{cumulative}: the GCPP sets universal rules, while
+IRPP, DRPP and BCPP add discipline-specific requirements.
+
+%------------------------------------------------------------------
+\section{General Contingency-Planning Policy (GCPP)}
+\subsection*{Purpose}
+Safeguard life, environment, assets and reputation by
+\emph{anticipating, preventing and managing} disruptive events.
+
+\subsection*{Scope}
+All personnel, sites, OT and IT systems (including SCADA, ERP and cloud
+environments) inside the ISMS boundary defined in Chapter~2.
+
+\subsection*{Policy Statements}
+\begin{enumerate}[label=\arabic*.]
+  \item \textbf{Risk-based planning}\,—All contingency plans shall derive
+        from documented risk assessments and the Statement of Applicability.
+  \item \textbf{Single source of truth}\,—An approved master copy of each
+        plan shall reside in the secure document repository with version
+        control and change-management records.
+  \item \textbf{Hierarchy \& integration}\,—Department-level plans (IR, DR,
+        BC) must align with and reference the GCPP.
+  \item \textbf{Testing cadence}\,—Each plan shall be exercised at least
+        annually and after material changes or significant incidents.
+  \item \textbf{Continuous improvement}\,—Lessons learned from exercises or
+        live events feed the corrective-action register and trigger updates.
+\end{enumerate}
+
+\subsection*{Roles \& Responsibilities}
+
+\begin{longtable}{@{}p{0.25\linewidth}p{0.7\linewidth}@{}}
+\toprule
+\textbf{Role} & \textbf{Key duties}\\
+\midrule
+\endhead
+Board of Directors & Approve the GCPP and resource its implementation.\\[2pt]
+Chief Information Security Officer (CISO) & Own the framework and coordinate
+audits.\\[2pt]
+Department Directors & Maintain department-specific plans and ensure staff
+readiness.\\[2pt]
+All Employees \& Contractors & Participate in training, report incidents,
+follow approved procedures.\\
+\bottomrule
+\end{longtable}
+
+\subsection*{Training \& Awareness}
+Mandatory induction plus refresher training every 12 months; scenario
+workshops for Engineering \& Grid Operations owing to SCADA criticality.
+
+\subsection*{Review \& Maintenance}
+The CISO schedules semi-annual management-review meetings to confirm plan
+adequacy and regulatory alignment.
+
+%------------------------------------------------------------------
+\section{Incident-Response Planning Policy (IRPP)}
+\label{sec:IRPP}
+\subsection*{Purpose}
+Formalise preparation, escalation and coordination required to manage
+information-security incidents rapidly and effectively.
+
+\subsection*{Scope}
+Real or suspected compromises of confidentiality, integrity or availability
+affecting IT or OT (e.g.\ SCADA manipulation, ERP data breach, phishing).
+
+\subsection*{Policy Requirements}
+\begin{enumerate}[label=\arabic*.]
+  \item \textbf{Incident-Response Team (IRT)} consisting of: Incident
+        Commander, SOC Analysts, OT-Security Engineer, Communications
+        Officer and Legal Adviser.
+  \item \textbf{Seven-phase method}\,—Preparation $\rightarrow$ Detection
+        $\rightarrow$ Assessment $\rightarrow$ Containment
+        $\rightarrow$ Eradication $\rightarrow$ Recovery
+        $\rightarrow$ Post-incident review.
+  \item \textbf{15-minute reporting rule}\,—Employees must inform the SOC or
+        on-call IRT within 15 minutes of discovery.
+  \item \textbf{Classification \& escalation}\,—Severity 1 events (critical
+        infrastructure impact) are escalated to the CEO and regulators
+        within one hour.
+  \item \textbf{Forensic evidence protection}\,—Maintain chain-of-custody
+        logs for potential legal proceedings.
+  \item \textbf{Metrics}\,—MTTD, MTTC and number of repeat incidents.
+\end{enumerate}
+
+\subsection*{Testing}
+Table-top exercise every six months and at least one live
+\emph{purple-team} drill per year.
+
+%------------------------------------------------------------------
+\section{Disaster-Recovery Planning Policy (DRPP)}
+\label{sec:DRPP}
+\subsection*{Purpose}
+Restore essential ICT and OT services—including SCADA control, cloud
+analytics and ERP—to their agreed Recovery Time Objective (RTO) and
+Recovery Point Objective (RPO) after a disruption.
+
+\subsection*{Scope}
+All production data centres, public-cloud regions and OT substations that
+support core revenue streams.
+
+\subsection*{Policy Requirements}
+\begin{enumerate}[label=\arabic*.]
+  \item \textbf{Business Impact Analysis}\,—Review critical processes
+        annually to set or revise RTO/RPO.
+  \item \textbf{Redundant architecture}\,—Dual-site or multi-region design
+        for SCADA masters and ERP; hot-standby OT–IT gateways.
+  \item \textbf{Backup strategy}\,—3-2-1 rule with immutable object
+        storage.
+  \item \textbf{Invocation authority}\,—Only the COO or CISO may declare a
+        disaster and activate the DR plan.
+  \item \textbf{Test schedule}\,—Functional fail-over test (quarterly);
+        full blackout recovery simulation (annually).
+  \item \textbf{Supplier coordination}\,—DR provisions embedded in SLA
+        clauses with critical vendors.
+\end{enumerate}
+
+%------------------------------------------------------------------
+\section{Business-Continuity Planning Policy (BCPP)}
+\label{sec:BCPP}
+\subsection*{Purpose}
+Ensure that \emph{critical business processes}—energy distribution,
+customer billing, supply-chain procurement, R\&D labs—continue at predefined
+capacity levels during and after disruptive events.
+
+\subsection*{Scope}
+All functions above plus supporting HR, Legal and Administration services
+necessary for compliance and workforce welfare.
+
+\subsection*{Policy Requirements}
+\begin{enumerate}[label=\arabic*.]
+  \item \textbf{Continuity-management lifecycle}: Context \& BIA
+        $\rightarrow$ Strategy $\rightarrow$ Plan Development
+        $\rightarrow$ Training $\rightarrow$ Exercising
+        $\rightarrow$ Maintenance.
+  \item \textbf{Minimum Service Levels (MSL)}: \\
+        \begin{tabular}{@{}l l@{}}
+        Grid-Operations Control & $\le$ 15 minutes downtime; 80\,\% load
+        capacity.\\
+        Customer Contact Centre & 75 \% calls handled within 4 hours.\\
+        Procurement Portal & Emergency ordering within 8 hours.\\
+        \end{tabular}
+  \item \textbf{Alternative facilities}: Remote SCADA console at secondary
+        NOC; cloud-native CRM \emph{warm} tenant for customer support.
+  \item \textbf{People continuity}: Cross-training matrix for key roles to
+        mitigate single-point-of-knowledge risk identified in
+        Chapter~6.
+  \item \textbf{Communication plan}: Pre-approved templates for regulators,
+        media and customers, vetted by Legal \& Administration.
+\end{enumerate}
+
+\subsection*{Exercises \& Evaluation}
+Departmental walk-throughs every quarter; enterprise-wide simulation
+(including key suppliers) every 24 months.  Corrective actions are tracked
+in the Risk-Treatment Register.
+
+%------------------------------------------------------------------
+\section{Governance, Monitoring \& Review}
+\begin{itemize}[leftmargin=*]
+  \item The \emph{Risk \& Compliance Committee} receives quarterly KPI
+        dashboards for IR, DR and BC performance.
+  \item Internal audit evaluates each policy’s effectiveness against
+        ISO/IEC 27001 clauses and Annex A controls.
+  \item Policies are reviewed at least annually or whenever major business,
+        technology or regulatory changes occur.
+\end{itemize}
+
+%------------------------------------------------------------------
+\section{Document-Control Table}
+\label{sec:doccontrol}
+
+\begin{longtable}{@{}p{0.28\linewidth}p{0.12\linewidth}p{0.07\linewidth}%
+                  p{0.15\linewidth}p{0.15\linewidth}@{}}
+\toprule
+\textbf{Document} & \textbf{Owner} & \textbf{Ver.} &
+\textbf{Approval Date} & \textbf{Next Review}\\
+\midrule
+\endhead
+GCPP & CISO & 1.0 & 18-May-2025 & 18-May-2026\\
+IRPP & CISO & 1.0 & 18-May-2025 & 18-May-2026\\
+DRPP & COO/CISO & 1.0 & 18-May-2025 & 18-May-2026\\
+BCPP & COO/CISO & 1.0 & 18-May-2025 & 18-May-2026\\
+\bottomrule
+\end{longtable}
+
+% ----------  End of Chapter 9  ----------
