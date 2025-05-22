@@ -1,0 +1,95 @@
+% Chapter 11: Contingency Plans
+\chapter{Contingency Plans}
+\label{chap:contingency_plans}
+
+This chapter presents the detailed contingency plans that operationalise the Contingency-Planning Policies defined in Chapter~\ref{chap:contingency}. Each plan is aligned with ISO/IEC 27001 requirements and provides step-by-step procedures for incident response, disaster recovery, and business continuity, ensuring GreenGrid Energy's resilience in the face of disruptive events.
+
+% Incident Response Plan
+\section{Incident Response Plan}
+\label{sec:IRP_plan}
+\textbf{Standard:} ISO/IEC 27001 Annex A.5.26 – Information-security incident management procedures
+
+This Incident Response Plan (IRP) implements the Incident-Response Planning Policy (IRPP) described in Chapter~\ref{chap:contingency}. It establishes the framework for managing information-security incidents to minimise damage, restore normal operations swiftly, and ensure compliance with regulatory requirements.
+
+\subsection{Scope and Objectives}
+The IRP covers incidents such as data breaches, malware outbreaks, and service disruptions affecting GreenGrid Energy's IT and OT environments, including SCADA, ERP, and customer-facing systems. The primary objectives are to minimise operational, financial, and reputational impact, and to restore services as quickly as possible.
+
+\subsection{Incident Response Team}
+The Incident Response Team (IRT) consists of the Incident Commander, SOC Analysts, OT-Security Engineer, Communications Coordinator, and Legal Advisor. Contact details for each role are maintained in the secure document repository. The IRT is activated when an incident meets predefined severity thresholds, as outlined in the IRPP (see Chapter~\ref{chap:contingency}).
+
+\subsection{Incident Lifecycle Procedures}
+Incident management follows a structured lifecycle:
+\begin{enumerate}
+  \item \textbf{Detection and Reporting}: Incidents are detected through monitoring channels or employee reports. All employees are required to report suspected incidents to the SOC or on-call IRT within 15 minutes of discovery.
+  \item \textbf{Analysis and Classification}: The IRT triages incidents, assesses impact, and classifies severity. Severity 1 events (e.g., critical infrastructure impact) are escalated to the CEO and regulators within one hour.
+  \item \textbf{Containment}: The IRT implements short-term and long-term containment strategies to limit the spread and impact of the incident.
+  \item \textbf{Eradication}: Root causes are eliminated, such as by patching vulnerabilities or removing malware.
+  \item \textbf{Recovery}: Systems are restored to operational status, with integrity and security verified before returning to service.
+  \item \textbf{Post-Incident Review}: The IRT conducts a root-cause analysis, documents lessons learned, and updates policies and controls as needed.
+\end{enumerate}
+
+\subsection{Communication Protocols}
+Communication during incidents follows pre-approved templates and timelines for internal alerts, customer notifications, regulatory reporting, and media statements. The Communications Coordinator ensures that all stakeholders are informed appropriately, in line with the communication plan described in Chapter~\ref{chap:contingency}.
+
+\subsection{Forensic Evidence Handling}
+Forensic evidence is handled in accordance with legal and regulatory requirements. Chain-of-custody forms are maintained, evidence is stored securely, and coordination with legal authorities is ensured to support potential legal proceedings.
+
+\subsection{Metrics and Testing}
+Key metrics such as Mean Time to Detect (MTTD), Mean Time to Respond (MTTR), and incident volume are tracked and reported to the Risk and Compliance Committee. The IRT conducts tabletop exercises semiannually and live drills annually to test and improve incident response capabilities.
+
+% Disaster Recovery Plan
+\section{Disaster Recovery Plan}
+\label{sec:DRP_plan}
+\textbf{Standards:} ISO/IEC 27001 Annex A.5.29 – Information-security continuity; Clause 8.14 – Availability of services
+
+The Disaster Recovery Plan (DRP) operationalises the Disaster-Recovery Planning Policy (DRPP) from Chapter~\ref{chap:contingency}. It details the procedures for restoring essential ICT and OT services, including SCADA control, cloud analytics, and ERP, to their agreed Recovery Time Objective (RTO) and Recovery Point Objective (RPO) after a disruption.
+
+\subsection{Scope and Recovery Objectives}
+The DRP applies to all production data centres, public-cloud regions, and OT substations supporting GreenGrid Energy's core revenue streams. Critical systems such as SCADA, ERP, CRM, and the billing engine are prioritised, with RTO and RPO targets defined in the Business Impact Analysis (see Chapter~\ref{chap:BIA}).
+
+\subsection{Recovery Strategies}
+GreenGrid Energy employs a combination of dual-site or multi-region failover for key platforms, cloud-based orchestration for rapid infrastructure provisioning, and manual recovery procedures for legacy systems. Redundant architecture and backup strategies (e.g., the 3-2-1 rule with immutable object storage) are in place to ensure resilience.
+
+\subsection{Activation Criteria and Authority}
+The DRP may be invoked when predefined conditions are met, such as significant service disruption or data loss. Only the COO or CISO is authorised to declare a disaster and activate the DRP, as specified in the DRPP.
+
+\subsection{Backup and Restoration Procedures}
+Backups are performed according to defined schedules, with media handled securely and integrity verified regularly. Restoration procedures are documented and tested to ensure data can be recovered quickly and reliably.
+
+\subsection{Infrastructure Recovery}
+Infrastructure recovery includes network reconfiguration, server rebuilds, application redeployment, and coordination with critical vendors. Supplier coordination is embedded in SLA clauses to support rapid recovery.
+
+\subsection{Testing and Maintenance}
+Quarterly functional failover tests and annual full-scope simulations are conducted, with results documented and corrective actions tracked. The DRP is reviewed and updated after each test or major incident.
+
+% Business Continuity Plan
+\section{Business Continuity Plan}
+\label{sec:BCP_plan}
+\textbf{Standards:} ISO/IEC 27001 Annex A.5.30 – ICT readiness for business continuity; Clause 8.14 – Availability of services
+
+The Business Continuity Plan (BCP) implements the Business-Continuity Planning Policy (BCPP) from Chapter~\ref{chap:contingency}. It ensures that critical business processes—such as energy distribution, customer billing, supply-chain procurement, and R\&D labs—continue at predefined capacity levels during and after disruptive events.
+
+\subsection{Business Impact Analysis Summary}
+The BCP is informed by the Business Impact Analysis (BIA) in Chapter~\ref{chap:BIA}, which identifies and prioritises critical business processes and specifies Maximum Allowable Downtime (MAD) for each business unit.
+
+\subsection{Continuity Strategies}
+Continuity is maintained through alternate work sites, remote workforce enablement, manual workarounds, and process adaptations. Resource and vendor coordination ensures rapid provisioning of essential services.
+
+\subsection{Plan Activation and Governance}
+A decision matrix guides the activation of continuity actions, with the Crisis Management Team responsible for governance and oversight. Roles and responsibilities are clearly defined to ensure effective response.
+
+\subsection{Continuity Procedures}
+Detailed procedures are in place to maintain customer services and billing operations, supply-chain procurement and logistics, and R\&D lab and testing environments. These procedures are regularly reviewed and updated based on lessons learned from exercises and real events.
+
+\subsection{Communication and Stakeholder Management}
+Stakeholder management is supported by pre-approved notification templates and up-to-date contact lists. Communication protocols ensure timely and accurate information sharing with internal and external stakeholders.
+
+\subsection{Recovery and Restoration}
+Criteria and procedures for resuming normal operations are defined, including final verification steps to ensure all systems and processes are fully restored.
+
+\subsection{Exercises and Review}
+Quarterly departmental walk-throughs and full-scale exercises every two years are conducted to validate the BCP. After-action reports are produced, and the plan is updated as necessary to address identified gaps.
+
+% Document Control
+\section{Document Control}
+All contingency plans are stored in the secure document repository under version control. Review cycles align with policy review timelines (annual) or are triggered after major incidents or tests, ensuring that all plans remain current and effective.
