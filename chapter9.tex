@@ -15,29 +15,29 @@ commitments adopted by the Board in Chapters 3–7.
 \textbf{Policy} & \textbf{Purpose} & \textbf{ISO/IEC 27001:2022 Annex A}\\
 \midrule
 \endhead
-General Contingency‐Planning Policy (GCPP) &
+\ac{GCPP} &
 Enterprise-level principles governing \emph{all} contingency capabilities. &
 Foundational (applies to the whole standard)\\[2pt]
 
-Incident-Response Planning Policy (IRPP) &
+\ac{IRPP} &
 Preparation and coordination for information-security incidents. &
 5.24 \textit{Information-security incident management planning \& preparation}\\[2pt]
 
-Disaster-Recovery Planning Policy (DRPP) &
+\ac{DRPP} &
 Restoration of ICT/OT services to meet defined RTO/RPO. &
 5.29 \textit{Information-security continuity}\\[2pt]
 
-Business-Continuity Planning Policy (BCPP) &
+\ac{BCPP} &
 Continuity of critical business processes beyond ICT recovery. &
 5.30 \textit{ICT readiness for business continuity}\\
 \bottomrule
 \end{longtable}
 
 The policies are \emph{cumulative}: the GCPP sets universal rules, while
-IRPP, DRPP and BCPP add discipline-specific requirements.
+\ac{IRPP}, \ac{DRPP} and \ac{BCPP} add discipline-specific requirements.
 
 %------------------------------------------------------------------
-\section{General Contingency-Planning Policy (GCPP)}
+\section{\ac{GCPP}}
 \subsection*{Purpose}
 Safeguard life, environment, assets and reputation by
 \emph{anticipating, preventing and managing} disruptive events.
@@ -54,7 +54,7 @@ environments) inside the ISMS boundary defined in Chapter~2.
         plan shall reside in the secure document repository with version
         control and change-management records.
   \item \textbf{Hierarchy \& integration}\,—Department-level plans (IR, DR,
-        BC) must align with and reference the GCPP.
+        BC) must align with and reference the \ac{GCPP}.
   \item \textbf{Testing cadence}\,—Each plan shall be exercised at least
         annually and after material changes or significant incidents.
   \item \textbf{Continuous improvement}\,—Lessons learned from exercises or
@@ -68,8 +68,8 @@ environments) inside the ISMS boundary defined in Chapter~2.
 \textbf{Role} & \textbf{Key duties}\\
 \midrule
 \endhead
-Board of Directors & Approve the GCPP and resource its implementation.\\[2pt]
-Chief Information Security Officer (CISO) & Own the framework and coordinate
+Board of Directors & Approve the \ac{GCPP} and resource its implementation.\\[2pt]
+\ac{CISO} & Own the framework and coordinate
 audits.\\[2pt]
 Department Directors & Maintain department-specific plans and ensure staff
 readiness.\\[2pt]
@@ -80,14 +80,14 @@ follow approved procedures.\\
 
 \subsection*{Training \& Awareness}
 Mandatory induction plus refresher training every 12 months; scenario
-workshops for Engineering \& Grid Operations owing to SCADA criticality.
+workshops for Engineering \& Grid Operations owing to \ac{SCADA} criticality.
 
 \subsection*{Review \& Maintenance}
 The CISO schedules semi-annual management-review meetings to confirm plan
 adequacy and regulatory alignment.
 
 %------------------------------------------------------------------
-\section{Incident-Response Planning Policy (IRPP)}
+\section{\ac{IRPP}}
 \label{sec:IRPP}
 \subsection*{Purpose}
 Formalise preparation, escalation and coordination required to manage
@@ -95,11 +95,11 @@ information-security incidents rapidly and effectively.
 
 \subsection*{Scope}
 Real or suspected compromises of confidentiality, integrity or availability
-affecting IT or OT (e.g.\ SCADA manipulation, ERP data breach, phishing).
+affecting IT or OT (e.g.\ \ac{SCADA} manipulation, ERP data breach, phishing).
 
 \subsection*{Policy Requirements}
 \begin{enumerate}[label=\arabic*.]
-  \item \textbf{Incident-Response Team (IRT)} consisting of: Incident
+  \item \textbf{\ac{IRT}} consisting of: Incident
         Commander, SOC Analysts, OT-Security Engineer, Communications
         Officer and Legal Adviser.
   \item \textbf{Seven-phase method}\,—Preparation $\rightarrow$ Detection
@@ -107,7 +107,7 @@ affecting IT or OT (e.g.\ SCADA manipulation, ERP data breach, phishing).
         $\rightarrow$ Eradication $\rightarrow$ Recovery
         $\rightarrow$ Post-incident review.
   \item \textbf{15-minute reporting rule}\,—Employees must inform the SOC or
-        on-call IRT within 15 minutes of discovery.
+        on-call \ac{IRT} within 15 minutes of discovery.
   \item \textbf{Classification \& escalation}\,—Severity 1 events (critical
         infrastructure impact) are escalated to the CEO and regulators
         within one hour.
@@ -121,12 +121,12 @@ Table-top exercise every six months and at least one live
 \emph{purple-team} drill per year.
 
 %------------------------------------------------------------------
-\section{Disaster-Recovery Planning Policy (DRPP)}
+\section{\ac{DRPP}}
 \label{sec:DRPP}
 \subsection*{Purpose}
 Restore essential ICT and OT services—including SCADA control, cloud
-analytics and ERP—to their agreed Recovery Time Objective (RTO) and
-Recovery Point Objective (RPO) after a disruption.
+analytics and ERP—to their agreed \ac{RTO} and
+\ac{RPO} after a disruption.
 
 \subsection*{Scope}
 All production data centres, public-cloud regions and OT substations that
@@ -149,7 +149,7 @@ support core revenue streams.
 \end{enumerate}
 
 %------------------------------------------------------------------
-\section{Business-Continuity Planning Policy (BCPP)}
+\section{\ac{BCPP}}
 \label{sec:BCPP}
 \subsection*{Purpose}
 Ensure that \emph{critical business processes}—energy distribution,
