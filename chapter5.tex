@@ -21,26 +21,90 @@ This policy defines GreenGrid Energy's approach to identifying, assessing and ma
 
 GreenGrid Energy maintains a conservative risk appetite, particularly for critical infrastructure such as \ac{SCADA} systems and sensitive customer information. Risks rated \textit{High} or \textit{Medium-High} require mandatory treatment and cannot be accepted without mitigation.
 
-\section{Risk Assessment Process}
-\label{sec:Risk_assessment}
+%───────────────────────────────────────────────────────────────────────────────
+\section{Risk-Assessment Process}
+\label{sec:risk_assessment}
+%───────────────────────────────────────────────────────────────────────────────
 
-\subsection*{Overview}
-The risk assessment process consists of three main stages:
+\subsection*{Process Overview}
+
+GreenGrid Energy evaluates information-security risk through a concise,
+four-step loop that is repeated whenever assets, threats or the business
+context change:
+
 \begin{enumerate}
-    \item \textbf{Risk Identification}: Mapping assets, associated threats, vulnerabilities and their potential impact.
-    \item \textbf{Risk Analysis}: Assessing the likelihood and impact of threat scenarios.
-    \item \textbf{Risk Assessment}: Comparing the analysed risk levels with predefined risk acceptance criteria.
+  \item \textbf{Identify} – catalogue each asset, its owner, and all credible
+        threats \& vulnerabilities.
+  \item \textbf{Analyse} – assign a qualitative \emph{Likelihood} and
+        \emph{Impact} value to every threat scenario.
+  \item \textbf{Evaluate} – calculate the scenario \emph{Criticality} as
+        Likelihood~\(\times\)~Impact (Equation~\ref{eq:criticality}) and consult
+        the Risk Matrix (Figure~\ref{figure:risk_matrix}) to obtain the
+        qualitative risk level.
+  \item \textbf{Treat/Monitor} – decide on mitigation, transfer, acceptance or
+        avoidance and track residual risk until it falls within the appetite
+        defined in Section~\ref{subsubsection:risk_apetite}.
 \end{enumerate}
 
-\subsection*{Methodology}
-Risks are analysed using a \textbf{Risk Level Matrix}, which combines the likelihood of an incident occurring with the severity of its impact. The matrix follows a 5x5 scale with risk levels classified as low, medium, high or critical. This structured approach enables a consistent and visual prioritisation of risks.
+\begin{equation}
+  \text{Criticality} = \text{Likelihood} \times \text{Impact}
+  \label{eq:criticality}
+\end{equation}
 
-\begin{figure}[H] \center \includegraphics[width=0.85\textwidth]{figures/image.png}
-    \caption{Risk level matrix used by GreenGrid Energy\cite{defelice2024riskmatrix}}
-    \label{figure:risk_matrix}
+\subsection*{Qualitative Scales}
+
+\paragraph{Likelihood}
+\begin{itemize}
+  \item \textbf{Very Likely} – expected within 12 months.
+  \item \textbf{Likely} – plausible in 1–3 years.
+  \item \textbf{Possible} – credible but uncommon; 3–5 year horizon.
+  \item \textbf{Unlikely} – conceivable once in 5–10 years.
+  \item \textbf{Very Unlikely} – practically improbable (\(>\)10 years).
+\end{itemize}
+
+\paragraph{Impact}
+\begin{itemize}
+  \item \textbf{Severe} – prolonged outage (\(>\)48 h), safety/environmental
+        harm or regulatory breach.
+  \item \textbf{Significant} – major financial loss or customer outage 8–48 h.
+  \item \textbf{Moderate} – noticeable service impact 1–8 h, limited legal or
+        financial exposure.
+  \item \textbf{Minor} – localised disruption, quickly reversible.
+  \item \textbf{Negligible} – no meaningful effect on operations or reputation.
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\textwidth]{figures/image.png}
+  \caption{GreenGrid Energy qualitative 5 × 5 risk matrix.}
+  \label{figure:risk_matrix}
 \end{figure}
 
-The matrix serves as a decision-making tool to identify which risks require immediate treatment and which can be accepted under defined conditions.
+The matrix yields one of five qualitative results—\textbf{High},
+\textbf{Medium-High}, \textbf{Medium}, \textbf{Low-Medium} or \textbf{Low}.
+Any scenario that registers as \textbf{High} or \textbf{Medium-High} exceeds
+the organisation’s risk appetite and must enter the treatment workflow
+immediately.
+
+\subsection*{Accountability}
+\label{subsec:risk_ownership}
+
+\begin{itemize}
+  \item \textbf{Asset Owner} – maintains the asset record, validates the
+        Likelihood/Impact assignment, funds the chosen treatment and signs off
+        any residual risk that is to be accepted.
+  \item \textbf{Information Security Manager (ISM)} – supplies the methodology,
+        moderates scoring for consistency and escalates overdue High or
+        Medium-High risks to the Risk Committee.
+  \item \textbf{Risk Committee} – reviews and approves residual risks at
+        Medium-High or above and arbitrates conflicts between operational needs
+        and risk-reduction actions.
+\end{itemize}
+
+These role assignments place day-to-day responsibility with the people closest
+to each asset while providing clear organisational oversight and escalation
+paths.
+
 
 \subsection{Risk Identification}
 
