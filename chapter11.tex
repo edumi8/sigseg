@@ -2,12 +2,12 @@
 \chapter{Risk Assessment}
 \label{chap:risk_assessment}
 
-Following the initial risk assessment presented in Chapter 6 and the Statement of Applicability (SoA) developed in Chapter 7, this activity consists of reassessing the risk landscape after applying selected ISO/IEC 27001 Annex A controls. The objective is to verify risk reduction, validate the effectiveness of the chosen controls, and record any corrective actions required.
+Following the initial risk assessment presented in Chapter \ref{chap:risk_assessment_report} and the \ac{SoA} developed in Chapter \ref{chap:soa}, this activity consists of reassessing the risk landscape after applying selected ISO/IEC 27001 Annex A controls. The objective is to verify risk reduction, validate the effectiveness of the chosen controls, and record any corrective actions required.
 
-\section*{12.1 Methodology}
-The methodology defined in Chapter 5 was used for risk re-evaluation, relying on:
+\section{Methodology}
+The methodology defined in Chapter \ref{chap:risk_management} was used for risk re-evaluation, relying on:
 \begin{itemize}
-    \item The Threat-Vulnerability-Asset (TVA) model for structuring risk identification.
+    \item The \ac{TVA} model for structuring risk identification.
     \item A 5×5 qualitative risk matrix (likelihood × impact) to assess residual risk.
     \item Focused evaluation on shared assets and each team member’s department: Shared Infrastructure, Supply Chain Management, Engineering \& Grid Operations, and Research \& Development.
 \end{itemize}
@@ -18,8 +18,9 @@ Each risk scenario was reviewed post-control implementation to determine whether
     \item Further mitigation or control reinforcement is required.
 \end{itemize}
 
-\section*{12.2 Reassessment of Shared Assets}
-\begin{longtable}{|p{3.5cm}|p{3.5cm}|p{5cm}|p{2.2cm}|p{2.5cm}|}
+\section{Reassessment of Shared Assets}
+
+\begin{longtable}{|p{2.8cm}|p{2.8cm}|p{4.5cm}|p{2cm}|p{2.2cm}|}
 \hline
 \textbf{Asset} & \textbf{Threat} & \textbf{Control(s) Applied} & \textbf{Residual Risk} & \textbf{Corrective Action Required} \\
 \hline
@@ -31,10 +32,10 @@ SAP ERP & Data tampering or unauthorized access & A.5.15 (Access control), A.8.1
 \hline
 \end{longtable}
 
-\section*{12.3 Departmental Risk Reassessment}
+\section{Departmental Risk Reassessment}
 
 \subsection*{Supply Chain Management}
-\begin{longtable}{|p{3.5cm}|p{3.5cm}|p{5cm}|p{2.2cm}|p{2.5cm}|}
+\begin{longtable}{|p{2.8cm}|p{2.8cm}|p{4.5cm}|p{2cm}|p{2.2cm}|}
 \hline
 \textbf{Asset} & \textbf{Threat} & \textbf{Control(s) Applied} & \textbf{Residual Risk} & \textbf{Action} \\
 \hline
@@ -44,8 +45,9 @@ Hardware inventory records & Tampering or data loss & A.5.9 (Asset management), 
 \hline
 \end{longtable}
 
-\subsection*{Engineering \& Grid Operations}
-\begin{longtable}{|p{3.5cm}|p{3.5cm}|p{5cm}|p{2.2cm}|p{2.5cm}|}
+\subsection{Engineering \& Grid Operations}
+
+\begin{longtable}{|p{2.8cm}|p{2.8cm}|p{4.5cm}|p{2cm}|p{2.2cm}|}
 \hline
 \textbf{Asset} & \textbf{Threat} & \textbf{Control(s) Applied} & \textbf{Residual Risk} & \textbf{Action} \\
 \hline
@@ -55,8 +57,9 @@ OT Network & Lateral movement from IT network & A.8.8 (Network segmentation), A.
 \hline
 \end{longtable}
 
-\subsection*{Research \& Development}
-\begin{longtable}{|p{3.5cm}|p{3.5cm}|p{5cm}|p{2.2cm}|p{2.5cm}|}
+\subsection{Research \& Development}
+
+\begin{longtable}{|p{2.8cm}|p{2.8cm}|p{4.5cm}|p{2cm}|p{2.2cm}|}
 \hline
 \textbf{Asset} & \textbf{Threat} & \textbf{Control(s) Applied} & \textbf{Residual Risk} & \textbf{Action} \\
 \hline
@@ -66,7 +69,8 @@ Research databases & Unauthorized access or exfiltration & A.8.4 (Encryption), A
 \hline
 \end{longtable}
 
-\section*{12.4 Summary of Corrective Actions}
+\section{Summary of Corrective Actions}
+
 \begin{longtable}{|p{4cm}|p{6cm}|p{3.5cm}|p{2cm}|}
 \hline
 \textbf{Area} & \textbf{Action} & \textbf{Responsible Party} & \textbf{Deadline} \\

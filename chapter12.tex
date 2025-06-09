@@ -2,9 +2,9 @@
 \chapter{Internal Audit Simulation}
 \label{chap:internal_audit_simulation}
 
-As part of Phase 4 of the ISMS lifecycle, this activity simulates an internal audit to evaluate the effectiveness, adequacy, and compliance of GreenGrid Energy’s ISMS against ISO/IEC 27001 requirements. The audit also assesses the integration of security controls applied in previous phases and the organisation’s readiness for external certification.
+As part of Phase 4 of the \ac{ISMS} lifecycle, this activity simulates an internal audit to evaluate the effectiveness, adequacy, and compliance of GreenGrid Energy’s ISMS against ISO/IEC 27001 requirements. The audit also assesses the integration of security controls applied in previous phases and the organisation’s readiness for external certification.
 
-\section*{13.1 Objectives and Scope}
+\section{Objectives and Scope}
 The internal audit aimed to:
 \begin{itemize}
     \item Verify conformity with ISO/IEC 27001:2022 requirements, including internal policies and procedures.
@@ -20,7 +20,7 @@ The scope of this audit includes:
     \item Security controls evaluated in the updated risk assessment (Activity 12).
 \end{itemize}
 
-\section*{13.2 Audit Methodology}
+\section{Audit Methodology}
 The internal audit followed these steps:
 \begin{enumerate}
     \item \textbf{Preparation}: Review of policies, SoA, risk register, and previous assessment reports.
@@ -30,8 +30,8 @@ The internal audit followed these steps:
     \item \textbf{Reporting}: Documentation of findings, non-conformities, observations, and recommendations.
 \end{enumerate}
 
-\section*{13.3 Key Findings}
-\subsection*{Positive Observations}
+\section{Key Findings}
+\subsection{Positive Observations}
 \begin{itemize}
     \item Controls related to access management (Annex A 5.15) and encryption (A.8.4) were effectively implemented across shared systems.
     \item Supply Chain Management demonstrated excellent control over vendor audits and contract compliance.
@@ -39,20 +39,20 @@ The internal audit followed these steps:
     \item R\&D environments are isolated and use code repositories with strict version control and access policies.
 \end{itemize}
 
-\subsection*{Non-Conformities}
+\subsection{Non-Conformities}
 \begin{enumerate}
     \item \textbf{VPN Certificate Lifecycle}: No documented schedule for certificate renewal.
     \item \textbf{SCADA Segmentation Policy}: Some firewall rules were not fully aligned with defined segmentation strategy.
     \item \textbf{Audit Logs in R\&D}: Logging exists but lacks real-time analysis and alerts.
 \end{enumerate}
 
-\subsection*{Observations}
+\subsection{Observations}
 \begin{itemize}
     \item There is room for improvement in cross-departmental communication regarding incident response escalation.
     \item Physical access control to server rooms (although partially out of scope) should be reinforced.
 \end{itemize}
 
-\section*{13.4 Recommendations}
+\section{Recommendations}
 \begin{itemize}
     \item Establish a formal renewal policy for VPN certificates with automated alerts.
     \item Review and update SCADA segmentation rules and conduct periodic firewall audits.
@@ -60,5 +60,5 @@ The internal audit followed these steps:
     \item Update the Incident Response Plan to clarify responsibilities across departments.
 \end{itemize}
 
-\section*{13.5 Conclusion}
+\section{Conclusion}
 The internal audit confirmed that the ISMS implemented at GreenGrid Energy is aligned with ISO/IEC 27001 requirements and is effective in mitigating critical risks. Identified non-conformities are limited in scope and can be resolved within a short timeframe. The organisation demonstrates a high degree of maturity in key areas such as supply chain security, SCADA protection, and information classification, indicating a strong position ahead of formal external certification.
