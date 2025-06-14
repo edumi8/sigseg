@@ -2,10 +2,11 @@
 \chapter{Internal Audit Simulation}
 \label{chap:internal_audit_simulation}
 
-As part of Phase 4 of the \ac{ISMS} lifecycle, this activity simulates an internal audit to evaluate the effectiveness, adequacy, and compliance of GreenGrid Energy’s ISMS against ISO/IEC 27001 requirements. The audit also assesses the integration of security controls applied in previous phases and the organisation’s readiness for external certification.
+As part of Phase 4 of the \ac{ISMS} lifecycle, this chapter simulates an internal audit to evaluate the effectiveness, adequacy, and compliance of GreenGrid Energy’s \ac{ISMS} against ISO/IEC 27001 requirements.
+The audit also assesses the integration of security controls applied in previous phases and the organisation’s readiness for external certification.
 
 \section{Objectives and Scope}
-The internal audit aimed to:
+The internal audit aims to:
 \begin{itemize}
     \item Verify conformity with ISO/IEC 27001:2022 requirements, including internal policies and procedures.
     \item Evaluate the effectiveness of implemented Annex A controls.
@@ -15,18 +16,18 @@ The internal audit aimed to:
 
 The scope of this audit includes:
 \begin{itemize}
-    \item Shared IT infrastructure and assets.
+    \item Shared \ac{IT} infrastructure and assets.
     \item Department-specific processes from Engineering \& Grid Operations, R\&D, and Supply Chain Management.
-    \item Security controls evaluated in the updated risk assessment (Activity 12).
+    \item Security controls evaluated in the updated risk assessment, from chapter \ref{chap:risk_assessment}.
 \end{itemize}
 
 \section{Audit Methodology}
 The internal audit followed these steps:
 \begin{enumerate}
-    \item \textbf{Preparation}: Review of policies, SoA, risk register, and previous assessment reports.
-    \item \textbf{Interviews}: Conducted with asset owners, department representatives, and IT staff.
+    \item \textbf{Preparation}: Review of policies, \ac{SoA}, risk register, and previous assessment reports.
+    \item \textbf{Interviews}: Conducted with asset owners, department representatives, and \ac{IT} staff.
     \item \textbf{Document Review}: Audit of logs, procedures, security events, and access records.
-    \item \textbf{Control Testing}: Sample testing of security control enforcement (e.g., MFA, backups, segmentation).
+    \item \textbf{Control Testing}: Sample testing of security control enforcement, such as \ac{MFA}.
     \item \textbf{Reporting}: Documentation of findings, non-conformities, observations, and recommendations.
 \end{enumerate}
 
@@ -35,13 +36,13 @@ The internal audit followed these steps:
 \begin{itemize}
     \item Controls related to access management (Annex A 5.15) and encryption (A.8.4) were effectively implemented across shared systems.
     \item Supply Chain Management demonstrated excellent control over vendor audits and contract compliance.
-    \item SCADA systems are protected by network segmentation and monitoring tools, consistent with defined objectives.
+    \item \ac{SCADA} systems are protected by network segmentation and monitoring tools, consistent with defined objectives.
     \item R\&D environments are isolated and use code repositories with strict version control and access policies.
 \end{itemize}
 
 \subsection{Non-Conformities}
 \begin{enumerate}
-    \item \textbf{VPN Certificate Lifecycle}: No documented schedule for certificate renewal.
+    \item \textbf{VPN Certificate Lifecycle}: Non documented schedule for certificate renewal.
     \item \textbf{SCADA Segmentation Policy}: Some firewall rules were not fully aligned with defined segmentation strategy.
     \item \textbf{Audit Logs in R\&D}: Logging exists but lacks real-time analysis and alerts.
 \end{enumerate}
@@ -49,16 +50,19 @@ The internal audit followed these steps:
 \subsection{Observations}
 \begin{itemize}
     \item There is room for improvement in cross-departmental communication regarding incident response escalation.
-    \item Physical access control to server rooms (although partially out of scope) should be reinforced.
+    \item Physical access control to server rooms, although partially out of scope, should be reinforced.
 \end{itemize}
 
 \section{Recommendations}
 \begin{itemize}
-    \item Establish a formal renewal policy for VPN certificates with automated alerts.
-    \item Review and update SCADA segmentation rules and conduct periodic firewall audits.
-    \item Integrate SIEM capabilities with R\&D environments to enable real-time monitoring.
-    \item Update the Incident Response Plan to clarify responsibilities across departments.
+    \item Establish a formal renewal policy for \ac{VPN} certificates with automated alerts.
+    \item Review and update \ac{SCADA} segmentation rules and conduct periodic firewall audits.
+    \item Integrate \ac{SIEM} capabilities with R\&D environments to enable real-time monitoring.
+    \item Update the \ac{IRP} to clarify responsibilities across departments.
 \end{itemize}
 
 \section{Conclusion}
-The internal audit confirmed that the ISMS implemented at GreenGrid Energy is aligned with ISO/IEC 27001 requirements and is effective in mitigating critical risks. Identified non-conformities are limited in scope and can be resolved within a short timeframe. The organisation demonstrates a high degree of maturity in key areas such as supply chain security, SCADA protection, and information classification, indicating a strong position ahead of formal external certification.
+The internal audit confirmed that the \ac{ISMS} implemented at GreenGrid Energy is aligned with ISO/IEC 27001 requirements
+and is effective in mitigating critical risks. Identified non-conformities are limited in scope and can be resolved within
+a short timeframe. The organisation demonstrates a high degree of maturity in key areas such as supply chain security, \ac{SCADA}
+protection, and information classification, indicating a strong position ahead of formal external certification.

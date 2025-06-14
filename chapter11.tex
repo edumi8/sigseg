@@ -2,21 +2,17 @@
 \chapter{Risk Assessment}
 \label{chap:risk_assessment}
 
-Following the initial risk assessment presented in Chapter \ref{chap:risk_assessment_report} and the \ac{SoA} developed in Chapter \ref{chap:soa}, this activity consists of reassessing the risk landscape after applying selected ISO/IEC 27001 Annex A controls. The objective is to verify risk reduction, validate the effectiveness of the chosen controls, and record any corrective actions required.
+Following the initial risk assessment presented in Chapter \ref{chap:risk_assessment_report} and the \ac{SoA} developed in Chapter \ref{chap:soa}, this chapter consists of reassessing the risk landscape after applying selected ISO/IEC 27001 Annex A controls. The objective is to verify risk reduction, validate the effectiveness of the chosen controls, and record any corrective actions required.
 
 \section{Methodology}
 The methodology defined in Chapter \ref{chap:risk_management} was used for risk re-evaluation, relying on:
 \begin{itemize}
     \item The \ac{TVA} model for structuring risk identification.
-    \item A 5×5 qualitative risk matrix (likelihood × impact) to assess residual risk.
+    \item A qualitative matrix, cross-referencing the likelihood of an event with its estimated impact.
     \item Focused evaluation on shared assets and each team member’s department: Shared Infrastructure, Supply Chain Management, Engineering \& Grid Operations, and Research \& Development.
 \end{itemize}
 
-Each risk scenario was reviewed post-control implementation to determine whether:
-\begin{itemize}
-    \item The residual risk is now acceptable (i.e., low or medium).
-    \item Further mitigation or control reinforcement is required.
-\end{itemize}
+Each risk scenario was reviewed post-control implementation to determine whether the residual risk is now considered acceptable or if further mitigation or control reinforcement is required.
 
 \section{Reassessment of Shared Assets}
 
@@ -24,11 +20,11 @@ Each risk scenario was reviewed post-control implementation to determine whether
 \hline
 \textbf{Asset} & \textbf{Threat} & \textbf{Control(s) Applied} & \textbf{Residual Risk} & \textbf{Corrective Action Required} \\
 \hline
-Microsoft 365 (Collab Tool) & Phishing attacks via email & A.5.10 (Access control policy), A.5.25 (Awareness) & Low & No \\
+Microsoft 365 & Phishing attacks via email & A.5.10 (Access control policy), A.5.25 (Awareness) & Low & No \\
 \hline
-VPN Infrastructure & Remote access compromise & A.8.4 (Use of cryptography), A.5.15 (MFA) & Medium & Improve VPN certificate rotation \\
+\ac{VPN} Infrastructure & Remote access compromise & A.8.4 (Use of cryptography), A.5.15 (MFA) & Medium & Improve VPN certificate rotation \\
 \hline
-SAP ERP & Data tampering or unauthorized access & A.5.15 (Access control), A.8.16 (Monitoring) & Low & No \\
+\ac{SAP} \ac{ERP} & Data tampering or unauthorized access & A.5.15 (Access control), A.8.16 (Monitoring) & Low & No \\
 \hline
 \end{longtable}
 
@@ -51,9 +47,9 @@ Hardware inventory records & Tampering or data loss & A.5.9 (Asset management), 
 \hline
 \textbf{Asset} & \textbf{Threat} & \textbf{Control(s) Applied} & \textbf{Residual Risk} & \textbf{Action} \\
 \hline
-SCADA system & Remote exploitation & A.5.15 (Access control), A.8.16 (Monitoring), A.8.8 (Segmentation) & Medium & Further restrict access \\
+\ac{SCADA} system & Remote exploitation & A.5.15 (Access control), A.8.16 (Monitoring), A.8.8 (Segmentation) & Medium & Further access restriction \\
 \hline
-OT Network & Lateral movement from IT network & A.8.8 (Network segmentation), A.5.10 (Policies) & Low & No \\
+OT Network & Lateral movement from \ac{IT} network & A.8.8 (Network segmentation), A.5.10 (Policies) & Low & No \\
 \hline
 \end{longtable}
 
@@ -71,17 +67,21 @@ Research databases & Unauthorized access or exfiltration & A.8.4 (Encryption), A
 
 \section{Summary of Corrective Actions}
 
+Summing up the corrective actions required based on the reassessment, the following table outlines the areas needing attention, the actions to be taken, responsible parties, and deadlines for completion.
+
 \begin{longtable}{|p{4cm}|p{6cm}|p{3.5cm}|p{2cm}|}
 \hline
 \textbf{Area} & \textbf{Action} & \textbf{Responsible Party} & \textbf{Deadline} \\
 \hline
-VPN Infrastructure & Rotate certificates every 3 months & IT Department & Q3 2025 \\
+\ac{VPN} Infrastructure & Rotate certificates every 3 months & \ac{IT} Department & Q3 2025 \\
 \hline
-SCADA Access & Apply stricter segmentation using firewalls and jump hosts & OT Security Engineer & Q3 2025 \\
+\ac{SCADA} Access & Apply stricter segmentation using firewalls and jump hosts & OT Security Engineer & Q3 2025 \\
 \hline
 R\&D Database Audit & Implement real-time audit logs and anomaly detection & RD Manager, IT Security & Q4 2025 \\
 \hline
 \end{longtable}
 
 \section*{12.5 Conclusion}
-The implementation of Annex A controls significantly reduced risk across most assessed areas. Residual risks were brought to acceptable levels in shared systems and departmental assets, with only a few requiring additional corrective measures. This reassessment confirms the effectiveness of GreenGrid Energy’s ISMS and the adequacy of its control framework.
+The implementation of Annex A controls significantly reduced risk across most assessed areas.
+Residual risks were brought to acceptable levels in shared systems and departmental assets, with only a few requiring additional
+corrective measures. This reassessment confirms the effectiveness of GreenGrid Energy’s \ac{ISMS} and the adequacy of its control framework.
