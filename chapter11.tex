@@ -1,87 +1,203 @@
 % Activity 12: Conducting a Risk Assessmen
 \chapter{Risk Assessment}
-\label{chap:risk_assessment}
+\label{chap:activity12}
 
-Following the initial risk assessment presented in Chapter \ref{chap:risk_assessment_report} and the \ac{SoA} developed in Chapter \ref{chap:soa}, this chapter consists of reassessing the risk landscape after applying selected ISO/IEC 27001 Annex A controls. The objective is to verify risk reduction, validate the effectiveness of the chosen controls, and record any corrective actions required.
+This chapter documents the risk assessment of the GreenGrid Energy \ac{ISMS}  
+It fulfils two ISO/IEC 27001 deliverables:
 
-\section{Methodology}
-The methodology defined in Chapter \ref{chap:risk_management} was used for risk re-evaluation, relying on:
+\begin{enumerate}
+  \item \textbf{Corrective-Actions Report} – Clause 10.2  
+        (Section~\ref{sec:corrective_actions});
+  \item \textbf{New Risk-Assessment Report} – Clause 8.2  
+        (Section~\ref{sec:new_risk_assessment}).
+\end{enumerate}
+
+The reassessment re-uses the methodology in
+Chapter~\ref{chap:risk_management}, applies the Annex A controls already
+selected in the Statement of Applicability
+(Chapter~\ref{chap:soa}), and evaluates the resulting \emph{residual} risk for:
+
 \begin{itemize}
-    \item The \ac{TVA} model for structuring risk identification.
-    \item A qualitative matrix, cross-referencing the likelihood of an event with its estimated impact.
-    \item Focused evaluation on shared assets and each team member’s department: Shared Infrastructure, Supply Chain Management, Engineering \& Grid Operations, and Research \& Development.
+  \item \textbf{Shared assets} – enterprise resources used organisation-wide;
+  \item \textbf{Department-specific assets} – the \ac{RD}, Supply-Chain and
+        Customer Services \& Billing domains.
 \end{itemize}
 
-Each risk scenario was reviewed post-control implementation to determine whether the residual risk is now considered acceptable or if further mitigation or control reinforcement is required.
+Only changes from the original assessment made on Chapter~\ref{chap:risk_assessment_report}) are shown; unchanged risks are carried forward verbatim.
 
-\section{Reassessment of Shared Assets}
+%-------------------------------------------------------------------------------
+\section{Method Recap}
+\label{sec:method_recap}
+%-------------------------------------------------------------------------------
 
-\begin{longtable}{|p{2.8cm}|p{2.8cm}|p{4.5cm}|p{2cm}|p{2.2cm}|}
-\hline
-\textbf{Asset} & \textbf{Threat} & \textbf{Control(s) Applied} & \textbf{Residual Risk} & \textbf{Corrective Action Required} \\
-\hline
-Microsoft 365 & Phishing attacks via email & A.5.10 (Access control policy), A.5.25 (Awareness) & Low & No \\
-\hline
-\ac{VPN} Infrastructure & Remote access compromise & A.8.4 (Use of cryptography), A.5.15 (MFA) & Medium & Improve VPN certificate rotation \\
-\hline
-\ac{SAP} \ac{ERP} & Data tampering or unauthorized access & A.5.15 (Access control), A.8.16 (Monitoring) & Low & No \\
-\hline
+The same 5 × 5 qualitative matrix (Figure~\ref{figure:risk_matrix}) is used.
+Residual likelihood and impact are re-scored \emph{after} the control is fully
+implemented and evidence (e.g.\ pilot results, audit logs, or training
+completion records) is available.
+
+\begin{center}
+\emph{Risk appetite remains unchanged: risks rated \textbf{High} or
+\textbf{Medium-High} must be further treated, transferred, or avoided.}
+\end{center}
+
+%-------------------------------------------------------------------------------
+\section{Corrective Actions}
+\label{sec:corrective_actions}
+%-------------------------------------------------------------------------------
+
+The non-conformities uncovered during implementation and their corrective
+actions are logged in Table~\ref{tab:corrective_actions}.  Each action is traceable
+to an asset risk, a root cause, and a responsible owner.
+
+\begin{longtable}{|p{1cm}|p{1.2cm}|p{3.0cm}|p{4.5cm}|p{2.0cm}|p{1.5cm}|p{1.5cm}|}
+  \caption{Corrective-Actions Log}
+  \label{tab:corrective_actions}\\
+  \hline
+  \textbf{CA ID} & \textbf{Risk ID} & \textbf{Root Cause} & \textbf{Corrective Action} & \textbf{Owner} & \textbf{Due} & \textbf{Status}\\
+  \hline
+  \endfirsthead
+  \hline
+  \textbf{CA ID} & \textbf{Risk ID} & \textbf{Root Cause} & \textbf{Corrective Action} & \textbf{Owner} & \textbf{Due} & \textbf{Status}\\
+  \hline
+  \endhead
+  CA-001 & IT-201 & Low phishing awareness & Deliver mandatory anti-phishing training (A.6.3.1) and quarterly tests & \ac{CISO} & 2025-07-31 & \textcolor{green}{Closed}\\
+  \hline
+  CA-002 & ERP-301 & Excessive privileges & Enforce RBAC review \& MFA (A.9.1.1 / A.5.20); revoke dormant roles & \ac{ERP} Manager & 2025-06-30 & \textcolor{green}{Closed}\\
+  \hline
+  CA-003 & RD-102 & Unlogged cloud admin actions & Enable CloudTrail \& SIEM ingestion (A.5.32) & Head of R\&D & 2025-08-15 & Open\\
+  \hline
+  CA-004 & HR-502 & Single point of knowledge & Document procedures; implement job-rotation plan (A.5.30) & HR Director & 2025-09-01 & Open\\
+  \hline
 \end{longtable}
 
-\section{Departmental Risk Reassessment}
+Corrective actions are verified through internal audit and the evidences are stored in the ISMS repository \texttt{/ISMS/evidence/CA\_logs/2025Q3}.
 
-\subsection*{Supply Chain Management}
-\begin{longtable}{|p{2.8cm}|p{2.8cm}|p{4.5cm}|p{2cm}|p{2.2cm}|}
+%-------------------------------------------------------------------------------
+\section{New Risk-Assessment Report}
+\label{sec:new_risk_assessment}
+%-------------------------------------------------------------------------------
+
+The following tables present the residual risk levels \emph{after} the controls
+listed in Chapter~\ref{chap:soa} and the corrective actions above have been
+fully applied.
+
+\subsection{Shared Assets – Residual Risk}
+\label{subsec:shared_residual}
+
+\begin{longtable}{|p{1.5cm}|p{2cm}|p{2cm}|p{2cm}|p{2.0cm}|p{2cm}|p{2.0cm}|}
+  \caption{Residual Risk – Shared Assets}
+  \label{tab:shared_residual}\\
 \hline
-\textbf{Asset} & \textbf{Threat} & \textbf{Control(s) Applied} & \textbf{Residual Risk} & \textbf{Action} \\
-\hline
-Vendor contracts & Malicious supplier compromise & A.5.22 (Third-party security), A.5.29 (Review) & Low & No \\
-\hline
-Hardware inventory records & Tampering or data loss & A.5.9 (Asset management), A.8.12 (Backups) & Low & No \\
-\hline
+  \textbf{Asset ID} & \textbf{Threat} & \textbf{Key Control(s)} & \textbf{Likelihood} & \textbf{Impact} & \textbf{Residual Level} & \textbf{Treatment Decision}\\
+  \hline
+  \endfirsthead
+  \hline
+  \textbf{Asset ID} & \textbf{Threat} & \textbf{Key Control(s)} & \textbf{Likelihood} & \textbf{Impact} & \textbf{Residual Level} & \textbf{Treatment Decision}\\
+  \hline
+  \endhead
+  ERP-301 & Data breach & A.9.1.1, A.5.20 & \textbf{Unlikely} & Severe & \textbf{Medium} & Accept \\
+  \hline
+  IT-201  & Phishing attack & A.6.3.1, A.7.2.2 & \textbf{Possible} & Significant & \textbf{Medium-High} & \textit{Treat\footnotemark} \\
+  \hline
+  IT-202  & Unauthorised access & A.13.1.1, A.12.4.1 & \textbf{Unlikely} & Significant & \textbf{Low-Medium} & Accept \\
+  \hline
+  CS-401  & Data leakage & A.9.2.3, A.9.2.5 & \textbf{Unlikely} & Significant & \textbf{Low-Medium} & Accept \\
+  \hline
+  HR-501  & Insider threat & A.9.2.5, A.12.4.3 & \textbf{Unlikely} & Significant & \textbf{Low-Medium} & Accept \\
+  \hline
+  HR-502  & Staff unavailability & A.17.1.1, A.5.30 & \textbf{Unlikely} & Significant & \textbf{Low-Medium} & Accept \\
+  \hline
+\end{longtable}
+\footnotetext{Additional anti-phishing campaigns are planned for Q4 2025 to
+drive the risk to \emph{Medium}.}
+
+\subsection{Departmental Assets – Residual Risk}
+
+\subsubsection*{Research \& Development}
+
+\begin{longtable}{|p{1.5cm}|p{2cm}|p{2cm}|p{2cm}|p{2.0cm}|p{2cm}|p{2.0cm}|}
+  \caption{Residual Risk – \ac{RD} Department}
+  \label{tab:rd_residual}\\
+  \hline
+  \textbf{Asset ID} & \textbf{Threat} & \textbf{Key Control(s)} & \textbf{Likelihood} & \textbf{Impact} & \textbf{Residual Level} & \textbf{Treatment Decision}\\
+  \hline
+  \endfirsthead
+  \hline
+  \textbf{Asset ID} & \textbf{Threat} & \textbf{Key Control(s)} & \textbf{Likelihood} & \textbf{Impact} & \textbf{Residual Level} & \textbf{Treatment Decision}\\
+  \hline
+  \endhead
+  RD-101 & Data loss & A.5.36, A.5.32 & Unlikely & Moderate & Low-Medium & Accept \\
+  \hline
+  RD-101 & Malware infection & A.5.20, A.5.28 & Unlikely & Significant & Low-Medium & Accept \\
+  \hline
+  RD-102 & Insider breach & A.5.18, A.5.25, A.5.32 & Unlikely & Significant & Low-Medium & Accept \\
+  \hline
+  RD-102 & Cloud misconfig. & A.15.1.1, A.14.2.2 & Possible & Severe & Medium-High & \textit{Treat} \\
+  \hline
 \end{longtable}
 
-\subsection{Engineering \& Grid Operations}
+\subsubsection*{Supply Chain}
 
-\begin{longtable}{|p{2.8cm}|p{2.8cm}|p{4.5cm}|p{2cm}|p{2.2cm}|}
-\hline
-\textbf{Asset} & \textbf{Threat} & \textbf{Control(s) Applied} & \textbf{Residual Risk} & \textbf{Action} \\
-\hline
-\ac{SCADA} system & Remote exploitation & A.5.15 (Access control), A.8.16 (Monitoring), A.8.8 (Segmentation) & Medium & Further access restriction \\
-\hline
-OT Network & Lateral movement from \ac{IT} network & A.8.8 (Network segmentation), A.5.10 (Policies) & Low & No \\
-\hline
+\begin{longtable}{|p{1.5cm}|p{2cm}|p{2cm}|p{2cm}|p{2.0cm}|p{2cm}|p{2.0cm}|}
+  \caption{Residual Risk – Supply Chain}
+  \label{tab:sc_residual}\\
+  \hline
+  \textbf{Asset ID} & \textbf{Threat} & \textbf{Key Control(s)} & \textbf{Likelihood} & \textbf{Impact} & \textbf{Residual Level} & \textbf{Treatment Decision}\\
+  \hline
+  \endfirsthead
+  \hline
+  \textbf{Asset ID} & \textbf{Threat} & \textbf{Key Control(s)} & \textbf{Likelihood} & \textbf{Impact} & \textbf{Residual Level} & \textbf{Treatment Decision}\\
+  \hline
+  \endhead
+  ERP-301 & Third-party compromise & A.15.1.1, A.15.2.1 & Unlikely & Severe & Medium & Accept \\
+  \hline
+  ERP-301 & Data integrity loss & A.12.1.2, A.14.2.2 & Unlikely & Significant & Low-Medium & Accept \\
+  \hline
+  ERP-301 & System downtime & A.17.1.2, A.17.2.1 & Very Unlikely & Severe & Low-Medium & Accept \\
+  \hline
 \end{longtable}
 
-\subsection{Research \& Development}
+\subsubsection*{Customer Services \& Billing}
 
-\begin{longtable}{|p{2.8cm}|p{2.8cm}|p{4.5cm}|p{2cm}|p{2.2cm}|}
-\hline
-\textbf{Asset} & \textbf{Threat} & \textbf{Control(s) Applied} & \textbf{Residual Risk} & \textbf{Action} \\
-\hline
-Code repositories & IP theft or code manipulation & A.5.10 (Access control), A.8.9 (Code integrity) & Low & No \\
-\hline
-Research databases & Unauthorized access or exfiltration & A.8.4 (Encryption), A.5.25 (Training), A.5.15 (MFA) & Medium & Enforce stricter audit logs \\
-\hline
+\begin{longtable}{|p{1.5cm}|p{2cm}|p{2cm}|p{2cm}|p{2.0cm}|p{2cm}|p{2.0cm}|}
+  \caption{Residual Risk – Customer Services \& Billing}
+  \label{tab:csb_residual}\\
+  \hline
+  \textbf{Asset ID} & \textbf{Threat} & \textbf{Key Control(s)} & \textbf{Likelihood} & \textbf{Impact} & \textbf{Residual Level} & \textbf{Treatment Decision}\\
+  \hline
+  \endfirsthead
+  \hline
+  \textbf{Asset ID} & \textbf{Threat} & \textbf{Key Control(s)} & \textbf{Likelihood} & \textbf{Impact} & \textbf{Residual Level} & \textbf{Treatment Decision}\\
+  \hline
+  \endhead
+  CS-CRM-01 & Customer data breach & A.5.18, A.5.20 & Possible & Major & Medium-High & \textit{Treat} \\
+  \hline
+  CS-CRM-01 & SaaS outage & A.17.1.2 & Unlikely & Major & Medium & Accept \\
+  \hline
+  CS-BILL-02 & Fraudulent tampering & A.5.32, A.5.25 & Unlikely & Critical & Medium-High & \textit{Treat} \\
+  \hline
+  CS-BILL-02 & DoS attack & A.17.2.1 & Very Unlikely & Major & Low-Medium & Accept \\
+  \hline
 \end{longtable}
 
-\section{Summary of Corrective Actions}
+%-------------------------------------------------------------------------------
+\section{Summary and Next Steps}
+%-------------------------------------------------------------------------------
 
-Summing up the corrective actions required based on the reassessment, the following table outlines the areas needing attention, the actions to be taken, responsible parties, and deadlines for completion.
+\begin{itemize}
+  \item \textbf{Risk posture improved.}  
+        Twelve of the seventeen originally \emph{High} or \emph{Medium-High}
+        risks have been reduced to \emph{Medium} or lower.
+  \item \textbf{Residual hot-spots.}  
+        Four risks remain \emph{Medium-High} (IT-201, RD-102 cloud,
+        CS-CRM-01, CS-BILL-02).  They carry dedicated treatment plans and
+        deadlines (Table~\ref{tab:corrective_actions}).
+  \item \textbf{Continuous monitoring.}  
+        All residual risks rated \emph{Medium} or higher are entered into the
+        ISMS risk register with quarterly review triggers.
+\end{itemize}
 
-\begin{longtable}{|p{4cm}|p{6cm}|p{3.5cm}|p{2cm}|}
-\hline
-\textbf{Area} & \textbf{Action} & \textbf{Responsible Party} & \textbf{Deadline} \\
-\hline
-\ac{VPN} Infrastructure & Rotate certificates every 3 months & \ac{IT} Department & Q3 2025 \\
-\hline
-\ac{SCADA} Access & Apply stricter segmentation using firewalls and jump hosts & OT Security Engineer & Q3 2025 \\
-\hline
-R\&D Database Audit & Implement real-time audit logs and anomaly detection & RD Manager, IT Security & Q4 2025 \\
-\hline
-\end{longtable}
+The Risk Committee will reconvene in October 2025 (Q4) to verify that the open
+corrective actions are closed and to decide whether risk acceptance is now
+possible or further treatment is required.
 
-\section*{12.5 Conclusion}
-The implementation of Annex A controls significantly reduced risk across most assessed areas.
-Residual risks were brought to acceptable levels in shared systems and departmental assets, with only a few requiring additional
-corrective measures. This reassessment confirms the effectiveness of GreenGrid Energy’s \ac{ISMS} and the adequacy of its control framework.
