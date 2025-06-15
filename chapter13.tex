@@ -1,156 +1,154 @@
-% ---------------------------------------------------------------------
+%----------------------------------------------------------------------
 \chapter{Management Review Simulation}
 \label{chap:management_review}
+%----------------------------------------------------------------------
 
-This chapter simulate the top-management
-review required by ISO/IEC 27001:2022 Clause 9.3 and by providing a
-critical reflection on the work performed throughout the \ac{ISMS} project.
-It is structured as two self-contained deliverables:
+This chapter **simulates** the top-management review required by
+ISO/IEC 27001:2022, Clause 9.3, and provides a critical reflection on the work
+performed during the \ac{ISMS} project.  It is delivered in two
+self-contained parts:
 
 \begin{enumerate}
-  \item \textbf{Management Review Report} — documentation of the simulated
-        review meeting, including required inputs, decisions, and actions
-        (Clause 9.3.2–9.3.3);
-  \item \textbf{Critical Reflection Report} — individual and team
+  \item \textbf{Management-Review Report} – documentation of the simulated
+        meeting, including required inputs, decisions, and actions
+        (Clauses 9.3.2 – 9.3.3);
+  \item \textbf{Critical-Reflection Report} – individual and team
         reflections on project achievements, limitations, and improvement
         opportunities.
 \end{enumerate}
 
-% ---------------------------------------------------------------------
-\section{Management Review Report}
+%----------------------------------------------------------------------
+\section{Management-Review Report}
 \label{sec:mgmt_review_report}
 
 \subsection{General}
 
 The simulated review was chaired by the \ac{CEO} on
-\textbf{5 June 2025} with participation from the full Executive Management
-Team, the \ac{CISO}, and departmental directors (Engineering\,\&\,Grid
-Operations, Supply Chain Management, Research\,\&\,Development, Customer
-Services\,\&\,Billing, \ac{HR}, Legal\,\&\,Administration).
-The purpose was to evaluate the continuing suitability, adequacy, and
-effectiveness of the \ac{ISMS} and to identify opportunities for improvement.
+\textbf{5 June 2025} with attendance from the full Executive Management
+Team, the \ac{CISO}, and the directors of Engineering \& Grid Operations,
+Supply Chain Management, Research \& Development, Customer
+Services \& Billing, \ac{HR}, and Legal \& Administration.
+The objective was to evaluate the continuing suitability, adequacy, and
+effectiveness of the \ac{ISMS} and to identify opportunities for
+improvement.
 
 \subsection{Management-Review Inputs}
 
-Table~\ref{tab:review_inputs} summarises the evidence provided to
-management, mapped to the sub-clauses of ISO/IEC 27001 §9.3.2.
+Table \ref{tab:review_inputs} maps the evidence presented to the
+sub-clauses of ISO/IEC 27001 §9.3.2.
 
-\begin{table}[H]
+\begin{table}[htbp]
   \centering
   \caption{Management-review inputs}
   \label{tab:review_inputs}
   \begin{tabular}{|p{5.2cm}|p{7.8cm}|}
     \hline
-    \textbf{Input Requirement} & \textbf{Evidence Presented}\\ \hline
-    Status of actions from previous reviews & All outstanding corrective actions closed except CA-003 and CA-004 (see Table~\ref{tab:corrective_actions})\\ \hline
-    Changes in internal/external issues & \ac{NIS2} final transposition in Portugal; integration of 150 MW wind farm (new OT nodes)\\ \hline
-    \ac{ISMS} performance & KPI dashboard (Q1–Q2 2025): MTTD 6 min, MTTR 42 min, phishing-click rate below 40 \%\\ \hline
-    Fulfilment of information-security objectives & 8 / 10 departmental objectives on track; OT anomaly-detection coverage at 88 \% (target 90 \%)\\ \hline
-    Non-conformities & Two minor NCs (audit \#INT-25-04) — missing evidence for cloud-logging scope; outdated BCP phone list\\ \hline
-    Monitoring and measurement results & SIEM trend analysis; vulnerability-scan closure rate 96 \% within SLA\\ \hline
-    Audit results & Internal \ac{ISMS} audit (Apr 2025) — overall ‘Conformant’; external surveillance audit scheduled Oct 2025\\ \hline
-    Risk-treatment plan status & 12 / 17 high risks reduced; 4 medium-high under treatment (Table~\ref{tab:shared_residual})\\ \hline
-    Opportunities for continual improvement & AI-based phishing simulation platform; zero-trust network pilot for field OT\\ \hline
+    \textbf{Input requirement} & \textbf{Evidence presented}\\ \hline
+    Status of previous actions & All outstanding CAPA closed except CA-003 and CA-004 (Table~\ref{tab:corrective_actions})\\ \hline
+    Internal / external changes & \ac{NIS2} transposed in Portugal; integration of 150 MW wind farm (new OT nodes)\\ \hline
+    \ac{ISMS} performance & KPI dashboard (Q1–Q2 2025): MTTD 6 min, MTTR 42 min, phishing-click rate < 40 \%\\ \hline
+    Fulfilment of objectives & 8 / 10 departmental objectives on track; OT anomaly-detection coverage 88 \% (target 90 \%)\\ \hline
+    Non-conformities & Two minor NCs (INT-25-04) – missing cloud-logging scope evidence; outdated BCP phone list\\ \hline
+    Monitoring / measurement & SIEM trend analysis; vulnerability-scan closure rate 96 \% within SLA\\ \hline
+    Audit results & Internal \ac{ISMS} audit (Apr 2025) – overall “Conformant”; external surveillance audit due Oct 2025\\ \hline
+    Risk-treatment status & 12 / 17 high risks reduced; 4 medium-high under treatment (Table~\ref{tab:shared_residual})\\ \hline
+    Improvement opportunities & AI-based phishing-simulation platform; zero-trust pilot for field OT\\ \hline
   \end{tabular}
 \end{table}
 
 \subsection{Management-Review Outputs}
 
-\paragraph{Decisions and Approved Actions}
-
+\paragraph{Decisions and approved actions}
 \begin{itemize}
-  \item \textbf{Action A1 — Complete cloud-logging rollout}  
-        \emph{Owner:} Head of R\&D; \emph{Due:} 31 Aug 2025
-  \item \textbf{Action A2 — Finalise job-rotation matrix for HR}  
-        \emph{Owner:} HR Director; \emph{Due:} 15 Sep 2025
-  \item \textbf{Action A3 — Pilot zero-trust segmentation in two OT
-        substations}  
-        \emph{Owner:} OT Security Engineer; \emph{Due:} 30 Nov 2025
-  \item \textbf{Action A4 — Procure AI-driven phishing-awareness
-        platform}  
-        \emph{Owner:} CISO / Procurement; \emph{Due:} 30 Oct 2025
-  \item \textbf{Action A5 — Update BCP contact lists and retest within next
+  \item \textbf{A1 – Complete cloud-logging rollout}  
+        \emph{Owner:} Head of R\&D \quad \emph{Due:} 31 Aug 2025
+  \item \textbf{A2 – Finalise job-rotation matrix for HR}  
+        \emph{Owner:} HR Director \quad \emph{Due:} 15 Sep 2025
+  \item \textbf{A3 – Pilot zero-trust segmentation in two OT substations}  
+        \emph{Owner:} OT Security Engineer \quad \emph{Due:} 30 Nov 2025
+  \item \textbf{A4 – Procure AI-driven phishing-awareness platform}  
+        \emph{Owner:} CISO / Procurement \quad \emph{Due:} 30 Oct 2025
+  \item \textbf{A5 – Update BCP contact lists and retest in next
         tabletop exercise}  
-        \emph{Owner:} BCM Coordinator; \emph{Due:} 31 Jul 2025
+        \emph{Owner:} BCM Coordinator \quad \emph{Due:} 31 Jul 2025
 \end{itemize}
 
-\paragraph{Resource Needs}
+\paragraph{Resource needs}
 
-The Board approved an additional \textbf{€ 250 k} CAPEX for OT zero-trust
-network hardware and € 70 k OPEX for the phishing-simulation subscription.
+The Board approved an additional \textbf{€ 250 k} CAPEX for OT
+zero-trust hardware and \textbf{€ 70 k} OPEX for the phishing-simulation
+subscription.
 
-\paragraph{Policy and Objective Changes}
+\paragraph{Policy and objective changes}
 
-No changes to the overarching Information-Security Policy were deemed
-necessary.  The OT-anomaly-detection objective target is increased from
-90 \% to \textbf{95 \%} coverage by Q2 2026.
+No change to the Information-Security Policy was required.  
+The OT anomaly-detection target was raised from 90 \% to
+\textbf{95 \%} coverage by Q2 2026.
 
-\paragraph{Risk Acceptance}
+\paragraph{Risk acceptance}
 
 Residual risk \emph{IT-201} (phishing) remains \textbf{Medium-High};
-acceptance deferred until Action A4 results are reviewed (Q4 2025).
+acceptance is deferred until the results of Action A4 are reviewed
+(Q4 2025).
 
-\paragraph{Effectiveness Statement}
+\paragraph{Effectiveness statement}
 
-Management concluded that the \ac{ISMS} remains \emph{effective and aligned}
-with organisational goals, subject to the timely completion of Actions A1–A5.
+Management concluded that the \ac{ISMS} remains
+\emph{effective and aligned} with organisational goals, contingent on the
+timely completion of Actions A1–A5.
 
-% ---------------------------------------------------------------------
-\section{Critical Reflection Report}
+%----------------------------------------------------------------------
+\section{Critical-Reflection Report}
 \label{sec:critical_reflection}
 
-\subsection{Methodological Strengths}
+\subsection{Methodological strengths}
 
 \begin{itemize}
-  \item \textbf{Iterative risk loop} — Re-using the same 5×5 matrix
-        across Activities 6, 12, 13 created a coherent audit trail and
-        simplified stakeholder communication.
-  \item \textbf{Cross-department engagement} — Embedding subject-matter
-        experts (SCADA, supply chain, R\&D) in each task produced richer
-        asset inventories and more realistic recovery metrics.
-  \item \textbf{Clause-mapped deliverables} — Aligning every chapter to a
-        specific ISO/IEC 27001 clause reduced scope creep and ensured
-        audit-readiness of documents.
+  \item \textbf{Iterative risk loop} – Re-using the same
+        $5\times5$ matrix across Activities 6, 12 and 13 provided a clear
+        audit trail and simplified stakeholder communication.
+  \item \textbf{Cross-department engagement} – Involving SCADA, supply-chain,
+        and R\&D experts enhanced asset inventories and made recovery
+        metrics more realistic.
+  \item \textbf{Clause-mapped deliverables} – Anchoring every chapter to a
+        specific ISO/IEC 27001 clause prevented scope creep and ensured
+        audit-ready documents.
 \end{itemize}
 
-\subsection{Challenges Encountered}
+\subsection{Challenges encountered}
 
 \begin{itemize}
-  \item \textbf{OT/IT convergence complexity} — Mapping Annex A controls
-        to mixed OT assets required extensive interpretation and
-        sometimes bespoke controls (e.g.\ secure firmware signing).
-  \item \textbf{Data granularity versus confidentiality} — Obtaining
-        detailed incident data for the KPI dashboard was constrained by
-        privacy rules, forcing reliance on aggregated metrics.
-  \item \textbf{Resource availability} — Simulated exercises exposed
-        single-point-of-knowledge risks (HR‐502) that were underestimated
-        in the initial BIA.
+  \item \textbf{OT/IT convergence complexity} – Mapping Annex A controls
+        to mixed OT assets demanded extensive interpretation and, at times,
+        bespoke controls (e.g.\ secure-firmware signing).
+  \item \textbf{Granularity versus confidentiality} – Privacy constraints
+        limited access to incident details, forcing reliance on aggregated
+        KPI data.
+  \item \textbf{Resource availability} – Simulated exercises uncovered
+        single-point-of-knowledge risks (HR-502) underestimated in the
+        initial BIA.
 \end{itemize}
 
-\subsection{Lessons Learned}
+\subsection{Lessons learned}
 
 \begin{enumerate}
-  \item \textbf{Early validation beats late correction} — Pilot tests of
-        controls (e.g.\ cloud logging) should run in parallel with policy
-        drafting to avoid post-implementation non-conformities.
-  \item \textbf{Visual dashboards accelerate executive buy-in} — Simple
-        traffic-light KPIs proved more persuasive than detailed
-        spreadsheets when presenting to the Board.
-  \item \textbf{Continuity plans must remain living documents} — Even
-        minor organisational changes (staff churn, new wind farm) rapidly
-        outdate contact trees and \ac{RTO}/\ac{RPO} assumptions.
+  \item \textbf{Validate early, correct less} – Pilot tests (e.g.\ cloud
+        logging) should run in parallel with policy drafting to avoid
+        post-implementation NCs.
+  \item \textbf{Visual dashboards drive buy-in} – Simple traffic-light
+        KPIs resonated more with the Board than detailed spreadsheets.
+  \item \textbf{Continuity plans must stay current} – Minor organisational
+        changes (staff churn, new wind farm) quickly render contact trees
+        and \ac{RTO}/\ac{RPO} assumptions obsolete.
 \end{enumerate}
 
-\subsection{Opportunities for Further Improvement}
+\subsection{Opportunities for further improvement}
 
 \begin{itemize}
   \item Integrate \emph{MITRE ATT\&CK for ICS} to refine threat scenarios
         and better quantify OT-specific residual risks.
-  \item Automate evidence collection (backup-verification logs,
-        vulnerability-scan results) into the \ac{ISMS} repository to streamline
-        future audits.
-  \item Extend supplier-security clauses to cover software bill of
+  \item Automate evidence intake (backup-verification logs, vulnerability
+        scans) into the \ac{ISMS} repository to streamline future audits.
+  \item Extend supplier-security clauses to mandate software bills of
         materials (SBOM) for all critical firmware and third-party code.
 \end{itemize}
-
-

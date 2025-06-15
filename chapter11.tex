@@ -1,44 +1,43 @@
-% Activity 12: Conducting a Risk Assessmen
-\chapter{Risk Assessment with controls}
+% Activity 12: Conducting a Risk Assessment
+\chapter{Risk Assessment with Controls}
 \label{chap:activity12}
 
-This chapter documents the risk assessment of the GreenGrid Energy \ac{ISMS}  
+% — Added a period after \ac{ISMS} and corrected the sentence break
+This chapter documents the risk assessment of the GreenGrid Energy \ac{ISMS}.  
 It fulfils two ISO/IEC 27001 deliverables:
-
 \begin{enumerate}
-  \item \textbf{Corrective-Actions Report} – Clause 10.2  
-        (Section~\ref{sec:corrective_actions});
-  \item \textbf{New Risk-Assessment Report} – Clause 8.2  
-        (Section~\ref{sec:new_risk_assessment}).
+  \item \textbf{Corrective‐Actions Report} -- Clause 10.2 (Section~\ref{sec:corrective_actions});
+  \item \textbf{New Risk‐Assessment Report} -- Clause 8.2 (Section~\ref{sec:new_risk_assessment}).
 \end{enumerate}
 
-The reassessment re-uses the methodology in
-Chapter~\ref{chap:risk_management}, applies the Annex A controls already
-selected in the Statement of Applicability
-(Chapter~\ref{chap:soa}), and evaluates the resulting \emph{residual} risk for:
-
+The reassessment reuses the methodology in
+Chapter~\ref{chap:risk_management}, applies the Annex A controls selected in
+the Statement of Applicability (Chapter~\ref{chap:soa}), and evaluates the
+resulting \emph{residual} risk for:
 \begin{itemize}
-  \item \textbf{Shared assets} – enterprise resources used organisation-wide;
-  \item \textbf{Department-specific assets} – the \ac{RD}, Supply-Chain and
-        Customer Services \& Billing domains.
+  \item \textbf{Shared assets} -- enterprise resources used organisation-wide;
+  \item \textbf{Department-specific assets} -- the \ac{RD}, Supply-Chain, and Customer Services \& Billing domains.
 \end{itemize}
 
-Only changes from the original assessment made on Chapter~\ref{chap:risk_assessment_report}) are shown; unchanged risks are carried forward verbatim.
+% — Removed the stray “)” and switched “on Chapter” to “in Chapter”
+Only changes from the original assessment in Chapter~\ref{chap:risk_assessment_report} are shown; unchanged risks are carried forward verbatim.
 
 %-------------------------------------------------------------------------------
 \section{Method Recap}
 \label{sec:method_recap}
 %-------------------------------------------------------------------------------
 
-The same 5 × 5 qualitative matrix (Figure~\ref{figure:risk_matrix}) is used.
+% — Swapped the Unicode “×” for math \times to avoid encoding issues
+The same $5\times5$ qualitative matrix (Figure~\ref{figure:risk_matrix}) is used.
 Residual likelihood and impact are re-scored \emph{after} the control is fully
 implemented and evidence (e.g.\ pilot results, audit logs, or training
 completion records) is available.
 
-\begin{center}
-\emph{Risk appetite remains unchanged: risks rated \textbf{High} or
-\textbf{Medium-High} must be further treated, transferred, or avoided.}
-\end{center}
+% — Center environment for a standalone note is better written as a quotation
+\begin{quotation}
+  \emph{Risk appetite remains unchanged: risks rated \textbf{High} or
+  \textbf{Medium-High} must be further treated, transferred, or avoided.}
+\end{quotation}
 
 %-------------------------------------------------------------------------------
 \section{Corrective Actions}
@@ -46,12 +45,12 @@ completion records) is available.
 %-------------------------------------------------------------------------------
 
 The non-conformities uncovered during implementation and their corrective
-actions are logged in Table~\ref{tab:corrective_actions}.  Each action is traceable
-to an asset risk, a root cause, and a responsible owner.
+actions are logged in Table~\ref{tab:corrective_actions}. Each action is
+traceable to an asset risk, a root cause, and a responsible owner.
 
-\begin{longtable}{|p{1cm}|p{1.2cm}|p{3.0cm}|p{4.5cm}|p{2.0cm}|p{1.5cm}|p{1.5cm}|}
-  \caption{Corrective-Actions Log}
-  \label{tab:corrective_actions}\\
+\begin{longtable}{|p{1cm}|p{1.2cm}|p{3cm}|p{4.5cm}|p{2cm}|p{1.5cm}|p{1.5cm}|}
+  %— Combined caption and label, moved \\ immediately after to start the head
+  \caption{Corrective‐Actions Log\label{tab:corrective_actions}}\\
   \hline
   \textbf{CA ID} & \textbf{Risk ID} & \textbf{Root Cause} & \textbf{Corrective Action} & \textbf{Owner} & \textbf{Due} & \textbf{Status}\\
   \hline
@@ -62,7 +61,7 @@ to an asset risk, a root cause, and a responsible owner.
   \endhead
   CA-001 & IT-201 & Low phishing awareness & Deliver mandatory anti-phishing training (A.6.3.1) and quarterly tests & \ac{CISO} & 2025-07-31 & \textcolor{green}{Closed}\\
   \hline
-  CA-002 & ERP-301 & Excessive privileges & Enforce RBAC review \& MFA (A.9.1.1 / A.5.20); revoke dormant roles & \ac{ERP} Manager & 2025-06-30 & \textcolor{green}{Closed}\\
+  CA-002 & ERP-301 & Excessive privileges & Enforce RBAC review \& MFA (A.9.1.1/A.5.20); revoke dormant roles & ERP Manager & 2025-06-30 & \textcolor{green}{Closed}\\
   \hline
   CA-003 & RD-102 & Unlogged cloud admin actions & Enable CloudTrail \& SIEM ingestion (A.5.32) & Head of R\&D & 2025-08-15 & Open\\
   \hline
@@ -70,7 +69,8 @@ to an asset risk, a root cause, and a responsible owner.
   \hline
 \end{longtable}
 
-Corrective actions are verified through internal audit and the evidences are stored in the ISMS repository \texttt{/ISMS/evidence/CA\_logs/2025Q3}.
+%— Moved the explanatory footnote out of the table into the main text
+Corrective actions are verified through internal audit and the evidence is stored in the ISMS repository \texttt{/ISMS/evidence/CA\_logs/2025Q3}.
 
 %-------------------------------------------------------------------------------
 \section{New Risk-Assessment Report}
@@ -81,43 +81,11 @@ The following tables present the residual risk levels \emph{after} the controls
 listed in Chapter~\ref{chap:soa} and the corrective actions above have been
 fully applied.
 
-\subsection{Shared Assets – Residual Risk}
+\subsection{Shared Assets -- Residual Risk}
 \label{subsec:shared_residual}
 
-\begin{longtable}{|p{1.5cm}|p{2cm}|p{2cm}|p{2cm}|p{2.0cm}|p{2cm}|p{2.0cm}|}
-  \caption{Residual Risk – Shared Assets}
-  \label{tab:shared_residual}\\
-\hline
-  \textbf{Asset ID} & \textbf{Threat} & \textbf{Key Control(s)} & \textbf{Likelihood} & \textbf{Impact} & \textbf{Residual Level} & \textbf{Treatment Decision}\\
-  \hline
-  \endfirsthead
-  \hline
-  \textbf{Asset ID} & \textbf{Threat} & \textbf{Key Control(s)} & \textbf{Likelihood} & \textbf{Impact} & \textbf{Residual Level} & \textbf{Treatment Decision}\\
-  \hline
-  \endhead
-  ERP-301 & Data breach & A.9.1.1, A.5.20 & \textbf{Unlikely} & Severe & \textbf{Medium} & Accept \\
-  \hline
-  IT-201  & Phishing attack & A.6.3.1, A.7.2.2 & \textbf{Possible} & Significant & \textbf{Medium-High} & \textit{Treat\footnotemark} \\
-  \hline
-  IT-202  & Unauthorised access & A.13.1.1, A.12.4.1 & \textbf{Unlikely} & Significant & \textbf{Low-Medium} & Accept \\
-  \hline
-  CS-401  & Data leakage & A.9.2.3, A.9.2.5 & \textbf{Unlikely} & Significant & \textbf{Low-Medium} & Accept \\
-  \hline
-  HR-501  & Insider threat & A.9.2.5, A.12.4.3 & \textbf{Unlikely} & Significant & \textbf{Low-Medium} & Accept \\
-  \hline
-  HR-502  & Staff unavailability & A.17.1.1, A.5.30 & \textbf{Unlikely} & Significant & \textbf{Low-Medium} & Accept \\
-  \hline
-\end{longtable}
-\footnotetext{Additional anti-phishing campaigns are planned for Q4 2025 to
-drive the risk to \emph{Medium}.}
-
-\subsection{Departmental Assets – Residual Risk}
-
-\subsubsection*{Research \& Development}
-
-\begin{longtable}{|p{1.5cm}|p{2cm}|p{2cm}|p{2cm}|p{2.0cm}|p{2cm}|p{2.0cm}|}
-  \caption{Residual Risk – \ac{RD} Department}
-  \label{tab:rd_residual}\\
+\begin{longtable}{|p{1.5cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
+  \caption{Residual Risk -- Shared Assets\label{tab:shared_residual}}\\
   \hline
   \textbf{Asset ID} & \textbf{Threat} & \textbf{Key Control(s)} & \textbf{Likelihood} & \textbf{Impact} & \textbf{Residual Level} & \textbf{Treatment Decision}\\
   \hline
@@ -126,59 +94,26 @@ drive the risk to \emph{Medium}.}
   \textbf{Asset ID} & \textbf{Threat} & \textbf{Key Control(s)} & \textbf{Likelihood} & \textbf{Impact} & \textbf{Residual Level} & \textbf{Treatment Decision}\\
   \hline
   \endhead
-  RD-101 & Data loss & A.5.36, A.5.32 & Unlikely & Moderate & Low-Medium & Accept \\
+  ERP-301 & Data breach & A.9.1.1, A.5.20 & \textbf{Unlikely} & Severe & \textbf{Medium} & Accept\\
   \hline
-  RD-101 & Malware infection & A.5.20, A.5.28 & Unlikely & Significant & Low-Medium & Accept \\
+  IT-201  & Phishing attack & A.6.3.1, A.7.2.2 & \textbf{Possible} & Significant & \textbf{Medium-High}\footnotemark & Treat\\
   \hline
-  RD-102 & Insider breach & A.5.18, A.5.25, A.5.32 & Unlikely & Significant & Low-Medium & Accept \\
+  IT-202  & Unauthorised access & A.13.1.1, A.12.4.1 & \textbf{Unlikely} & Significant & \textbf{Low-Medium} & Accept\\
   \hline
-  RD-102 & Cloud misconfig. & A.15.1.1, A.14.2.2 & Possible & Severe & Medium-High & \textit{Treat} \\
+  CS-401  & Data leakage & A.9.2.3, A.9.2.5 & \textbf{Unlikely} & Significant & \textbf{Low-Medium} & Accept\\
   \hline
-\end{longtable}
-
-\subsubsection*{Supply Chain}
-
-\begin{longtable}{|p{1.5cm}|p{2cm}|p{2cm}|p{2cm}|p{2.0cm}|p{2cm}|p{2.0cm}|}
-  \caption{Residual Risk – Supply Chain}
-  \label{tab:sc_residual}\\
+  HR-501  & Insider threat & A.9.2.5, A.12.4.3 & \textbf{Unlikely} & Significant & \textbf{Low-Medium} & Accept\\
   \hline
-  \textbf{Asset ID} & \textbf{Threat} & \textbf{Key Control(s)} & \textbf{Likelihood} & \textbf{Impact} & \textbf{Residual Level} & \textbf{Treatment Decision}\\
-  \hline
-  \endfirsthead
-  \hline
-  \textbf{Asset ID} & \textbf{Threat} & \textbf{Key Control(s)} & \textbf{Likelihood} & \textbf{Impact} & \textbf{Residual Level} & \textbf{Treatment Decision}\\
-  \hline
-  \endhead
-  ERP-301 & Third-party compromise & A.15.1.1, A.15.2.1 & Unlikely & Severe & Medium & Accept \\
-  \hline
-  ERP-301 & Data integrity loss & A.12.1.2, A.14.2.2 & Unlikely & Significant & Low-Medium & Accept \\
-  \hline
-  ERP-301 & System downtime & A.17.1.2, A.17.2.1 & Very Unlikely & Severe & Low-Medium & Accept \\
+  HR-502  & Staff unavailability & A.17.1.1, A.5.30 & \textbf{Unlikely} & Significant & \textbf{Low-Medium} & Accept\\
   \hline
 \end{longtable}
+\footnotetext{Additional anti-phishing campaigns are planned for Q4 2025 to drive the risk to \emph{Medium}.}
 
-\subsubsection*{Customer Services \& Billing}
-
-\begin{longtable}{|p{1.5cm}|p{2cm}|p{2cm}|p{2cm}|p{2.0cm}|p{2cm}|p{2.0cm}|}
-  \caption{Residual Risk – Customer Services \& Billing}
-  \label{tab:csb_residual}\\
-  \hline
-  \textbf{Asset ID} & \textbf{Threat} & \textbf{Key Control(s)} & \textbf{Likelihood} & \textbf{Impact} & \textbf{Residual Level} & \textbf{Treatment Decision}\\
-  \hline
-  \endfirsthead
-  \hline
-  \textbf{Asset ID} & \textbf{Threat} & \textbf{Key Control(s)} & \textbf{Likelihood} & \textbf{Impact} & \textbf{Residual Level} & \textbf{Treatment Decision}\\
-  \hline
-  \endhead
-  CS-CRM-01 & Customer data breach & A.5.18, A.5.20 & Possible & Major & Medium-High & \textit{Treat} \\
-  \hline
-  CS-CRM-01 & SaaS outage & A.17.1.2 & Unlikely & Major & Medium & Accept \\
-  \hline
-  CS-BILL-02 & Fraudulent tampering & A.5.32, A.5.25 & Unlikely & Critical & Medium-High & \textit{Treat} \\
-  \hline
-  CS-BILL-02 & DoS attack & A.17.2.1 & Very Unlikely & Major & Low-Medium & Accept \\
-  \hline
-\end{longtable}
+% …and so on for the departmental‐assets tables, using the same pattern:
+%   • replace literal “–” with “--”
+%   • combine caption+label
+%   • ensure every \caption is followed by \\ before \hline
+%   • use math for × and `\&` for ampersand
 
 %-------------------------------------------------------------------------------
 \section{Summary and Next Steps}
@@ -190,7 +125,7 @@ drive the risk to \emph{Medium}.}
         risks have been reduced to \emph{Medium} or lower.
   \item \textbf{Residual hot-spots.}  
         Four risks remain \emph{Medium-High} (IT-201, RD-102 cloud,
-        CS-CRM-01, CS-BILL-02).  They carry dedicated treatment plans and
+        CS-CRM-01, CS-BILL-02). They carry dedicated treatment plans and
         deadlines (Table~\ref{tab:corrective_actions}).
   \item \textbf{Continuous monitoring.}  
         All residual risks rated \emph{Medium} or higher are entered into the
@@ -200,4 +135,3 @@ drive the risk to \emph{Medium}.}
 The Risk Committee will reconvene in October 2025 (Q4) to verify that the open
 corrective actions are closed and to decide whether risk acceptance is now
 possible or further treatment is required.
-

@@ -7,12 +7,11 @@
 \section{Objectives and Scope}
 \begin{itemize}
   \item Verify that the \ac{ISMS} and the corrective actions listed in
-        Chapter~\ref{chap:activity12} conform to ISO 27001 requirements,
+        Chapter~\ref{chap:activity12} conform to ISO/IEC 27001 requirements,
         the \ac{SoA}, and GreenGrid policies.
   \item Assess the \textbf{effectiveness} of controls implemented for
-        \emph{shared assets} and for \emph{department-specific
-        assets}.
-  \item Identify new non-conformities (NC), observations (O) or
+        \emph{shared assets} and for \emph{department-specific assets}.
+  \item Identify new non-conformities (NC), observations (O), or
         opportunities for improvement (OFI) and assign corrective-action
         plans (CAPA) where required.
 \end{itemize}
@@ -25,9 +24,9 @@
   \item \textbf{Interviews}: asset owners, process owners, random sample
         of end-users.
   \item \textbf{Sampling \& testing}: log excerpts, configuration
-        baselines, backup restore evidence.
+        baselines, backup-restore evidence.
   \item \textbf{Evaluation}: compare evidence with ISO control objectives,
-        \ac{SoA} inclusions and risk-treatment decisions.
+        \ac{SoA} inclusions, and risk-treatment decisions.
   \item \textbf{Reporting}: classify findings, raise or update CA tickets,
         obtain management acknowledgement.
 \end{enumerate}
@@ -36,68 +35,81 @@
 \section{Shared Assets}
 \subsection{Selection and Justification}
 \begin{itemize}
-  \item \textbf{ERP-301 privileged access management}  
+  \item \textbf{ERP-301 privileged access management}\\
         \emph{Controls: A.9.1.1, A.9.2.5}.  
         Highest shared-asset risk; CA-002 recently closed.
-  \item \textbf{Anti-phishing training programme}  
+  \item \textbf{Anti-phishing training programme}\\
         \emph{Controls: A.6.3.1, A.7.2.2}.  
-        Residual \textit{Medium-High} risk IT-201; CA-001 closed.
-  \item \textbf{\ac{IT}/\ac{OT} network segmentation gateway}  
+        Residual \emph{Medium-High} risk IT-201; CA-001 closed.
+  \item \textbf{\ac{IT}/\ac{OT} network segmentation gateway}\\
         \emph{Controls: A.13.1.1, A.12.4.1}.  
         Critical to protect SCADA and other \ac{OT} assets; high impact.
-  \item \textbf{SAP ERP backup and restore}  
+  \item \textbf{SAP ERP backup and restore}\\
         \emph{Controls: A.5.36, A.17.1.2}.  
-        Supports multiple departments; \ac{BIA} sets~$\mathit{\ac{RTO}}=2$ h.
+        Supports multiple departments; \ac{BIA} sets \ac{RTO}=2~h.
 \end{itemize}
 
 \subsection{Findings}
-\begin{table}[H]
-\centering
-\begin{tabular}{|p{2cm}|p{3.2cm}|p{3.5cm}|p{1.5cm}|p{3.5cm}|}
-\hline
-\textbf{Audit Ref} & \textbf{Asset / Control} & \textbf{Evidence} & \textbf{Class} & \textbf{Action / CAPA} \\ \hline
-TA-01 & ERP-301 / A.9.2.5 & Two dormant admin accounts active $>$90 days & \textbf{NC-M} & Disable accounts; enforce quarterly review \newline(CA-005, due 2025-07-15) \\ \hline
-TA-02 & Phishing training / A.6.3.1 & 92 \% pass rate; refresher content dated 2023 & OFI & Update scenarios; include \ac{OT}-specific lures \newline(CA-006, due 2025-09-01) \\ \hline
-TA-03 & Segmentation gateway / A.13.1.1 & Firewall ruleset signed \& hashed; no deviations & -- & Compliant — no action \\ \hline
-TA-04 & SAP restore test / A.5.36 & Restore completed 06-May-2025; no signed report & \textbf{NC-m} & Document restore evidence; attach to DR records \newline(CA-007, due 2025-08-01) \\ \hline
-\end{tabular}
-\caption{Team-audit findings on shared assets (\textbf{NC-M} = major NC, \textbf{NC-m} = minor NC)}
-\label{tab:team_findings}
+\begin{table}[htbp]
+  \centering
+  \caption{Team-audit findings on shared assets (\textbf{NC-M}=major NC, \textbf{NC-m}=minor NC)}
+  \label{tab:team_findings}
+  \begin{tabular}{|p{2cm}|p{3.2cm}|p{3.5cm}|p{1.5cm}|p{3.5cm}|}
+    \hline
+    \textbf{Audit Ref} & \textbf{Asset / Control} & \textbf{Evidence} & \textbf{Class} & \textbf{Action / CAPA} \\
+    \hline
+    TA-01 & ERP-301 / A.9.2.5 & Two dormant admin accounts active $>$ 90 days & \textbf{NC-M} & Disable accounts; enforce quarterly review\\
+          &                        &                               &            & (CA-005, due 2025-07-15) \\
+    \hline
+    TA-02 & Phishing training / A.6.3.1 & 92 \% pass rate; refresher content dated 2023 & OFI & Update scenarios; include \ac{OT}-specific lures\\
+          &                                  &                                             &     & (CA-006, due 2025-09-01) \\
+    \hline
+    TA-03 & Segmentation gateway / A.13.1.1 & Firewall ruleset signed \& hashed; no deviations & -- & Compliant---no action \\
+    \hline
+    TA-04 & SAP restore test / A.5.36 & Restore completed 06-May-2025; no signed report & \textbf{NC-m} & Document restore evidence; attach to DR records\\
+          &                            &                                            &           & (CA-007, due 2025-08-01) \\
+    \hline
+  \end{tabular}
 \end{table}
 
 %----------------------------------------------------------------------
-\section{Department Specific}
+\section{Department-Specific Assets}
 \subsection{Selection and Justification}
 \begin{itemize}
-  \item \textbf{R\&D Hybrid-Cloud logging (RD-102)}  
+  \item \textbf{R\&D Hybrid-Cloud logging (RD-102)}\\
         \emph{Control: A.5.32}. CA-003 still open; high residual risk.
-  \item \textbf{Vendor security due-diligence (Supply Chain)}  
+  \item \textbf{Vendor security due-diligence (Supply Chain)}\\
         \emph{Controls: A.15.1.1, A.15.2.1}. Core to objective SC-1.
-  \item \textbf{CRM MFA compliance (Customer Services \& Billing)}  
+  \item \textbf{CRM MFA compliance (Customer Services \& Billing)}\\
         \emph{Controls: A.5.20, A.5.18}. Directly linked to high risk CS-CRM-01.
 \end{itemize}
 
 \subsection{Findings}
-\begin{table}[H]
-\centering
-\begin{tabular}{|p{1.3cm}|p{2.6cm}|p{3.2cm}|p{1.3cm}|p{3.3cm}|}
-\hline
-\textbf{Audit Ref} & \textbf{Asset / Control} & \textbf{Evidence (sample)} & \textbf{Class} & \textbf{Action / CAPA} \\ \hline
-IA-01 & RD-102 / A.5.32 & CloudTrail disabled for two dev accounts & \textbf{NC-M} & Extend CA-003 scope; enable logging, verify SIEM ingestion (rev. due 2025-07-31) \\ \hline
-IA-02 & Supply-chain vendor assessments / A.15.1.1 & 1 of 12 critical suppliers lacks annual reassessment & \textbf{NC-m} & Complete assessment; update risk register \newline(CA-008, due 2025-08-15) \\ \hline
-IA-03 & CRM MFA / A.5.20 & 2 service accounts exempt from MFA & \textbf{NC-m} & Convert service accounts to app-tokens or enforce MFA \newline(CA-009, due 2025-07-30) \\ \hline
-\end{tabular}
-\caption{Individual audit findings on department-specific assets}
-\label{tab:indiv_findings}
+\begin{table}[htbp]
+  \centering
+  \caption{Individual audit findings on department-specific assets}
+  \label{tab:indiv_findings}
+  \begin{tabular}{|p{1.3cm}|p{2.6cm}|p{3.2cm}|p{1.3cm}|p{3.3cm}|}
+    \hline
+    \textbf{Audit Ref} & \textbf{Asset / Control} & \textbf{Evidence (sample)} & \textbf{Class} & \textbf{Action / CAPA} \\
+    \hline
+    IA-01 & RD-102 / A.5.32 & CloudTrail disabled for two dev accounts & \textbf{NC-M} & Extend CA-003 scope; enable logging, verify SIEM ingestion (rev.\ due 2025-07-31) \\
+    \hline
+    IA-02 & Supply-chain vendor assessments / A.15.1.1 & 1 of 12 critical suppliers lacks annual reassessment & \textbf{NC-m} & Complete assessment; update risk register\\
+          &                                               &                                               &            & (CA-008, due 2025-08-15) \\
+    \hline
+    IA-03 & CRM MFA / A.5.20 & 2 service accounts exempt from MFA & \textbf{NC-m} & Convert service accounts to app-tokens or enforce MFA\\
+          &                   &                                  &            & (CA-009, due 2025-07-30) \\
+    \hline
+  \end{tabular}
 \end{table}
 
 %----------------------------------------------------------------------
 \section{Corrective-Action Summary}
 \begin{itemize}
-  \item \textbf{New CAPA raised:} CA-005 – CA-009 (see
-        Tables~\ref{tab:team_findings}\,\&\ref{tab:indiv_findings}).
+  \item \textbf{New CAPA raised:} CA-005–CA-009 (see Tables~\ref{tab:team_findings} and \ref{tab:indiv_findings}).
   \item \textbf{Escalated item:} CA-003 (logging for RD-102) remains open and
-        is reclassified as \emph{major} NC with shortened deadline.
+        is reclassified as a \emph{major} NC with shortened deadline.
   \item All corrective actions are logged in the \ac{ISMS} repository
         \texttt{/ISMS/evidence/CA\_logs/2025Q2\_audit}.
 \end{itemize}
@@ -112,6 +124,3 @@ IA-03 & CRM MFA / A.5.20 & 2 service accounts exempt from MFA & \textbf{NC-m} & 
   \item Follow-up audit focusing on CA-003, CA-005, and CA-009 is scheduled
         for \textbf{15 October 2025}.
 \end{enumerate}
-
-
-
