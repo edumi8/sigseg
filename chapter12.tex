@@ -1,68 +1,117 @@
-% Activity 13: Internal Audit Simulation
+%======================================================================
 \chapter{Internal Audit Simulation}
-\label{chap:internal_audit_simulation}
+\label{chap:internal_audit}
+%======================================================================
 
-As part of Phase 4 of the \ac{ISMS} lifecycle, this chapter simulates an internal audit to evaluate the effectiveness, adequacy, and compliance of GreenGrid Energy’s \ac{ISMS} against ISO/IEC 27001 requirements.
-The audit also assesses the integration of security controls applied in previous phases and the organisation’s readiness for external certification.
-
+%----------------------------------------------------------------------
 \section{Objectives and Scope}
-The internal audit aims to:
 \begin{itemize}
-    \item Verify conformity with ISO/IEC 27001:2022 requirements, including internal policies and procedures.
-    \item Evaluate the effectiveness of implemented Annex A controls.
-    \item Confirm that identified risks are being properly monitored, treated, or mitigated.
-    \item Assess preparedness for external audit and certification.
+  \item Verify that the \ac{ISMS} and the corrective actions listed in
+        Chapter~\ref{chap:activity12} conform to ISO 27001 requirements,
+        the \ac{SoA}, and GreenGrid policies.
+  \item Assess the \textbf{effectiveness} of controls implemented for
+        \emph{shared assets} and for \emph{department-specific
+        assets}.
+  \item Identify new non-conformities (NC), observations (O) or
+        opportunities for improvement (OFI) and assign corrective-action
+        plans (CAPA) where required.
 \end{itemize}
 
-The scope of this audit includes:
-\begin{itemize}
-    \item Shared \ac{IT} infrastructure and assets.
-    \item Department-specific processes from Engineering \& Grid Operations, R\&D, and Supply Chain Management.
-    \item Security controls evaluated in the updated risk assessment, from chapter \ref{chap:risk_assessment}.
-\end{itemize}
-
+%----------------------------------------------------------------------
 \section{Audit Methodology}
-The internal audit followed these steps:
 \begin{enumerate}
-    \item \textbf{Preparation}: Review of policies, \ac{SoA}, risk register, and previous assessment reports.
-    \item \textbf{Interviews}: Conducted with asset owners, department representatives, and \ac{IT} staff.
-    \item \textbf{Document Review}: Audit of logs, procedures, security events, and access records.
-    \item \textbf{Control Testing}: Sample testing of security control enforcement, such as \ac{MFA}.
-    \item \textbf{Reporting}: Documentation of findings, non-conformities, observations, and recommendations.
+  \item \textbf{Document review}: policies, procedures, change records,
+        CA logs.
+  \item \textbf{Interviews}: asset owners, process owners, random sample
+        of end-users.
+  \item \textbf{Sampling \& testing}: log excerpts, configuration
+        baselines, backup restore evidence.
+  \item \textbf{Evaluation}: compare evidence with ISO control objectives,
+        \ac{SoA} inclusions and risk-treatment decisions.
+  \item \textbf{Reporting}: classify findings, raise or update CA tickets,
+        obtain management acknowledgement.
 \end{enumerate}
 
-\section{Key Findings}
-\subsection{Positive Observations}
+%----------------------------------------------------------------------
+\section{Shared Assets}
+\subsection{Selection and Justification}
 \begin{itemize}
-    \item Controls related to access management (Annex A 5.15) and encryption (A.8.4) were effectively implemented across shared systems.
-    \item Supply Chain Management demonstrated excellent control over vendor audits and contract compliance.
-    \item \ac{SCADA} systems are protected by network segmentation and monitoring tools, consistent with defined objectives.
-    \item R\&D environments are isolated and use code repositories with strict version control and access policies.
+  \item \textbf{ERP-301 privileged access management}  
+        \emph{Controls: A.9.1.1, A.9.2.5}.  
+        Highest shared-asset risk; CA-002 recently closed.
+  \item \textbf{Anti-phishing training programme}  
+        \emph{Controls: A.6.3.1, A.7.2.2}.  
+        Residual \textit{Medium-High} risk IT-201; CA-001 closed.
+  \item \textbf{\ac{IT}/\ac{OT} network segmentation gateway}  
+        \emph{Controls: A.13.1.1, A.12.4.1}.  
+        Critical to protect SCADA and other \ac{OT} assets; high impact.
+  \item \textbf{SAP ERP backup and restore}  
+        \emph{Controls: A.5.36, A.17.1.2}.  
+        Supports multiple departments; \ac{BIA} sets~$\mathit{\ac{RTO}}=2$ h.
 \end{itemize}
 
-\subsection{Non-Conformities}
+\subsection{Findings}
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{2cm}|p{3.2cm}|p{3.5cm}|p{1.5cm}|p{3.5cm}|}
+\hline
+\textbf{Audit Ref} & \textbf{Asset / Control} & \textbf{Evidence} & \textbf{Class} & \textbf{Action / CAPA} \\ \hline
+TA-01 & ERP-301 / A.9.2.5 & Two dormant admin accounts active $>$90 days & \textbf{NC-M} & Disable accounts; enforce quarterly review \newline(CA-005, due 2025-07-15) \\ \hline
+TA-02 & Phishing training / A.6.3.1 & 92 \% pass rate; refresher content dated 2023 & OFI & Update scenarios; include \ac{OT}-specific lures \newline(CA-006, due 2025-09-01) \\ \hline
+TA-03 & Segmentation gateway / A.13.1.1 & Firewall ruleset signed \& hashed; no deviations & -- & Compliant — no action \\ \hline
+TA-04 & SAP restore test / A.5.36 & Restore completed 06-May-2025; no signed report & \textbf{NC-m} & Document restore evidence; attach to DR records \newline(CA-007, due 2025-08-01) \\ \hline
+\end{tabular}
+\caption{Team-audit findings on shared assets (\textbf{NC-M} = major NC, \textbf{NC-m} = minor NC)}
+\label{tab:team_findings}
+\end{table}
+
+%----------------------------------------------------------------------
+\section{Department Specific}
+\subsection{Selection and Justification}
+\begin{itemize}
+  \item \textbf{R\&D Hybrid-Cloud logging (RD-102)}  
+        \emph{Control: A.5.32}. CA-003 still open; high residual risk.
+  \item \textbf{Vendor security due-diligence (Supply Chain)}  
+        \emph{Controls: A.15.1.1, A.15.2.1}. Core to objective SC-1.
+  \item \textbf{CRM MFA compliance (Customer Services \& Billing)}  
+        \emph{Controls: A.5.20, A.5.18}. Directly linked to high risk CS-CRM-01.
+\end{itemize}
+
+\subsection{Findings}
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{1.3cm}|p{2.6cm}|p{3.2cm}|p{1.3cm}|p{3.3cm}|}
+\hline
+\textbf{Audit Ref} & \textbf{Asset / Control} & \textbf{Evidence (sample)} & \textbf{Class} & \textbf{Action / CAPA} \\ \hline
+IA-01 & RD-102 / A.5.32 & CloudTrail disabled for two dev accounts & \textbf{NC-M} & Extend CA-003 scope; enable logging, verify SIEM ingestion (rev. due 2025-07-31) \\ \hline
+IA-02 & Supply-chain vendor assessments / A.15.1.1 & 1 of 12 critical suppliers lacks annual reassessment & \textbf{NC-m} & Complete assessment; update risk register \newline(CA-008, due 2025-08-15) \\ \hline
+IA-03 & CRM MFA / A.5.20 & 2 service accounts exempt from MFA & \textbf{NC-m} & Convert service accounts to app-tokens or enforce MFA \newline(CA-009, due 2025-07-30) \\ \hline
+\end{tabular}
+\caption{Individual audit findings on department-specific assets}
+\label{tab:indiv_findings}
+\end{table}
+
+%----------------------------------------------------------------------
+\section{Corrective-Action Summary}
+\begin{itemize}
+  \item \textbf{New CAPA raised:} CA-005 – CA-009 (see
+        Tables~\ref{tab:team_findings}\,\&\ref{tab:indiv_findings}).
+  \item \textbf{Escalated item:} CA-003 (logging for RD-102) remains open and
+        is reclassified as \emph{major} NC with shortened deadline.
+  \item All corrective actions are logged in the \ac{ISMS} repository
+        \texttt{/ISMS/evidence/CA\_logs/2025Q2\_audit}.
+\end{itemize}
+
+%----------------------------------------------------------------------
+\section{Audit Conclusion}
 \begin{enumerate}
-    \item \textbf{VPN Certificate Lifecycle}: Non documented schedule for certificate renewal.
-    \item \textbf{SCADA Segmentation Policy}: Some firewall rules were not fully aligned with defined segmentation strategy.
-    \item \textbf{Audit Logs in R\&D}: Logging exists but lacks real-time analysis and alerts.
+  \item Controls were \emph{generally effective}; four minor and two major
+        non-conformities were detected.
+  \item No evidence of systemic failure, but privileged-access governance
+        and cloud-logging require urgent attention.
+  \item Follow-up audit focusing on CA-003, CA-005, and CA-009 is scheduled
+        for \textbf{15 October 2025}.
 \end{enumerate}
 
-\subsection{Observations}
-\begin{itemize}
-    \item There is room for improvement in cross-departmental communication regarding incident response escalation.
-    \item Physical access control to server rooms, although partially out of scope, should be reinforced.
-\end{itemize}
 
-\section{Recommendations}
-\begin{itemize}
-    \item Establish a formal renewal policy for \ac{VPN} certificates with automated alerts.
-    \item Review and update \ac{SCADA} segmentation rules and conduct periodic firewall audits.
-    \item Integrate \ac{SIEM} capabilities with R\&D environments to enable real-time monitoring.
-    \item Update the \ac{IRP} to clarify responsibilities across departments.
-\end{itemize}
 
-\section{Conclusion}
-The internal audit confirmed that the \ac{ISMS} implemented at GreenGrid Energy is aligned with ISO/IEC 27001 requirements
-and is effective in mitigating critical risks. Identified non-conformities are limited in scope and can be resolved within
-a short timeframe. The organisation demonstrates a high degree of maturity in key areas such as supply chain security, \ac{SCADA}
-protection, and information classification, indicating a strong position ahead of formal external certification.
